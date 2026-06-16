@@ -1,0 +1,54 @@
+{
+  "name": "How to search on YouTube",
+  "start_url": "https://www.youtube.com",
+  "output": "youtube-search.pdf",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "headless": true,
+  "steps": [
+    {
+      "description": "Click on the search box in the YouTube header",
+      "action": "click",
+      "locator": {
+        "role": "combobox",
+        "name": "Search"
+      },
+      "highlight": true,
+      "status": "verified"
+    },
+    {
+      "description": "Type 'web scraping' into the search box",
+      "action": "fill",
+      "locator": {
+        "role": "combobox",
+        "name": "Search"
+      },
+      "value": "web scraping",
+      "highlight": false,
+      "status": "verified"
+    },
+    {
+      "description": "Press Enter to search",
+      "action": "press",
+      "locator": {
+        "role": "combobox",
+        "name": "Search"
+      },
+      "value": "Enter",
+      "highlight": false,
+      "status": "verified"
+    },
+    {
+      "description": "View the search results for web scraping tutorials",
+      "action": "click",
+      "locator": {
+        "role": "link",
+        "name": "Web Scraping Full Free Course by WsCube Tech"
+      },
+      "highlight": true,
+      "status": "verified"
+    }
+  ]
+}

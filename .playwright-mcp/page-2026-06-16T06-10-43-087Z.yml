@@ -1,0 +1,175 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "Guide" [active] [ref=e9] [cursor=pointer]:
+          - generic [ref=e12]:
+            - img
+        - generic [ref=e13]:
+          - link "YouTube Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]:
+              - img
+          - generic [ref=e20]: IN
+        - button "Skip navigation" [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]: Skip navigation
+      - generic [ref=e29]:
+        - search [ref=e30]:
+          - generic [ref=e31]:
+            - generic [ref=e32]:
+              - combobox "Search" [expanded] [ref=e34]: web scraping
+              - button "Clear search query" [ref=e116] [cursor=pointer]:
+                - generic [ref=e119]:
+                  - img
+            - button "Search" [ref=e35] [cursor=pointer]:
+              - generic [ref=e38]:
+                - img
+        - generic [ref=e40]:
+          - button "Search with your voice" [ref=e42] [cursor=pointer]:
+            - generic [ref=e209]:
+              - img
+          - tooltip "tooltip"
+      - generic [ref=e51]:
+        - button "Settings" [ref=e56] [cursor=pointer]:
+          - generic [ref=e59]:
+            - img
+        - link "Sign in" [ref=e62] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fresults%253Fsearch_query%253Dweb%252Bscraping&hl=en&ec=65620
+          - generic [ref=e210]:
+            - img
+          - generic [ref=e67]: Sign in
+  - navigation [ref=e71]:
+    - generic [ref=e72]:
+      - link "Home" [ref=e74] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e211]:
+          - img
+        - generic [ref=e78]: Home
+      - link "Shorts" [ref=e80] [cursor=pointer]:
+        - /url: /shorts/
+        - generic [ref=e83]:
+          - img
+        - generic [ref=e84]: Shorts
+      - link "Subscriptions" [ref=e86] [cursor=pointer]:
+        - /url: /feed/subscriptions
+        - generic [ref=e89]:
+          - img
+        - generic [ref=e90]: Subscriptions
+      - link "You" [ref=e92] [cursor=pointer]:
+        - /url: /feed/you
+        - generic [ref=e95]:
+          - img
+        - generic [ref=e96]: You
+  - generic [ref=e97]:
+    - text: •
+    - main [ref=e212]:
+      - generic [ref=e213]:
+        - generic [ref=e215]:
+          - tablist [ref=e220]:
+            - tab "All" [selected] [ref=e224] [cursor=pointer]:
+              - generic [ref=e226]: All
+            - tab "Shorts" [ref=e233] [cursor=pointer]:
+              - generic [ref=e235]: Shorts
+            - tab "Unwatched" [ref=e242] [cursor=pointer]:
+              - generic [ref=e244]: Unwatched
+            - tab "Watched" [ref=e251] [cursor=pointer]:
+              - generic [ref=e253]: Watched
+            - tab "Videos" [ref=e260] [cursor=pointer]:
+              - generic [ref=e262]: Videos
+            - tab "Recently uploaded" [ref=e269] [cursor=pointer]:
+              - generic [ref=e271]: Recently uploaded
+            - tab "Live" [ref=e278] [cursor=pointer]:
+              - generic [ref=e280]: Live
+          - generic [ref=e285]:
+            - button "Search filters" [ref=e287] [cursor=pointer]:
+              - generic [ref=e288]: Filters
+            - tooltip "tooltip"
+        - generic [ref=e297]:
+          - generic [ref=e299]:
+            - generic [ref=e304]:
+              - img [ref=e310]
+              - generic [ref=e312] [cursor=pointer]:
+                - generic [ref=e313]:
+                  - link "Master AI Tools In 3 Hours" [ref=e316]:
+                    - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=Ct6Lg4egwaoLzDoPvz7sPhYPG2QXvwpHGhwGP2svEqBawkB8QASAAYOXK5YO0DoIBF2NhLXB1Yi02MjE5ODExNzQ3MDQ5MzcxoAHNqO_UKakCY7Pl4160Rj6oAwTIAwqqBJwCT9A96TejifFXaGXkhCM0TX-JJLGva542y5HUfb5l2Fw8Vxb3GgqyN4KU6VlgxP-S5XDebb4XAT7hswZ8bxI0mVk3DQctPDF5PoirieNTJQ_RMvH1JcGvtdN3mo-FgI6iPPoDxR4xk2YcPFz_RSEucxpK-ZQzbSTS0gL9P0pe61Z2codURpTi1NfZ65IFMYFIrL2oqWhDteWFjqwOglH25tqf0VJ80feR8_Qi4Su3bbmCH6312lFE319u9EOYJEc9JaCqsBBMyV7cifXalnWX6oCNR5Bmib2mKNPdw-ai9KpbiRleQ5zCUrFHPO28hz6CTMSYJbyvPka6taqQ8HJBfbmGlSk8JCq_0tFcRmlCXekMBV3C2g5iK9rwPIeIBZO8z-FYkgUICBN4ivbB4QSgBqQBgAfN4L-0BJAHBKgH8sCxAqgHuMSxAqgH4baxAqgHpc-xAqgH552xAqgH6J2xAqgH77WxAqgH8LWxAqgH-dOxAqgHydqxAqgHqeCxAqgHhAioB6bUsQKoB6jSG6gHtgeoB7HcG6gHsJuxAqgHrrGxAqgH_bKxAqgHyM-xAqgHyc-xAqgHzcexAqgH8dGxAqgH_NWxAqgH-9WxAqgHjNaxAqgHi9axAqgHmuKxAqgHm-KxAqgHndexAqgHndSxAqgHgcYbqAf8r7ECqAe-2bECqAerxRuoB7ehsQKoB9WpsQKoB961sQKoB-qxsQKoB763sQKoB5m1sQKoB4XBsQKoB-ulsQKoB8qpsQLSCC4IgEEQARheMgKCAjoPgEKAwICAgICAgAKqgIAQSNmg0jVQFFiQ19vrjIuVA2ABmgkoaHR0cHM6Ly9iZTEweC5jb20vYWktdG9vbHMtd29ya3Nob3AtZ2E2L7EJRLfwDQRk9l3ICQCYCwG6CzoIAxAFGBYgCCgBMBxAAUgAWE5gAGgAcAGIAQCYAQGiAQgKAKgCAdgCAqgBAdgBAYACAYgCBroDAnNp0AsS0gwCEAHaDCYKCxCgip-EhbKY4aIBEgIBAxoNGJO8z-FYIK_j0YzpBUABSgIQH5oNARKqDQJJTsgNAdINsQFodHRwczovL2JlMTB4LmNvbS9haS10b29scy13b3Jrc2hvcC1nYTYvP3V0bV9zb3VyY2U9Z2E2JnV0bV9tZWRpdW09UG1heF9TcG9ydHNnb2xmMSZ1dG1fY2FtcGFpZ249MjM4MjY5NzQ2MjcmdXRtX3Rlcm09JnV0bV9pZD0yMzgyNjk3NDYyNyZnYWRfc291cmNlPTImZ2FkX2NhbXBhaWduaWQ9MjM4MjcwNDU5MDewDpv_6v8YuBP___________8BiBQCsBQDwBWBgIBA0BUB2BUBmBYB4hYCCAGAFwGKFxgIAxgBIAEoATABOAFAAUgBUAFYAWACaAGgFwGpF5CCJu0HrOBVuhcGKAAwADgB0BgB8BgBwhkCCAE&ase=2&gclid=EAIaIQobChMIwufb64yLlQMVg_dzAR2FgTFbEAEYASAAEgJ1dvD_BwE&num=1&cid=CAASwwHkaGjiaRYLKHZ65t9pd2nXkLXV8hk96Pp02zgp-Gys4_k3apNwhUwnwEFPHs_IXFy0tAGEI0cH_9_Qb4uJEIQJyUOdv8Pkz-nlzlDuZbcGuBKktP5lNFCSgr2MPWW84JVG3NADvdQouZ6Dx9uDDcvZW1r6meDuxb-2dAjLK9Tap1osfi8qzMvzqgal6ncrCf5Zt-W9ZzDnFPGV4opia1LNeSreKWUzUXaXRxFvXEuke_05y3DwIPi4PiM3enpVVhX83kM&sig=AOD64_3-GDGyGpFv050QWV4w8ikD5DTg7Q&ms=%5BCLICK_MS%5D&nb=0&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D
+                  - link "Master 10+ AI tools in a 3-hour live workshop to boost your productivity." [ref=e319]:
+                    - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=Ct6Lg4egwaoLzDoPvz7sPhYPG2QXvwpHGhwGP2svEqBawkB8QASAAYOXK5YO0DoIBF2NhLXB1Yi02MjE5ODExNzQ3MDQ5MzcxoAHNqO_UKakCY7Pl4160Rj6oAwTIAwqqBJwCT9A96TejifFXaGXkhCM0TX-JJLGva542y5HUfb5l2Fw8Vxb3GgqyN4KU6VlgxP-S5XDebb4XAT7hswZ8bxI0mVk3DQctPDF5PoirieNTJQ_RMvH1JcGvtdN3mo-FgI6iPPoDxR4xk2YcPFz_RSEucxpK-ZQzbSTS0gL9P0pe61Z2codURpTi1NfZ65IFMYFIrL2oqWhDteWFjqwOglH25tqf0VJ80feR8_Qi4Su3bbmCH6312lFE319u9EOYJEc9JaCqsBBMyV7cifXalnWX6oCNR5Bmib2mKNPdw-ai9KpbiRleQ5zCUrFHPO28hz6CTMSYJbyvPka6taqQ8HJBfbmGlSk8JCq_0tFcRmlCXekMBV3C2g5iK9rwPIeIBZO8z-FYkgUICBN4ivbB4QSgBqQBgAfN4L-0BJAHBKgH8sCxAqgHuMSxAqgH4baxAqgHpc-xAqgH552xAqgH6J2xAqgH77WxAqgH8LWxAqgH-dOxAqgHydqxAqgHqeCxAqgHhAioB6bUsQKoB6jSG6gHtgeoB7HcG6gHsJuxAqgHrrGxAqgH_bKxAqgHyM-xAqgHyc-xAqgHzcexAqgH8dGxAqgH_NWxAqgH-9WxAqgHjNaxAqgHi9axAqgHmuKxAqgHm-KxAqgHndexAqgHndSxAqgHgcYbqAf8r7ECqAe-2bECqAerxRuoB7ehsQKoB9WpsQKoB961sQKoB-qxsQKoB763sQKoB5m1sQKoB4XBsQKoB-ulsQKoB8qpsQLSCC4IgEEQARheMgKCAjoPgEKAwICAgICAgAKqgIAQSNmg0jVQFFiQ19vrjIuVA2ABmgkoaHR0cHM6Ly9iZTEweC5jb20vYWktdG9vbHMtd29ya3Nob3AtZ2E2L7EJRLfwDQRk9l3ICQCYCwG6CzoIAxAFGBYgCCgBMBxAAUgAWE5gAGgAcAGIAQCYAQGiAQgKAKgCAdgCAqgBAdgBAYACAYgCBroDAnNp0AsS0gwCEAHaDCYKCxCgip-EhbKY4aIBEgIBAxoNGJO8z-FYIK_j0YzpBUABSgIQH5oNARKqDQJJTsgNAdINsQFodHRwczovL2JlMTB4LmNvbS9haS10b29scy13b3Jrc2hvcC1nYTYvP3V0bV9zb3VyY2U9Z2E2JnV0bV9tZWRpdW09UG1heF9TcG9ydHNnb2xmMSZ1dG1fY2FtcGFpZ249MjM4MjY5NzQ2MjcmdXRtX3Rlcm09JnV0bV9pZD0yMzgyNjk3NDYyNyZnYWRfc291cmNlPTImZ2FkX2NhbXBhaWduaWQ9MjM4MjcwNDU5MDewDpv_6v8YuBP___________8BiBQCsBQDwBWBgIBA0BUB2BUBmBYB4hYCCAGAFwGKFxgIAxgBIAEoATABOAFAAUgBUAFYAWACaAGgFwGpF5CCJu0HrOBVuhcGKAAwADgB0BgB8BgBwhkCCAE&ase=2&gclid=EAIaIQobChMIwufb64yLlQMVg_dzAR2FgTFbEAEYASAAEgJ1dvD_BwE&num=1&cid=CAASwwHkaGjiaRYLKHZ65t9pd2nXkLXV8hk96Pp02zgp-Gys4_k3apNwhUwnwEFPHs_IXFy0tAGEI0cH_9_Qb4uJEIQJyUOdv8Pkz-nlzlDuZbcGuBKktP5lNFCSgr2MPWW84JVG3NADvdQouZ6Dx9uDDcvZW1r6meDuxb-2dAjLK9Tap1osfi8qzMvzqgal6ncrCf5Zt-W9ZzDnFPGV4opia1LNeSreKWUzUXaXRxFvXEuke_05y3DwIPi4PiM3enpVVhX83kM&sig=AOD64_3-GDGyGpFv050QWV4w8ikD5DTg7Q&ms=%5BCLICK_MS%5D&nb=7&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D
+                  - generic [ref=e320]:
+                    - generic [ref=e322]:
+                      - generic [ref=e323]: Sponsored
+                      - text: ·
+                    - generic [ref=e325]: Be 10x
+                - button "My Ad Center" [ref=e328]:
+                  - generic [ref=e332]:
+                    - img
+            - generic [ref=e337]:
+              - link [ref=e339] [cursor=pointer]:
+                - /url: /watch?v=GjKQ6V_ViQE&pp=ygUMd2ViIHNjcmFwaW5n
+                - img [ref=e341]
+              - generic [ref=e342] [cursor=pointer]:
+                - generic [ref=e343]:
+                  - heading "Comprehensive Python Beautiful Soup Web Scraping Tutorial! (find/find_all, css select, scrape table) 1 hour, 13 minutes" [level=3] [ref=e345]:
+                    - link "Comprehensive Python Beautiful Soup Web Scraping Tutorial! (find/find_all, css select, scrape table) 1 hour, 13 minutes" [ref=e346]:
+                      - /url: /watch?v=GjKQ6V_ViQE&pp=ygUMd2ViIHNjcmFwaW5n
+                      - text: Comprehensive Python Beautiful Soup Web Scraping Tutorial! (find/find_all, css select, scrape table)
+                  - generic [ref=e349]:
+                    - generic [ref=e350]: 348K views
+                    - generic [ref=e351]: •5 years ago
+                - generic [ref=e352]:
+                  - link "Go to channel Keith Galli" [ref=e353]:
+                    - /url: /@KeithGalli
+                  - generic [ref=e355]:
+                    - link "Keith Galli" [ref=e359]:
+                      - /url: /@KeithGalli
+                    - img "Verified" [ref=e364]
+                - generic [ref=e366]:
+                  - text: Practice your Python Pandas data science skills with problems on StrataScratch! https://stratascratch.com/?via=keith In this video ...
+                  - tooltip "tooltip"
+                - generic [ref=e369]:
+                  - generic [ref=e370]:
+                    - generic [ref=e374]: 18 chapters
+                    - 'button "Intro & Video Overview | What is web scraping? | Introduction to HTML | Using the beautiful soup library | Loading in a webpage (requests library) | Starting to scrape | find & find_all methods | Finding specific text/strings in our HTML (regex) | Select method (CSS path selections) | Grabbing the string/text from an HTML element | Getting a property of HTML element (href, src, id, class, etc) | Code navigation (parents, children, siblings) | Let’s practice our skills! | Exercise #1: Grab all social links on webpage in 3 different ways | Exercise #2: Scrape an HTML table into a Pandas Dataframe | Exercise #3: Grab all fun facts that contain the word “is” | Exercise #4: Use beautiful soup to help download an image from a webpage | Exercise #5: Solve the mystery challenge!!!" [ref=e375]'
+                  - button "More" [ref=e380]:
+                    - generic [ref=e384]:
+                      - img
+            - generic [ref=e389]:
+              - link [ref=e391] [cursor=pointer]:
+                - /url: /watch?v=8GhFmQPZAlo&pp=ygUMd2ViIHNjcmFwaW5n
+                - img [ref=e393]
+              - generic [ref=e394] [cursor=pointer]:
+                - generic [ref=e395]:
+                  - heading "Am I going to jail for web scraping? 4 minutes, 35 seconds" [level=3] [ref=e397]:
+                    - link "Am I going to jail for web scraping? 4 minutes, 35 seconds" [ref=e398]:
+                      - /url: /watch?v=8GhFmQPZAlo&pp=ygUMd2ViIHNjcmFwaW5n
+                      - text: Am I going to jail for web scraping?
+                  - generic [ref=e401]:
+                    - generic [ref=e402]: 1.2M views
+                    - generic [ref=e403]: •1 year ago
+                - generic [ref=e404]:
+                  - link "Go to channel Fireship" [ref=e405]:
+                    - /url: /@Fireship
+                  - generic [ref=e407]:
+                    - link "Fireship" [ref=e411]:
+                      - /url: /@Fireship
+                    - img "Verified" [ref=e416]
+                - generic [ref=e418]:
+                  - generic [ref=e419]: Is it legal to mine data from a public website? Let's take a detailed look at recent lawsuits and controversies surrounding the ...
+                  - tooltip "tooltip"
+                - img "4K" [ref=e424]:
+                  - generic [ref=e425]: 4K
+          - generic [ref=e432]:
+            - img [ref=e438]
+            - generic [ref=e440] [cursor=pointer]:
+              - generic [ref=e441]:
+                - 'link "Web Scraping In Python: Master The Fundamentals" [ref=e444]':
+                  - /url: https://www.google.com/aclk?sa=L&ai=DChsSEwiZ5-7rjIuVAxXGyTwCHcJPKpYYACICCAEQABoCc2Y&co=1&ase=2&gclid=EAIaIQobChMImefu64yLlQMVxsk8Ah3CTyqWEAEYASAAEgIbKPD_BwE&num=1&cid=CAAS0wHkaAoMUkpYBtGtCucdC3DEWC9F2dx8dfjH2K16iXpMWgplDQCZb7xwdsKGc1yYrvYGzWe0cO2mWacv06XFQ4MZ7RTkPOCyhP2cI19Me2jpRf9ceWAworTZmlvljVpP62VY87OEefI67rGGMk8I_ynlVnhS4WRWbHNMb82h_s_XqPYhBmdOZ5yjpQH6vBBb11IOdKJC_K1HdYCDrwgotqQLMU31NsxrqOL18mYW36Q9RVmCR521dauBE-0OWBf5vxRtXMSdojo0wSp-sHxtw4DsCFgG&cce=2&category=acrcp_v1_32&sig=AOD64_05hFm3KSYNQZwI3U77EHFAZWN_8w&adurl=https://www.udemy.com/course/introduction-to-data-exractionweb-scraping-in-python/%3Futm_campaign%3DSearch_DSA_Beta_Prof_la.EN_cc.India_Subs%26utm_source%3Dgoogle%26utm_medium%3Dpaid-search%26portfolio%3DIndia%26utm_audience%3Dmx%26utm_tactic%3Dnb%26utm_term%3D_._ag_185390585033_._ad_769665429290_._kw_%26utm_content%3Ds%26funnel%3D%26test%3D%26gad_source%3D2%26gad_campaignid%3D22900574867&ms=%5BCLICK_MS%5D&nx=%5BNX%5D&ny=%5BNY%5D&nb=0
+                - link "Control your development with Personal Plan. Access courses in development and more. Personal Plan allows you unlimited access..." [ref=e447]:
+                  - /url: https://www.google.com/aclk?sa=L&ai=DChsSEwiZ5-7rjIuVAxXGyTwCHcJPKpYYACICCAEQABoCc2Y&co=1&ase=2&gclid=EAIaIQobChMImefu64yLlQMVxsk8Ah3CTyqWEAEYASAAEgIbKPD_BwE&num=1&cid=CAAS0wHkaAoMUkpYBtGtCucdC3DEWC9F2dx8dfjH2K16iXpMWgplDQCZb7xwdsKGc1yYrvYGzWe0cO2mWacv06XFQ4MZ7RTkPOCyhP2cI19Me2jpRf9ceWAworTZmlvljVpP62VY87OEefI67rGGMk8I_ynlVnhS4WRWbHNMb82h_s_XqPYhBmdOZ5yjpQH6vBBb11IOdKJC_K1HdYCDrwgotqQLMU31NsxrqOL18mYW36Q9RVmCR521dauBE-0OWBf5vxRtXMSdojo0wSp-sHxtw4DsCFgG&cce=2&category=acrcp_v1_32&sig=AOD64_05hFm3KSYNQZwI3U77EHFAZWN_8w&adurl=https://www.udemy.com/course/introduction-to-data-exractionweb-scraping-in-python/%3Futm_campaign%3DSearch_DSA_Beta_Prof_la.EN_cc.India_Subs%26utm_source%3Dgoogle%26utm_medium%3Dpaid-search%26portfolio%3DIndia%26utm_audience%3Dmx%26utm_tactic%3Dnb%26utm_term%3D_._ag_185390585033_._ad_769665429290_._kw_%26utm_content%3Ds%26funnel%3D%26test%3D%26gad_source%3D2%26gad_campaignid%3D22900574867&ms=%5BCLICK_MS%5D&nx=%5BNX%5D&ny=%5BNY%5D&nb=7
+                - generic [ref=e448]:
+                  - generic [ref=e450]:
+                    - generic [ref=e451]: Sponsored
+                    - text: ·
+                  - generic [ref=e453]: https://www.udemy.com/
+              - button "My Ad Center" [ref=e456]:
+                - generic [ref=e460]:
+                  - img

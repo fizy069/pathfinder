@@ -1,0 +1,8 @@
+# Generated tutorial output
+*.pdf
+.playwright-mcp
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/

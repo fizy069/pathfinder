@@ -1,0 +1,1702 @@
+- generic [ref=e2]:
+  - navigation "Shortcuts menu" [ref=e3]:
+    - heading "Skip to" [level=2] [ref=e4]
+    - list "Skip to" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "main content" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+    - separator [ref=e8]
+    - heading "Keyboard shortcuts" [level=2] [ref=e9]
+    - list "Keyboard shortcuts" [ref=e10]:
+      - listitem [ref=e11]:
+        - link "Search, alt, forward slash" [ref=e12] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e13]:
+            - generic [ref=e14]: Search
+            - generic [ref=e15]:
+              - generic [ref=e16]: alt
+              - generic [ref=e17]: +
+              - generic [ref=e18]: /
+      - listitem [ref=e19]:
+        - link "Cart, shift, alt, c" [ref=e20] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e21]:
+            - generic [ref=e22]: Cart
+            - generic [ref=e23]:
+              - generic [ref=e24]: shift
+              - generic [ref=e25]: +
+              - generic [ref=e26]: alt
+              - generic [ref=e27]: +
+              - generic [ref=e28]: C
+      - listitem [ref=e29]:
+        - link "Home, shift, alt, h" [ref=e30] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e31]:
+            - generic [ref=e32]: Home
+            - generic [ref=e33]:
+              - generic [ref=e34]: shift
+              - generic [ref=e35]: +
+              - generic [ref=e36]: alt
+              - generic [ref=e37]: +
+              - generic [ref=e38]: H
+      - listitem [ref=e39]:
+        - link "Your orders, shift, alt, o" [ref=e40] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e41]:
+            - generic [ref=e42]: Orders
+            - generic [ref=e43]:
+              - generic [ref=e44]: shift
+              - generic [ref=e45]: +
+              - generic [ref=e46]: alt
+              - generic [ref=e47]: +
+              - generic [ref=e48]: O
+      - listitem [ref=e49]:
+        - button "Show/hide shortcuts, shift, alt, z" [ref=e50] [cursor=pointer]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: Show/Hide shortcuts
+            - generic [ref=e53]:
+              - generic [ref=e54]: shift
+              - generic [ref=e55]: +
+              - generic [ref=e56]: alt
+              - generic [ref=e57]: +
+              - generic [ref=e58]: Z
+    - generic [ref=e64]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=e65]:
+    - navigation "Primary" [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - link "Amazon.in" [ref=e70] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .in
+          - button "Delivering to Bengaluru 562130 Update location" [ref=e73] [cursor=pointer]:
+            - generic [ref=e75]:
+              - generic [ref=e76]: Delivering to Bengaluru 562130
+              - generic [ref=e77]: Update location
+        - search [ref=e80]:
+          - generic [ref=e83]:
+            - generic [ref=e85]: All
+            - combobox "Select the department you want to search in" [ref=e87] [cursor=pointer]:
+              - option "All Categories" [selected]
+              - option "Alexa Skills"
+              - option "Amazon Devices"
+              - option "Amazon Fashion"
+              - option "Amazon Fresh"
+              - option "Amazon Pharmacy"
+              - option "Appliances"
+              - option "Apps & Games"
+              - option "Audible Audiobooks"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Car & Motorbike"
+              - option "Clothing & Accessories"
+              - option "Collectibles"
+              - option "Computers & Accessories"
+              - option "Deals"
+              - option "Electronics"
+              - option "Furniture"
+              - option "Garden & Outdoors"
+              - option "Gift Cards"
+              - option "Grocery & Gourmet Foods"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Jewellery"
+              - option "Kindle Store"
+              - option "Luggage & Bags"
+              - option "Luxury Beauty"
+              - option "Movies & TV Shows"
+              - option "MP3 Music"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Office Products"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Shoes & Handbags"
+              - option "Software"
+              - option "Sports, Fitness & Outdoors"
+              - option "Subscribe & Save"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Under ₹500"
+              - option "Video Games"
+              - option "Watches"
+          - searchbox "Search Amazon.in" [ref=e90]
+          - generic "Go" [ref=e93] [cursor=pointer]:
+            - button "Go" [ref=e94]
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - link "Choose a language for shopping in Amazon India. The current selection is English (EN)." [ref=e98] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang
+              - generic [ref=e101]:
+                - img "India" [ref=e102]
+                - generic [ref=e103]: EN
+            - button "Expand to Change Language or Country" [ref=e104] [cursor=pointer]
+          - generic [ref=e105]:
+            - link "Hello, sign in Account & Lists" [ref=e106] [cursor=pointer]:
+              - /url: https://www.amazon.in/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fcart%2Fadd-to-cart%2Fref%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=e108]: Hello, sign in
+              - generic [ref=e109]: Account & Lists
+            - button "Expand Account and Lists" [ref=e110] [cursor=pointer]
+          - link "Returns & Orders" [ref=e111] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e112]: Returns
+            - generic [ref=e113]: "& Orders"
+          - link "1 item in cart" [ref=e114] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e116]: "1"
+            - generic [ref=e119]: Cart
+      - generic [ref=e121]:
+        - button "Open All Categories Menu" [ref=e123] [cursor=pointer]:
+          - generic [ref=e125]: All
+        - list [ref=e129]:
+          - listitem [ref=e130]:
+            - generic [ref=e131]:
+              - link "Fresh" [ref=e132] [cursor=pointer]:
+                - /url: /fresh?ref_=nav_cs_grocery
+              - button "Fresh Details" [ref=e133] [cursor=pointer]
+          - listitem [ref=e134]:
+            - link "MX Player" [ref=e136] [cursor=pointer]:
+              - /url: /minitv?ref_=nav_avod_desktop_topnav
+          - listitem [ref=e137]:
+            - link "Sell" [ref=e139] [cursor=pointer]:
+              - /url: /b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3
+          - listitem [ref=e140]:
+            - link "Bestsellers" [ref=e142] [cursor=pointer]:
+              - /url: /gp/bestsellers/?ref_=nav_cs_bestsellers
+          - listitem [ref=e143]:
+            - link "Today's Deals" [ref=e145] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_gb
+          - listitem [ref=e146]:
+            - generic [ref=e147]:
+              - link "Prime" [ref=e148] [cursor=pointer]:
+                - /url: /prime?ref_=nav_cs_primelink_nonmember
+              - button "Prime Details" [ref=e149] [cursor=pointer]
+          - listitem [ref=e150]:
+            - link "Mobiles" [ref=e152] [cursor=pointer]:
+              - /url: /mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles
+          - listitem [ref=e153]:
+            - link "New Releases" [ref=e155] [cursor=pointer]:
+              - /url: /gp/new-releases/?ref_=nav_cs_newreleases
+          - listitem [ref=e156]:
+            - link "Customer Service" [ref=e158] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help
+          - listitem [ref=e159]:
+            - link "Amazon Pay" [ref=e161] [cursor=pointer]:
+              - /url: /gp/sva/dashboard?ref_=nav_cs_apay
+          - listitem [ref=e162]:
+            - link "Electronics" [ref=e164] [cursor=pointer]:
+              - /url: /electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics
+          - listitem [ref=e165]:
+            - link "Home & Kitchen" [ref=e167] [cursor=pointer]:
+              - /url: /Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home
+          - listitem [ref=e168]:
+            - link "Fashion" [ref=e170] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6648217031&ref_=nav_cs_fashion
+          - listitem [ref=e171]:
+            - link "Computers" [ref=e173] [cursor=pointer]:
+              - /url: /computers-and-accessories/b/?ie=UTF8&node=976392031&ref_=nav_cs_pc
+          - listitem [ref=e174]:
+            - link "Toys & Games" [ref=e176] [cursor=pointer]:
+              - /url: /Toys-Games/b/?ie=UTF8&node=1350380031&ref_=nav_cs_toys
+          - listitem [ref=e177]:
+            - link "Car & Motorbike" [ref=e179] [cursor=pointer]:
+              - /url: /Car-Motorbike-Store/b/?ie=UTF8&node=4772060031&ref_=nav_cs_automotive
+          - listitem [ref=e180]:
+            - link "Beauty & Personal Care" [ref=e182] [cursor=pointer]:
+              - /url: /beauty/b/?ie=UTF8&node=1355016031&ref_=nav_cs_beauty
+          - listitem [ref=e183]:
+            - link "Gift Cards" [ref=e185] [cursor=pointer]:
+              - /url: /gift-card-store/b/?ie=UTF8&node=3704982031&ref_=nav_cs_gc
+          - listitem [ref=e186]:
+            - link "Home Improvement" [ref=e188] [cursor=pointer]:
+              - /url: /Home-Improvement/b/?ie=UTF8&node=4286640031&ref_=nav_cs_hi
+          - listitem [ref=e189]:
+            - link "Grocery & Gourmet Foods" [ref=e191] [cursor=pointer]:
+              - /url: /Gourmet-Specialty-Foods/b/?ie=UTF8&node=2454178031&ref_=nav_cs_grocery
+          - listitem [ref=e192]:
+            - link "Health, Household & Personal Care" [ref=e194] [cursor=pointer]:
+              - /url: /health-and-personal-care/b/?ie=UTF8&node=1350384031&ref_=nav_cs_hpc
+          - listitem [ref=e195]:
+            - link "Video Games" [ref=e197] [cursor=pointer]:
+              - /url: /video-games/b/?ie=UTF8&node=976460031&ref_=nav_cs_video_games
+          - listitem [ref=e198]:
+            - link "Custom Products" [ref=e200] [cursor=pointer]:
+              - /url: /Amazon-Custom/b/?ie=UTF8&node=32615889031&ref_=nav_cs_custom
+          - listitem [ref=e201]:
+            - link "Sports, Fitness & Outdoors" [ref=e203] [cursor=pointer]:
+              - /url: /Sports/b/?ie=UTF8&node=1984443031&ref_=nav_cs_sports
+          - listitem [ref=e204]:
+            - link "Baby" [ref=e206] [cursor=pointer]:
+              - /url: /Baby/b/?ie=UTF8&node=1571274031&ref_=nav_cs_baby
+          - listitem [ref=e207]:
+            - link "Pet Supplies" [ref=e209] [cursor=pointer]:
+              - /url: /Pet-Supplies/b/?ie=UTF8&node=2454181031&ref_=nav_cs_pets
+          - listitem [ref=e210]:
+            - link "Audible" [ref=e212] [cursor=pointer]:
+              - /url: /Audible-Books-and-Originals/b/?ie=UTF8&node=17941593031&ref_=nav_cs_audible
+          - listitem [ref=e213]:
+            - link "AmazonBasics" [ref=e215] [cursor=pointer]:
+              - /url: /b/?node=6637738031&ref_=nav_cs_amazonbasics
+          - listitem [ref=e216]:
+            - link "Books" [ref=e218] [cursor=pointer]:
+              - /url: /Books/b/?ie=UTF8&node=976389031&ref_=nav_cs_books
+          - listitem [ref=e219]:
+            - link "Subscribe & Save" [ref=e221] [cursor=pointer]:
+              - /url: /auto-deliveries/landing?ref_=nav_cs_sns
+          - listitem [ref=e222]:
+            - link "Kindle eBooks" [ref=e224] [cursor=pointer]:
+              - /url: /Kindle-eBooks/b/?ie=UTF8&node=1634753031&ref_=nav_cs_kindle_books
+          - listitem [ref=e225]:
+            - link "Flights" [ref=e227] [cursor=pointer]:
+              - /url: /flights?ref_=nav_cs_apay_desktop_topnav_flights
+      - dialog [ref=e230]:
+        - generic [ref=e233]:
+          - generic [ref=e237]:
+            - heading "Subtotal" [level=1] [ref=e239]
+            - heading "₹209.00" [level=2] [ref=e242]
+          - link "Go to Cart" [ref=e248] [cursor=pointer]:
+            - /url: /cart?ref_=ox_ewc_ret_gtc_dsk_in
+          - list [ref=e253]:
+            - listitem [ref=e254]:
+              - generic [ref=e256]:
+                - generic [ref=e257]:
+                  - link "Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug & Play" [ref=e259] [cursor=pointer]:
+                    - /url: /gp/product/B0G3RG1XM2/ref=ewc_pr_img_1?smid=AJ6SIZC8YQDZX&psc=1
+                    - img "Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug & Play" [ref=e260]
+                  - generic [ref=e263]: Limited time
+                  - generic [ref=e264]: ₹209.00
+                  - generic [ref=e265]: Only 1 left in stock.
+                - group "Quantity is 1" [ref=e271]:
+                  - generic [ref=e272]: Quantity is 1
+                  - generic [ref=e274]:
+                    - button "Delete Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug &amp; Play" [ref=e275] [cursor=pointer]
+                    - generic [ref=e279]: "1"
+                    - generic [ref=e281]: "1"
+                    - button "Increase quantity by one Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug &amp; Play" [ref=e282] [cursor=pointer]
+  - generic [ref=e287]:
+    - generic [ref=e288]:
+      - generic [ref=e289]:
+        - link "Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug &amp; Play" [ref=e292] [cursor=pointer]:
+          - /url: /gp/product/B0G3RG1XM2/ref=sw_img_1?smid=AJ6SIZC8YQDZX&psc=1
+          - img "Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug &amp; Play" [ref=e293]
+        - generic [ref=e294]:
+          - heading "Added to cart" [active] [level=1] [ref=e301]
+          - list [ref=e303]:
+            - listitem [ref=e304]:
+              - generic [ref=e305]: "Style Name: Nimb 03"
+      - generic [ref=e307]:
+        - generic [ref=e308]:
+          - generic [ref=e309]:
+            - heading "Cart subtotal:" [ref=e310]
+            - generic [ref=e312]:
+              - generic [ref=e313]: ₹209.00
+              - generic [ref=e314]:
+                - text: ₹
+                - generic [ref=e315]:
+                  - text: "209"
+                  - generic [ref=e316]: .
+                - text: "00"
+          - generic [ref=e321] [cursor=pointer]:
+            - button "Proceed to Buy (1 item) Buy Amazon items" [ref=e322]: Proceed to checkout
+            - generic [ref=e325]: Proceed to Buy (1 item)
+          - link "Go to Cart" [ref=e328] [cursor=pointer]:
+            - /url: /cart?ref_=sw_gtc
+        - generic [ref=e330]:
+          - text: For best experience
+          - link "sign in to your account" [ref=e331] [cursor=pointer]:
+            - /url: https://www.amazon.in/ap/signin/ref=sw_signin?openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fcart%3Fapp-nav-type%3Dnone%26dc%3Ddf&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+    - group [ref=e338]:
+      - generic [ref=e339]:
+        - heading "Customers who bought items in your cart also bought" [level=1] [ref=e341]
+        - generic [ref=e344]: Page 1 of 7
+      - generic [ref=e346]:
+        - button "Previous page" [ref=e348] [cursor=pointer]:
+          - generic [ref=e351]: Previous page
+        - group [ref=e353]:
+          - list [ref=e354]:
+            - listitem [ref=e355]:
+              - generic [ref=e356]:
+                - generic [ref=e357]:
+                  - link "Geonix Helio C200 Power Bank 20000mAh | 22.5W Fast Charging Power Bank |Slim | Dual USB & Type-C Outputs + Extra Type-C Port" [ref=e358] [cursor=pointer]:
+                    - /url: /20000mAh-Charging-Capacity-Portable-Warranty/dp/B0FQV66276/ref=sw_img_d_crh_rh_hashrec?_encoding=UTF8&pd_rd_i=B0FQV66276&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Geonix Helio C200 Power Bank 20000mAh | 22.5W Fast Charging Power Bank |Slim | Dual USB & Type-C Outputs + Extra Type-C Port" [ref=e360]
+                  - generic [ref=e361]:
+                    - link "Geonix Helio C200 Power Bank 20000mAh | 22.5W Fast Charging Power Bank |Slim | Dual USB & Type-C Outputs + Extra Type-C Port | High Capacity Portable Charger, 1 Year Warranty, Blue" [ref=e362] [cursor=pointer]:
+                      - /url: /20000mAh-Charging-Capacity-Portable-Warranty/dp/B0FQV66276/ref=sw_ttl_d_crh_rh_hashrec?_encoding=UTF8&pd_rd_i=B0FQV66276&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e363]:
+                        - generic [ref=e364]: Geonix Helio C200 Power Bank 20000mAh | 22.5W Fast Charging Power Bank |Slim | Dual USB & Type-C Outputs + Extra Type-C Port | High Capacity Portable Charger, 1 Year Warranty, Blue
+                        - generic [ref=e365]: Geonix Helio C200 Power Bank 20000mAh | 22.5W Fa…
+                    - link "4.1 out of 5 stars 20" [ref=e367] [cursor=pointer]:
+                      - /url: /product-reviews/B0FQV66276/ref=sw_cr_d_crh_rh_hashrec?_encoding=UTF8&pd_rd_i=B0FQV66276&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e369]: 4.1 out of 5 stars
+                      - text: "20"
+                    - generic [ref=e371]: 60% off Limited time deal
+                    - generic [ref=e372]:
+                      - generic [ref=e373]:
+                        - generic [ref=e374]: ₹999.00
+                        - generic [ref=e375]:
+                          - text: ₹
+                          - generic [ref=e376]:
+                            - text: "999"
+                            - generic [ref=e377]: .
+                          - text: "00"
+                      - generic [ref=e378]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e379]:
+                          - generic [ref=e380]: Previous Price ₹2,499.00
+                          - text: ₹2,499.00
+                - generic [ref=e382]:
+                  - status [ref=e383]
+                  - generic [ref=e388] [cursor=pointer]:
+                    - button "Add to cart, Geonix Helio C200 Power Bank 20000mAh | 22.5W Fast Charging Power Bank |Slim | Dual USB & Type-C Outputs + Extra Type-C Port | High Capacity Portable Charger, 1 Year Warranty, Blue" [ref=e389]
+                    - generic [ref=e390]: Add to cart
+            - listitem [ref=e392]:
+              - generic [ref=e393]:
+                - generic [ref=e394]:
+                  - link "Geonix Atomic G65, Gan Charger, 65W GaN Charger | Dual Port USB & Type-C Fast Charging Adapter for iPhone 16–11 Series, iPad," [ref=e395] [cursor=pointer]:
+                    - /url: /Geonix-Charger-Charging-Adapter-Android/dp/B0FQ5TCD2S/ref=sw_img_d_crh_rh_hashrec_1?_encoding=UTF8&pd_rd_i=B0FQ5TCD2S&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Geonix Atomic G65, Gan Charger, 65W GaN Charger | Dual Port USB & Type-C Fast Charging Adapter for iPhone 16–11 Series, iPad," [ref=e397]
+                  - generic [ref=e398]:
+                    - link "Geonix Atomic G65, Gan Charger, 65W GaN Charger | Dual Port USB & Type-C Fast Charging Adapter for iPhone 16–11 Series, iPad, Android, Laptop, Tablet, Power Bank (White)" [ref=e399] [cursor=pointer]:
+                      - /url: /Geonix-Charger-Charging-Adapter-Android/dp/B0FQ5TCD2S/ref=sw_ttl_d_crh_rh_hashrec_1?_encoding=UTF8&pd_rd_i=B0FQ5TCD2S&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e400]:
+                        - generic [ref=e401]: Geonix Atomic G65, Gan Charger, 65W GaN Charger | Dual Port USB & Type-C Fast Charging Adapter for iPhone 16–11 Series, iPad, Android, Laptop, Tablet, Power Bank (White)
+                        - generic [ref=e402]: Geonix Atomic G65, Gan Charger, 65W GaN Charger |…
+                    - link "4.5 out of 5 stars 3" [ref=e404] [cursor=pointer]:
+                      - /url: /product-reviews/B0FQ5TCD2S/ref=sw_cr_d_crh_rh_hashrec_1?_encoding=UTF8&pd_rd_i=B0FQ5TCD2S&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e406]: 4.5 out of 5 stars
+                      - text: "3"
+                    - generic [ref=e408]: 38% off Limited time deal
+                    - generic [ref=e409]:
+                      - generic [ref=e410]:
+                        - generic [ref=e411]: ₹1,849.00
+                        - generic [ref=e412]:
+                          - text: ₹
+                          - generic [ref=e413]:
+                            - text: 1,849
+                            - generic [ref=e414]: .
+                          - text: "00"
+                      - generic [ref=e415]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e416]:
+                          - generic [ref=e417]: Previous Price ₹2,999.00
+                          - text: ₹2,999.00
+                - generic [ref=e419]:
+                  - status [ref=e420]
+                  - generic [ref=e425] [cursor=pointer]:
+                    - button "Add to cart, Geonix Atomic G65, Gan Charger, 65W GaN Charger | Dual Port USB & Type-C Fast Charging Adapter for iPhone 16–11 Series, iPad, Android, Laptop, Tablet, Power Bank (White)" [ref=e426]
+                    - generic [ref=e427]: Add to cart
+            - listitem [ref=e429]:
+              - generic [ref=e430]:
+                - generic [ref=e431]:
+                  - link "Geonix Neo Fold 11, Foldable Wireless Keyboard | BT 5.0 Version | Rechargeable | 1 Year Warranty | 100+ Working Hours, Li-Pol" [ref=e432] [cursor=pointer]:
+                    - /url: /Foldable-Wireless-Keyboard-Rechargeable-Li-Polymer/dp/B0G4998SR5/ref=sw_img_d_crh_rh_hashrec_2?_encoding=UTF8&pd_rd_i=B0G4998SR5&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Geonix Neo Fold 11, Foldable Wireless Keyboard | BT 5.0 Version | Rechargeable | 1 Year Warranty | 100+ Working Hours, Li-Pol" [ref=e434]
+                  - generic [ref=e435]:
+                    - link "Geonix Neo Fold 11, Foldable Wireless Keyboard | BT 5.0 Version | Rechargeable | 1 Year Warranty | 100+ Working Hours, Li-Polymer Battery (Black)" [ref=e436] [cursor=pointer]:
+                      - /url: /Foldable-Wireless-Keyboard-Rechargeable-Li-Polymer/dp/B0G4998SR5/ref=sw_ttl_d_crh_rh_hashrec_2?_encoding=UTF8&pd_rd_i=B0G4998SR5&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e437]:
+                        - generic [ref=e438]: Geonix Neo Fold 11, Foldable Wireless Keyboard | BT 5.0 Version | Rechargeable | 1 Year Warranty | 100+ Working Hours, Li-Polymer Battery (Black)
+                        - generic [ref=e439]: Geonix Neo Fold 11, Foldable Wireless Keyboard | BT 5.0 V…
+                    - link "4.4 out of 5 stars 8" [ref=e441] [cursor=pointer]:
+                      - /url: /product-reviews/B0G4998SR5/ref=sw_cr_d_crh_rh_hashrec_2?_encoding=UTF8&pd_rd_i=B0G4998SR5&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e443]: 4.4 out of 5 stars
+                      - text: "8"
+                    - generic [ref=e445]: 63% off Limited time deal
+                    - generic [ref=e446]:
+                      - generic [ref=e447]:
+                        - generic [ref=e448]: ₹898.00
+                        - generic [ref=e449]:
+                          - text: ₹
+                          - generic [ref=e450]:
+                            - text: "898"
+                            - generic [ref=e451]: .
+                          - text: "00"
+                      - generic [ref=e452]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e453]:
+                          - generic [ref=e454]: Previous Price ₹2,399.00
+                          - text: ₹2,399.00
+                - generic [ref=e456]:
+                  - status [ref=e457]
+                  - generic [ref=e462] [cursor=pointer]:
+                    - button "Add to cart, Geonix Neo Fold 11, Foldable Wireless Keyboard | BT 5.0 Version | Rechargeable | 1 Year Warranty | 100+ Working Hours, Li-Polymer Battery (Black)" [ref=e463]
+                    - generic [ref=e464]: Add to cart
+            - listitem [ref=e466]:
+              - generic [ref=e467]:
+                - generic [ref=e468]:
+                  - link "Geonix Opal A11 Optical Wireless Mouse | High Precision Tracking, Silent Click, 3 DPI Modes, Type-C Rechargeable, 10 m Range," [ref=e469] [cursor=pointer]:
+                    - /url: /Wireless-Precision-Tracking-Rechargeable-Ergonomic/dp/B0G3R92DCS/ref=sw_img_d_crh_rh_hashrec_3?_encoding=UTF8&pd_rd_i=B0G3R92DCS&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Geonix Opal A11 Optical Wireless Mouse | High Precision Tracking, Silent Click, 3 DPI Modes, Type-C Rechargeable, 10 m Range," [ref=e471]
+                  - generic [ref=e472]:
+                    - link "Geonix Opal A11 Optical Wireless Mouse | High Precision Tracking, Silent Click, 3 DPI Modes, Type-C Rechargeable, 10 m Range, 4-Button Ergonomic Design" [ref=e473] [cursor=pointer]:
+                      - /url: /Wireless-Precision-Tracking-Rechargeable-Ergonomic/dp/B0G3R92DCS/ref=sw_ttl_d_crh_rh_hashrec_3?_encoding=UTF8&pd_rd_i=B0G3R92DCS&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e474]:
+                        - generic [ref=e475]: Geonix Opal A11 Optical Wireless Mouse | High Precision Tracking, Silent Click, 3 DPI Modes, Type-C Rechargeable, 10 m Range, 4-Button Ergonomic Design
+                        - generic [ref=e476]: Geonix Opal A11 Optical Wireless Mouse | High Precis…
+                    - link "4.0 out of 5 stars 12" [ref=e478] [cursor=pointer]:
+                      - /url: /product-reviews/B0G3R92DCS/ref=sw_cr_d_crh_rh_hashrec_3?_encoding=UTF8&pd_rd_i=B0G3R92DCS&pd_rd_w=OMeDo&content-id=amzn1.sym.6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_p=6473271d-4411-421b-8a49-cb0591a667fc&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e480]: 4.0 out of 5 stars
+                      - text: "12"
+                    - generic [ref=e482]: 64% off Limited time deal
+                    - generic [ref=e483]:
+                      - generic [ref=e484]:
+                        - generic [ref=e485]: ₹309.00
+                        - generic [ref=e486]:
+                          - text: ₹
+                          - generic [ref=e487]:
+                            - text: "309"
+                            - generic [ref=e488]: .
+                          - text: "00"
+                      - generic [ref=e489]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e490]:
+                          - generic [ref=e491]: Previous Price ₹849.00
+                          - text: ₹849.00
+                - generic [ref=e493]:
+                  - status [ref=e494]
+                  - generic [ref=e499] [cursor=pointer]:
+                    - button "Add to cart, Geonix Opal A11 Optical Wireless Mouse | High Precision Tracking, Silent Click, 3 DPI Modes, Type-C Rechargeable, 10 m Range, 4-Button Ergonomic Design" [ref=e500]
+                    - generic [ref=e501]: Add to cart
+        - button "Next page" [ref=e504] [cursor=pointer]:
+          - generic [ref=e507]: Next page
+    - generic [ref=e508]:
+      - group [ref=e513]:
+        - heading "Featured items you may like" [level=1] [ref=e516]
+        - group [ref=e521]:
+          - list [ref=e522]:
+            - listitem [ref=e523]:
+              - generic [ref=e524]:
+                - generic [ref=e525]:
+                  - link "amazon basics 2.5 inch SATA Internal SSD 256 GB | Speed up to 550 MBps | Shock Resistant | Energy Efficient | High-Speed Perf" [ref=e526] [cursor=pointer]:
+                    - /url: /amazon-basics-Resistant-High-Speed-Performance/dp/B0D7M6VQYZ/ref=sw_img_d_pb-allspark-smartwagon?_encoding=UTF8&pd_rd_i=B0D7M6VQYZ&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "amazon basics 2.5 inch SATA Internal SSD 256 GB | Speed up to 550 MBps | Shock Resistant | Energy Efficient | High-Speed Perf" [ref=e528]
+                  - generic [ref=e529]:
+                    - link "amazon basics 2.5 inch SATA Internal SSD 256 GB | Speed up to 550 MBps | Shock Resistant | Energy Efficient | High-Speed Performance" [ref=e530] [cursor=pointer]:
+                      - /url: /amazon-basics-Resistant-High-Speed-Performance/dp/B0D7M6VQYZ/ref=sw_ttl_d_pb-allspark-smartwagon?_encoding=UTF8&pd_rd_i=B0D7M6VQYZ&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e531]:
+                        - generic [ref=e532]: amazon basics 2.5 inch SATA Internal SSD 256 GB | Speed up to 550 MBps | Shock Resistant | Energy Efficient | High-Speed Performance
+                        - generic [ref=e533]: amazon basics 2.5 inch SATA Internal SSD 256 GB | Speed…
+                    - link "4.0 out of 5 stars 301" [ref=e535] [cursor=pointer]:
+                      - /url: /product-reviews/B0D7M6VQYZ/ref=sw_cr_d_pb-allspark-smartwagon?_encoding=UTF8&pd_rd_i=B0D7M6VQYZ&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e537]: 4.0 out of 5 stars
+                      - text: "301"
+                    - generic [ref=e539]: 7% off Limited time deal
+                    - generic [ref=e540]:
+                      - generic [ref=e541]:
+                        - generic [ref=e542]: ₹4,199.00
+                        - generic [ref=e543]:
+                          - text: ₹
+                          - generic [ref=e544]:
+                            - text: 4,199
+                            - generic [ref=e545]: .
+                          - text: "00"
+                      - generic [ref=e546]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e547]:
+                          - generic [ref=e548]: Previous Price ₹4,499.00
+                          - text: ₹4,499.00
+                - generic [ref=e550]:
+                  - status [ref=e551]
+                  - generic [ref=e556] [cursor=pointer]:
+                    - button "Add to cart, amazon basics 2.5 inch SATA Internal SSD 256 GB | Speed up to 550 MBps | Shock Resistant | Energy Efficient | High-Speed Performance" [ref=e557]
+                    - generic [ref=e558]: Add to cart
+            - listitem [ref=e560]:
+              - generic [ref=e561]:
+                - generic [ref=e562]:
+                  - link "amazon basics Wired USB Mouse, 3-Button, 1000 DPI Optical Sensor, Plug & Play, for Windows/Mac" [ref=e563] [cursor=pointer]:
+                    - /url: /Amazon-Basics-3-Button-Optical-Windows/dp/B0BT6ZYM1Q/ref=sw_img_d_pb-allspark-smartwagon_1?_encoding=UTF8&pd_rd_i=B0BT6ZYM1Q&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "amazon basics Wired USB Mouse, 3-Button, 1000 DPI Optical Sensor, Plug & Play, for Windows/Mac" [ref=e565]
+                  - generic [ref=e566]:
+                    - link "amazon basics Wired USB Mouse, 3-Button, 1000 DPI Optical Sensor, Plug & Play, for Windows/Mac" [ref=e567] [cursor=pointer]:
+                      - /url: /Amazon-Basics-3-Button-Optical-Windows/dp/B0BT6ZYM1Q/ref=sw_ttl_d_pb-allspark-smartwagon_1?_encoding=UTF8&pd_rd_i=B0BT6ZYM1Q&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e568]:
+                        - generic [ref=e569]: amazon basics Wired USB Mouse, 3-Button, 1000 DPI Optical Sensor, Plug & Play, for Windows/Mac
+                        - generic [ref=e570]: amazon basics Wired USB Mouse, 3-Button, 1000 DPI…
+                    - link "3.7 out of 5 stars 355" [ref=e572] [cursor=pointer]:
+                      - /url: /product-reviews/B0BT6ZYM1Q/ref=sw_cr_d_pb-allspark-smartwagon_1?_encoding=UTF8&pd_rd_i=B0BT6ZYM1Q&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e574]: 3.7 out of 5 stars
+                      - text: "355"
+                    - generic [ref=e575]:
+                      - generic [ref=e576]:
+                        - generic [ref=e577]: ₹349.00
+                        - generic [ref=e578]:
+                          - text: ₹
+                          - generic [ref=e579]:
+                            - text: "349"
+                            - generic [ref=e580]: .
+                          - text: "00"
+                      - generic [ref=e581]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e582]:
+                          - generic [ref=e583]: Previous Price ₹919.00
+                          - text: ₹919.00
+                - generic [ref=e585]:
+                  - status [ref=e586]
+                  - generic [ref=e591] [cursor=pointer]:
+                    - button "Add to cart, amazon basics Wired USB Mouse, 3-Button, 1000 DPI Optical Sensor, Plug & Play, for Windows/Mac" [ref=e592]
+                    - generic [ref=e593]: Add to cart
+            - listitem [ref=e595]:
+              - generic [ref=e596]:
+                - generic [ref=e597]:
+                  - link "Amazon Basics 150Mbps Nano Wireless USB Wi-Fi Adapter for PC, Laptop | Supports Windows, Mac and Linux | USB 2.0" [ref=e598] [cursor=pointer]:
+                    - /url: /150Mbps-Wireless-Adapter-Supports-Windows/dp/B0C7CQT1RS/ref=sw_img_d_pb-allspark-smartwagon_2?_encoding=UTF8&pd_rd_i=B0C7CQT1RS&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Amazon Basics 150Mbps Nano Wireless USB Wi-Fi Adapter for PC, Laptop | Supports Windows, Mac and Linux | USB 2.0" [ref=e600]
+                  - generic [ref=e601]:
+                    - link "Amazon Basics 150Mbps Nano Wireless USB Wi-Fi Adapter for PC, Laptop | Supports Windows, Mac and Linux | USB 2.0" [ref=e602] [cursor=pointer]:
+                      - /url: /150Mbps-Wireless-Adapter-Supports-Windows/dp/B0C7CQT1RS/ref=sw_ttl_d_pb-allspark-smartwagon_2?_encoding=UTF8&pd_rd_i=B0C7CQT1RS&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e603]:
+                        - generic [ref=e604]: Amazon Basics 150Mbps Nano Wireless USB Wi-Fi Adapter for PC, Laptop | Supports Windows, Mac and Linux | USB 2.0
+                        - generic [ref=e605]: Amazon Basics 150Mbps Nano Wireless USB Wi-Fi Adapter…
+                    - link "3.8 out of 5 stars 1,017" [ref=e607] [cursor=pointer]:
+                      - /url: /product-reviews/B0C7CQT1RS/ref=sw_cr_d_pb-allspark-smartwagon_2?_encoding=UTF8&pd_rd_i=B0C7CQT1RS&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e609]: 3.8 out of 5 stars
+                      - text: 1,017
+                    - generic [ref=e610]:
+                      - generic [ref=e611]:
+                        - generic [ref=e612]: ₹429.00
+                        - generic [ref=e613]:
+                          - text: ₹
+                          - generic [ref=e614]:
+                            - text: "429"
+                            - generic [ref=e615]: .
+                          - text: "00"
+                      - generic [ref=e616]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e617]:
+                          - generic [ref=e618]: Previous Price ₹699.00
+                          - text: ₹699.00
+                - generic [ref=e620]:
+                  - status [ref=e621]
+                  - generic [ref=e626] [cursor=pointer]:
+                    - button "Add to cart, Amazon Basics 150Mbps Nano Wireless USB Wi-Fi Adapter for PC, Laptop | Supports Windows, Mac and Linux | USB 2.0" [ref=e627]
+                    - generic [ref=e628]: Add to cart
+            - listitem [ref=e630]:
+              - generic [ref=e631]:
+                - generic [ref=e632]:
+                  - link "Tukzer Multiport Adapter 4-in-1 USB Hub Splitter Extender, 1xUSB 3.0 & 3 x USB 2.0 Ports, 5 Gbps High Speed Data Transfer, Un" [ref=e633] [cursor=pointer]:
+                    - /url: /Tukzer-Multiport-Splitter-Universally-Compatible/dp/B0F3DMRN5P/ref=sw_img_d_pb-allspark-smartwagon_3?_encoding=UTF8&pd_rd_i=B0F3DMRN5P&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Tukzer Multiport Adapter 4-in-1 USB Hub Splitter Extender, 1xUSB 3.0 & 3 x USB 2.0 Ports, 5 Gbps High Speed Data Transfer, Un" [ref=e635]
+                  - generic [ref=e636]:
+                    - link "Tukzer Multiport Adapter 4-in-1 USB Hub Splitter Extender, 1xUSB 3.0 & 3 x USB 2.0 Ports, 5 Gbps High Speed Data Transfer, Universally Compatible with All USB, PC, Laptop, Hard Drive, Speaker (Grey)" [ref=e637] [cursor=pointer]:
+                      - /url: /Tukzer-Multiport-Splitter-Universally-Compatible/dp/B0F3DMRN5P/ref=sw_ttl_d_pb-allspark-smartwagon_3?_encoding=UTF8&pd_rd_i=B0F3DMRN5P&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e638]:
+                        - generic [ref=e639]: Tukzer Multiport Adapter 4-in-1 USB Hub Splitter Extender, 1xUSB 3.0 & 3 x USB 2.0 Ports, 5 Gbps High Speed Data Transfer, Universally Compatible with All USB, PC, Laptop, Hard Drive, Speaker (Grey)
+                        - generic [ref=e640]: Tukzer Multiport Adapter 4-in-1 USB Hub Splitter Exten…
+                    - link "3.9 out of 5 stars 11" [ref=e642] [cursor=pointer]:
+                      - /url: /product-reviews/B0F3DMRN5P/ref=sw_cr_d_pb-allspark-smartwagon_3?_encoding=UTF8&pd_rd_i=B0F3DMRN5P&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e644]: 3.9 out of 5 stars
+                      - text: "11"
+                    - generic [ref=e645]:
+                      - generic [ref=e646]:
+                        - generic [ref=e647]: ₹169.00
+                        - generic [ref=e648]:
+                          - text: ₹
+                          - generic [ref=e649]:
+                            - text: "169"
+                            - generic [ref=e650]: .
+                          - text: "00"
+                      - generic [ref=e651]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e652]:
+                          - generic [ref=e653]: Previous Price ₹799.00
+                          - text: ₹799.00
+                - generic [ref=e655]:
+                  - status [ref=e656]
+                  - generic [ref=e661] [cursor=pointer]:
+                    - button "Add to cart, Tukzer Multiport Adapter 4-in-1 USB Hub Splitter Extender, 1xUSB 3.0 & 3 x USB 2.0 Ports, 5 Gbps High Speed Data Transfer, Universally Compatible with All USB, PC, Laptop, Hard Drive, Speaker (Grey)" [ref=e662]
+                    - generic [ref=e663]: Add to cart
+            - listitem [ref=e665]:
+              - generic [ref=e666]:
+                - generic [ref=e667]:
+                  - link "amazon basics Pro Series 2.4G Wireless Ergonomic Mouse for PC, Mac, Laptop | 4 Adjustable DPI Settings Up to 2400 | Shortcut" [ref=e668] [cursor=pointer]:
+                    - /url: /amazon-basics-Ergonomic-Bluetooth-Adjustable/dp/B0DB5QFF9Z/ref=sw_img_d_pb-allspark-smartwagon_4?_encoding=UTF8&pd_rd_i=B0DB5QFF9Z&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "amazon basics Pro Series 2.4G Wireless Ergonomic Mouse for PC, Mac, Laptop | 4 Adjustable DPI Settings Up to 2400 | Shortcut" [ref=e670]
+                  - generic [ref=e671]:
+                    - link "amazon basics Pro Series 2.4G Wireless Ergonomic Mouse for PC, Mac, Laptop | 4 Adjustable DPI Settings Up to 2400 | Shortcut Buttons (Black)" [ref=e672] [cursor=pointer]:
+                      - /url: /amazon-basics-Ergonomic-Bluetooth-Adjustable/dp/B0DB5QFF9Z/ref=sw_ttl_d_pb-allspark-smartwagon_4?_encoding=UTF8&pd_rd_i=B0DB5QFF9Z&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e673]:
+                        - generic [ref=e674]: amazon basics Pro Series 2.4G Wireless Ergonomic Mouse for PC, Mac, Laptop | 4 Adjustable DPI Settings Up to 2400 | Shortcut Buttons (Black)
+                        - generic [ref=e675]: amazon basics Pro Series 2.4G Wireless Ergonomic Mouse f…
+                    - link "3.6 out of 5 stars 107" [ref=e677] [cursor=pointer]:
+                      - /url: /product-reviews/B0DB5QFF9Z/ref=sw_cr_d_pb-allspark-smartwagon_4?_encoding=UTF8&pd_rd_i=B0DB5QFF9Z&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e679]: 3.6 out of 5 stars
+                      - text: "107"
+                    - generic [ref=e680]:
+                      - generic [ref=e681]:
+                        - generic [ref=e682]: ₹708.00
+                        - generic [ref=e683]:
+                          - text: ₹
+                          - generic [ref=e684]:
+                            - text: "708"
+                            - generic [ref=e685]: .
+                          - text: "00"
+                      - generic [ref=e686]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e687]:
+                          - generic [ref=e688]: Previous Price ₹2,699.00
+                          - text: ₹2,699.00
+                - generic [ref=e690]:
+                  - status [ref=e691]
+                  - generic [ref=e696] [cursor=pointer]:
+                    - button "Add to cart, amazon basics Pro Series 2.4G Wireless Ergonomic Mouse for PC, Mac, Laptop | 4 Adjustable DPI Settings Up to 2400 | Shortcut Buttons (Black)" [ref=e697]
+                    - generic [ref=e698]: Add to cart
+            - listitem [ref=e700]:
+              - generic [ref=e701]:
+                - generic [ref=e702]:
+                  - link "Amazon Basics 20000 mAh Power Bank | 22.5W Fast Charging | Dual Output & Input | Charge 3 Devices Simultaneously | for Smartp" [ref=e703] [cursor=pointer]:
+                    - /url: /Charging-Devices-Simultaneously-Smartphones-Speakers/dp/B0D96HMLYX/ref=sw_img_d_pb-allspark-smartwagon_5?_encoding=UTF8&pd_rd_i=B0D96HMLYX&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Amazon Basics 20000 mAh Power Bank | 22.5W Fast Charging | Dual Output & Input | Charge 3 Devices Simultaneously | for Smartp" [ref=e705]
+                  - generic [ref=e706]:
+                    - link "Amazon Basics 20000 mAh Power Bank | 22.5W Fast Charging | Dual Output & Input | Charge 3 Devices Simultaneously | for Smartphones, TWS Earbuds, Speakers, Tablets (Dark Blue)" [ref=e707] [cursor=pointer]:
+                      - /url: /Charging-Devices-Simultaneously-Smartphones-Speakers/dp/B0D96HMLYX/ref=sw_ttl_d_pb-allspark-smartwagon_5?_encoding=UTF8&pd_rd_i=B0D96HMLYX&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e708]:
+                        - generic [ref=e709]: Amazon Basics 20000 mAh Power Bank | 22.5W Fast Charging | Dual Output & Input | Charge 3 Devices Simultaneously | for Smartphones, TWS Earbuds, Speakers, Tablets (Dark Blue)
+                        - generic [ref=e710]: Amazon Basics 20000 mAh Power Bank | 22.5W Fast Ch…
+                    - link "4.0 out of 5 stars 1,783" [ref=e712] [cursor=pointer]:
+                      - /url: /product-reviews/B0D96HMLYX/ref=sw_cr_d_pb-allspark-smartwagon_5?_encoding=UTF8&pd_rd_i=B0D96HMLYX&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e714]: 4.0 out of 5 stars
+                      - text: 1,783
+                    - generic [ref=e715]:
+                      - generic [ref=e716]:
+                        - generic [ref=e717]: ₹1,099.00
+                        - generic [ref=e718]:
+                          - text: ₹
+                          - generic [ref=e719]:
+                            - text: 1,099
+                            - generic [ref=e720]: .
+                          - text: "00"
+                      - generic [ref=e721]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e722]:
+                          - generic [ref=e723]: Previous Price ₹3,999.00
+                          - text: ₹3,999.00
+                - generic [ref=e725]:
+                  - status [ref=e726]
+                  - generic [ref=e731] [cursor=pointer]:
+                    - button "Add to cart, Amazon Basics 20000 mAh Power Bank | 22.5W Fast Charging | Dual Output & Input | Charge 3 Devices Simultaneously | for Smartphones, TWS Earbuds, Speakers, Tablets (Dark Blue)" [ref=e732]
+                    - generic [ref=e733]: Add to cart
+            - listitem [ref=e735]:
+              - generic [ref=e736]:
+                - generic [ref=e737]:
+                  - link "Amazon Basics UPS for WiFi Router/Modem/Set top Box Devices. Supports 12Vdc, 2.5A Routers. Backup Upto 4 Hours, Current Surge" [ref=e738] [cursor=pointer]:
+                    - /url: /Devices-Supports-Routers-Discharge-Protection/dp/B0CTXCX22D/ref=sw_img_d_pb-allspark-smartwagon_6?_encoding=UTF8&pd_rd_i=B0CTXCX22D&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Amazon Basics UPS for WiFi Router/Modem/Set top Box Devices. Supports 12Vdc, 2.5A Routers. Backup Upto 4 Hours, Current Surge" [ref=e740]
+                  - generic [ref=e741]:
+                    - link "Amazon Basics UPS for WiFi Router/Modem/Set top Box Devices. Supports 12Vdc, 2.5A Routers. Backup Upto 4 Hours, Current Surge & Deep Discharge Protection (Black)" [ref=e742] [cursor=pointer]:
+                      - /url: /Devices-Supports-Routers-Discharge-Protection/dp/B0CTXCX22D/ref=sw_ttl_d_pb-allspark-smartwagon_6?_encoding=UTF8&pd_rd_i=B0CTXCX22D&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e744]: Amazon Basics UPS for WiFi Router/Modem/Set top Box Devices. Supports 12Vdc, 2.5A Routers. Backup Upto 4 Hours, Current Surge & Deep Discharge Protection (Black)
+                    - link "3.8 out of 5 stars 1,138" [ref=e746] [cursor=pointer]:
+                      - /url: /product-reviews/B0CTXCX22D/ref=sw_cr_d_pb-allspark-smartwagon_6?_encoding=UTF8&pd_rd_i=B0CTXCX22D&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e748]: 3.8 out of 5 stars
+                      - text: 1,138
+                    - generic [ref=e749]:
+                      - generic [ref=e750]:
+                        - generic [ref=e751]: ₹979.00
+                        - generic [ref=e752]:
+                          - text: ₹
+                          - generic [ref=e753]:
+                            - text: "979"
+                            - generic [ref=e754]: .
+                          - text: "00"
+                      - generic [ref=e755]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e756]:
+                          - generic [ref=e757]: Previous Price ₹2,999.00
+                          - text: ₹2,999.00
+                - generic [ref=e759]:
+                  - status [ref=e760]
+                  - generic [ref=e765] [cursor=pointer]:
+                    - button "Add to cart, Amazon Basics UPS for WiFi Router/Modem/Set top Box Devices. Supports 12Vdc, 2.5A Routers. Backup Upto 4 Hours, Current Surge & Deep Discharge Protection (Black)" [ref=e766]
+                    - generic [ref=e767]: Add to cart
+            - listitem [ref=e769]:
+              - generic [ref=e770]:
+                - generic [ref=e771]:
+                  - link "TechMaven Aluminium Lightweight Tripod Stand (48-134CM) Tripod with Mobile Holder 360° Rotation 3 Way Tilt |for DSLR, Camera," [ref=e772] [cursor=pointer]:
+                    - /url: /TechMaven-Aluminium-Lightweight-48cm-134CM-Smartphones/dp/B0FRLYS11N/ref=sw_img_d_pb-allspark-smartwagon_7?_encoding=UTF8&pd_rd_i=B0FRLYS11N&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "TechMaven Aluminium Lightweight Tripod Stand (48-134CM) Tripod with Mobile Holder 360° Rotation 3 Way Tilt |for DSLR, Camera," [ref=e774]
+                  - generic [ref=e775]:
+                    - link "TechMaven Aluminium Lightweight Tripod Stand (48-134CM) Tripod with Mobile Holder 360° Rotation 3 Way Tilt |for DSLR, Camera, GoPro, Smartphones with Phone Stand & Carry Bag (Copper Color)" [ref=e776] [cursor=pointer]:
+                      - /url: /TechMaven-Aluminium-Lightweight-48cm-134CM-Smartphones/dp/B0FRLYS11N/ref=sw_ttl_d_pb-allspark-smartwagon_7?_encoding=UTF8&pd_rd_i=B0FRLYS11N&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e778]: TechMaven Aluminium Lightweight Tripod Stand (48-134CM) Tripod with Mobile Holder 360° Rotation 3 Way Tilt |for DSLR, Camera, GoPro, Smartphones with Phone Stand & Carry Bag (Copper Color)
+                    - link "4.2 out of 5 stars 10" [ref=e780] [cursor=pointer]:
+                      - /url: /product-reviews/B0FRLYS11N/ref=sw_cr_d_pb-allspark-smartwagon_7?_encoding=UTF8&pd_rd_i=B0FRLYS11N&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e782]: 4.2 out of 5 stars
+                      - text: "10"
+                    - generic [ref=e784]: 58% off Limited time deal
+                    - generic [ref=e785]:
+                      - generic [ref=e786]:
+                        - generic [ref=e787]: ₹759.00
+                        - generic [ref=e788]:
+                          - text: ₹
+                          - generic [ref=e789]:
+                            - text: "759"
+                            - generic [ref=e790]: .
+                          - text: "00"
+                      - generic [ref=e791]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e792]:
+                          - generic [ref=e793]: Previous Price ₹1,799.00
+                          - text: ₹1,799.00
+                - generic [ref=e795]:
+                  - status [ref=e796]
+                  - generic [ref=e801] [cursor=pointer]:
+                    - button "Add to cart, TechMaven Aluminium Lightweight Tripod Stand (48-134CM) Tripod with Mobile Holder 360° Rotation 3 Way Tilt |for DSLR, Camera, GoPro, Smartphones with Phone Stand & Carry Bag (Copper Color)" [ref=e802]
+                    - generic [ref=e803]: Add to cart
+            - listitem [ref=e805]:
+              - generic [ref=e806]:
+                - generic [ref=e807]:
+                  - link "amazon basics 2.4GHz Wireless + Bluetooth 5.1 Mouse, Multi-Device Dual Mode Slim Rechargeable Silent Click Buttons Wireless B" [ref=e808] [cursor=pointer]:
+                    - /url: /amazon-basics-Multi-Device-Rechargeable-Adjustable/dp/B0CHS64DZ2/ref=sw_img_d_pb-allspark-smartwagon_8?_encoding=UTF8&pd_rd_i=B0CHS64DZ2&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "amazon basics 2.4GHz Wireless + Bluetooth 5.1 Mouse, Multi-Device Dual Mode Slim Rechargeable Silent Click Buttons Wireless B" [ref=e810]
+                  - generic [ref=e811]:
+                    - link "amazon basics 2.4GHz Wireless + Bluetooth 5.1 Mouse, Multi-Device Dual Mode Slim Rechargeable Silent Click Buttons Wireless Bluetooth Mouse, 3 Adjustable DPI" [ref=e812] [cursor=pointer]:
+                      - /url: /amazon-basics-Multi-Device-Rechargeable-Adjustable/dp/B0CHS64DZ2/ref=sw_ttl_d_pb-allspark-smartwagon_8?_encoding=UTF8&pd_rd_i=B0CHS64DZ2&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e814]: amazon basics 2.4GHz Wireless + Bluetooth 5.1 Mouse, Multi-Device Dual Mode Slim Rechargeable Silent Click Buttons Wireless Bluetooth Mouse, 3 Adjustable DPI
+                    - link "3.8 out of 5 stars 931" [ref=e816] [cursor=pointer]:
+                      - /url: /product-reviews/B0CHS64DZ2/ref=sw_cr_d_pb-allspark-smartwagon_8?_encoding=UTF8&pd_rd_i=B0CHS64DZ2&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e818]: 3.8 out of 5 stars
+                      - text: "931"
+                    - generic [ref=e819]:
+                      - generic [ref=e820]:
+                        - generic [ref=e821]: ₹529.00
+                        - generic [ref=e822]:
+                          - text: ₹
+                          - generic [ref=e823]:
+                            - text: "529"
+                            - generic [ref=e824]: .
+                          - text: "00"
+                      - generic [ref=e825]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e826]:
+                          - generic [ref=e827]: Previous Price ₹3,079.00
+                          - text: ₹3,079.00
+                - generic [ref=e829]:
+                  - status [ref=e830]
+                  - generic [ref=e835] [cursor=pointer]:
+                    - button "Add to cart, amazon basics 2.4GHz Wireless + Bluetooth 5.1 Mouse, Multi-Device Dual Mode Slim Rechargeable Silent Click Buttons Wireless Bluetooth Mouse, 3 Adjustable DPI" [ref=e836]
+                    - generic [ref=e837]: Add to cart
+            - listitem [ref=e839]:
+              - generic [ref=e840]:
+                - generic [ref=e841]:
+                  - link "Prodot USB Plug & Play Ergonomic Wired Mouse I High Resolution 1000 DPI Optical Sensor I 5M Key Press Life & Clickable Scroll" [ref=e842] [cursor=pointer]:
+                    - /url: /ProSeries-Ergonomic-Resolution-Clickable-Compatible/dp/B077KZ9S1V/ref=sw_img_d_pb-allspark-smartwagon_9?_encoding=UTF8&pd_rd_i=B077KZ9S1V&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Prodot USB Plug & Play Ergonomic Wired Mouse I High Resolution 1000 DPI Optical Sensor I 5M Key Press Life & Clickable Scroll" [ref=e844]
+                  - generic [ref=e845]:
+                    - link "Prodot USB Plug & Play Ergonomic Wired Mouse I High Resolution 1000 DPI Optical Sensor I 5M Key Press Life & Clickable Scroll Wheel I 1 Year Warranty I Compatible with Windows, iOS, Linux" [ref=e846] [cursor=pointer]:
+                      - /url: /ProSeries-Ergonomic-Resolution-Clickable-Compatible/dp/B077KZ9S1V/ref=sw_ttl_d_pb-allspark-smartwagon_9?_encoding=UTF8&pd_rd_i=B077KZ9S1V&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e848]: Prodot USB Plug & Play Ergonomic Wired Mouse I High Resolution 1000 DPI Optical Sensor I 5M Key Press Life & Clickable Scroll Wheel I 1 Year Warranty I Compatible with Windows, iOS, Linux
+                    - link "3.8 out of 5 stars 152" [ref=e850] [cursor=pointer]:
+                      - /url: /product-reviews/B077KZ9S1V/ref=sw_cr_d_pb-allspark-smartwagon_9?_encoding=UTF8&pd_rd_i=B077KZ9S1V&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e852]: 3.8 out of 5 stars
+                      - text: "152"
+                    - generic [ref=e854]: 34% off Limited time deal
+                    - generic [ref=e855]:
+                      - generic [ref=e856]:
+                        - generic [ref=e857]: ₹165.00
+                        - generic [ref=e858]:
+                          - text: ₹
+                          - generic [ref=e859]:
+                            - text: "165"
+                            - generic [ref=e860]: .
+                          - text: "00"
+                      - generic [ref=e861]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e862]:
+                          - generic [ref=e863]: Previous Price ₹250.00
+                          - text: ₹250.00
+                - generic [ref=e865]:
+                  - status [ref=e866]
+                  - generic [ref=e871] [cursor=pointer]:
+                    - button "Add to cart, Prodot USB Plug & Play Ergonomic Wired Mouse I High Resolution 1000 DPI Optical Sensor I 5M Key Press Life & Clickable Scroll Wheel I 1 Year Warranty I Compatible with Windows, iOS, Linux" [ref=e872]
+                    - generic [ref=e873]: Add to cart
+            - listitem [ref=e875]:
+              - generic [ref=e876]:
+                - generic [ref=e877]:
+                  - link "Prodot W15N WiFi Dongle 150 Mbps Mini Wireless Network USB Wi-Fi Adapter for PC Desktop Laptop Supports Windows, MAC OS, Linu" [ref=e878] [cursor=pointer]:
+                    - /url: /Wireless-Network-Adapter-Desktop-Supports/dp/B08W4BHC32/ref=sw_img_d_pb-allspark-smartwagon_10?_encoding=UTF8&pd_rd_i=B08W4BHC32&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Prodot W15N WiFi Dongle 150 Mbps Mini Wireless Network USB Wi-Fi Adapter for PC Desktop Laptop Supports Windows, MAC OS, Linu" [ref=e880]
+                  - generic [ref=e881]:
+                    - link "Prodot W15N WiFi Dongle 150 Mbps Mini Wireless Network USB Wi-Fi Adapter for PC Desktop Laptop Supports Windows, MAC OS, Linux ,USB 2.0, Black" [ref=e882] [cursor=pointer]:
+                      - /url: /Wireless-Network-Adapter-Desktop-Supports/dp/B08W4BHC32/ref=sw_ttl_d_pb-allspark-smartwagon_10?_encoding=UTF8&pd_rd_i=B08W4BHC32&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e884]: Prodot W15N WiFi Dongle 150 Mbps Mini Wireless Network USB Wi-Fi Adapter for PC Desktop Laptop Supports Windows, MAC OS, Linux ,USB 2.0, Black
+                    - link "3.8 out of 5 stars 23" [ref=e886] [cursor=pointer]:
+                      - /url: /product-reviews/B08W4BHC32/ref=sw_cr_d_pb-allspark-smartwagon_10?_encoding=UTF8&pd_rd_i=B08W4BHC32&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e888]: 3.8 out of 5 stars
+                      - text: "23"
+                    - generic [ref=e889]:
+                      - generic [ref=e890]:
+                        - generic [ref=e891]: ₹369.00
+                        - generic [ref=e892]:
+                          - text: ₹
+                          - generic [ref=e893]:
+                            - text: "369"
+                            - generic [ref=e894]: .
+                          - text: "00"
+                      - generic [ref=e895]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e896]:
+                          - generic [ref=e897]: Previous Price ₹400.00
+                          - text: ₹400.00
+                - generic [ref=e899]:
+                  - status [ref=e900]
+                  - generic [ref=e905] [cursor=pointer]:
+                    - button "Add to cart, Prodot W15N WiFi Dongle 150 Mbps Mini Wireless Network USB Wi-Fi Adapter for PC Desktop Laptop Supports Windows, MAC OS, Linux ,USB 2.0, Black" [ref=e906]
+                    - generic [ref=e907]: Add to cart
+            - listitem [ref=e909]:
+              - generic [ref=e910]:
+                - generic [ref=e911]:
+                  - link "Amazon Basics Clamber Pro+ - Foldable Step Ladder with Tool Tray, Firm Grip, 3 Steps (Aluminium Steps, Orange & Satin)" [ref=e912] [cursor=pointer]:
+                    - /url: /Amazon-Basics-Clamber-Pro-Aluminium/dp/B0BVZ79VB2/ref=sw_img_d_pb-allspark-smartwagon_11?_encoding=UTF8&pd_rd_i=B0BVZ79VB2&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Amazon Basics Clamber Pro+ - Foldable Step Ladder with Tool Tray, Firm Grip, 3 Steps (Aluminium Steps, Orange & Satin)" [ref=e914]
+                  - link "Amazon Basics Clamber Pro+ - Foldable Step Ladder with Tool Tray, Firm Grip, 3 Steps (Aluminium Steps, Orange & Satin)" [ref=e916] [cursor=pointer]:
+                    - /url: /Amazon-Basics-Clamber-Pro-Aluminium/dp/B0BVZ79VB2/ref=sw_ttl_d_pb-allspark-smartwagon_11?_encoding=UTF8&pd_rd_i=B0BVZ79VB2&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - generic [ref=e918]: Amazon Basics Clamber Pro+ - Foldable Step Ladder with Tool Tray, Firm Grip, 3 Steps (Aluminium Steps, Orange & Satin)
+                - link "See buying options" [ref=e923] [cursor=pointer]:
+                  - /url: /Amazon-Basics-Clamber-Pro-Aluminium/dp/B0BVZ79VB2/ref=sw_atc_o_d_pb-allspark-smartwagon_11?_encoding=UTF8&pd_rd_i=B0BVZ79VB2&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+            - listitem [ref=e924]:
+              - generic [ref=e925]:
+                - generic [ref=e926]:
+                  - link "ProDot Alive USB Wired Keyboard Floated Key I Plug & Play Technology I 103-Keys I Rupees Key I 1.2m Wired I Spill Resistant D" [ref=e927] [cursor=pointer]:
+                    - /url: /ProDot-Keyboard-Profile-Resistant-KB-Alive/dp/B0C5N8QBT8/ref=sw_img_d_pb-allspark-smartwagon_12?_encoding=UTF8&pd_rd_i=B0C5N8QBT8&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "ProDot Alive USB Wired Keyboard Floated Key I Plug & Play Technology I 103-Keys I Rupees Key I 1.2m Wired I Spill Resistant D" [ref=e929]
+                  - generic [ref=e930]:
+                    - link "ProDot Alive USB Wired Keyboard Floated Key I Plug & Play Technology I 103-Keys I Rupees Key I 1.2m Wired I Spill Resistant Design I Compatible with Windows, iOS, Linux with 1 Year Warranty" [ref=e931] [cursor=pointer]:
+                      - /url: /ProDot-Keyboard-Profile-Resistant-KB-Alive/dp/B0C5N8QBT8/ref=sw_ttl_d_pb-allspark-smartwagon_12?_encoding=UTF8&pd_rd_i=B0C5N8QBT8&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e933]: ProDot Alive USB Wired Keyboard Floated Key I Plug & Play Technology I 103-Keys I Rupees Key I 1.2m Wired I Spill Resistant Design I Compatible with Windows, iOS, Linux with 1 Year Warranty
+                    - link "4.0 out of 5 stars 228" [ref=e935] [cursor=pointer]:
+                      - /url: /product-reviews/B0C5N8QBT8/ref=sw_cr_d_pb-allspark-smartwagon_12?_encoding=UTF8&pd_rd_i=B0C5N8QBT8&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e937]: 4.0 out of 5 stars
+                      - text: "228"
+                    - generic [ref=e939]: 48% off Limited time deal
+                    - generic [ref=e940]:
+                      - generic [ref=e941]:
+                        - generic [ref=e942]: ₹259.00
+                        - generic [ref=e943]:
+                          - text: ₹
+                          - generic [ref=e944]:
+                            - text: "259"
+                            - generic [ref=e945]: .
+                          - text: "00"
+                      - generic [ref=e946]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e947]:
+                          - generic [ref=e948]: Previous Price ₹500.00
+                          - text: ₹500.00
+                - generic [ref=e950]:
+                  - status [ref=e951]
+                  - generic [ref=e956] [cursor=pointer]:
+                    - button "Add to cart, ProDot Alive USB Wired Keyboard Floated Key I Plug & Play Technology I 103-Keys I Rupees Key I 1.2m Wired I Spill Resistant Design I Compatible with Windows, iOS, Linux with 1 Year Warranty" [ref=e957]
+                    - generic [ref=e958]: Add to cart
+            - listitem [ref=e960]:
+              - generic [ref=e961]:
+                - generic [ref=e962]:
+                  - link "Consistent DDR3 Motherboard CMB H61 with NVME Slot" [ref=e963] [cursor=pointer]:
+                    - /url: /Consistent-MOTHERBOARD-CMB-H61/dp/B078QZ1X25/ref=sw_img_d_pb-allspark-smartwagon_13?_encoding=UTF8&pd_rd_i=B078QZ1X25&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Consistent DDR3 Motherboard CMB H61 with NVME Slot" [ref=e965]
+                  - generic [ref=e966]:
+                    - link "Consistent DDR3 Motherboard CMB H61 with NVME Slot" [ref=e967] [cursor=pointer]:
+                      - /url: /Consistent-MOTHERBOARD-CMB-H61/dp/B078QZ1X25/ref=sw_ttl_d_pb-allspark-smartwagon_13?_encoding=UTF8&pd_rd_i=B078QZ1X25&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e969]: Consistent DDR3 Motherboard CMB H61 with NVME Slot
+                    - link "3.6 out of 5 stars 907" [ref=e971] [cursor=pointer]:
+                      - /url: /product-reviews/B078QZ1X25/ref=sw_cr_d_pb-allspark-smartwagon_13?_encoding=UTF8&pd_rd_i=B078QZ1X25&pd_rd_w=5gmvP&content-id=amzn1.sym.ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_p=ef045fad-b611-4e1d-a9b8-8b9efe98d06e&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e973]: 3.6 out of 5 stars
+                      - text: "907"
+                    - generic [ref=e974]:
+                      - generic [ref=e975]:
+                        - generic [ref=e976]: ₹1,499.00
+                        - generic [ref=e977]:
+                          - text: ₹
+                          - generic [ref=e978]:
+                            - text: 1,499
+                            - generic [ref=e979]: .
+                          - text: "00"
+                      - generic [ref=e980]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e981]:
+                          - generic [ref=e982]: Previous Price ₹3,999.00
+                          - text: ₹3,999.00
+                - generic [ref=e984]:
+                  - status [ref=e985]
+                  - generic [ref=e990] [cursor=pointer]:
+                    - button "Add to cart, Consistent DDR3 Motherboard CMB H61 with NVME Slot" [ref=e991]
+                    - generic [ref=e992]: Add to cart
+      - group [ref=e998]:
+        - heading "Bargain recommendations" [level=1] [ref=e1001]
+        - group [ref=e1006]:
+          - list [ref=e1007]:
+            - listitem [ref=e1008]:
+              - generic [ref=e1009]:
+                - generic [ref=e1010]:
+                  - link "Portronics Toad 33 Wireless Mouse with 2.4 GHz Wireless Receiver, Adjustable Sensitivity, Ergonomic Design, for Laptops, Desk" [ref=e1011] [cursor=pointer]:
+                    - /url: /Portronics-Wireless-Adjustable-Sensitivity-Ergonomic/dp/B0DF7GW92Q/ref=sw_img_d_crh_rh_chashrec?_encoding=UTF8&pd_rd_i=B0DF7GW92Q&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Portronics Toad 33 Wireless Mouse with 2.4 GHz Wireless Receiver, Adjustable Sensitivity, Ergonomic Design, for Laptops, Desk" [ref=e1013]
+                  - generic [ref=e1014]:
+                    - link "Portronics Toad 33 Wireless Mouse with 2.4 GHz Wireless Receiver, Adjustable Sensitivity, Ergonomic Design, for Laptops, Desktops PC, Mac (Black)" [ref=e1015] [cursor=pointer]:
+                      - /url: /Portronics-Wireless-Adjustable-Sensitivity-Ergonomic/dp/B0DF7GW92Q/ref=sw_ttl_d_crh_rh_chashrec?_encoding=UTF8&pd_rd_i=B0DF7GW92Q&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1017]: Portronics Toad 33 Wireless Mouse with 2.4 GHz Wireless Receiver, Adjustable Sensitivity, Ergonomic Design, for Laptops, Desktops PC, Mac (Black)
+                    - link "3.9 out of 5 stars 646" [ref=e1019] [cursor=pointer]:
+                      - /url: /product-reviews/B0DF7GW92Q/ref=sw_cr_d_crh_rh_chashrec?_encoding=UTF8&pd_rd_i=B0DF7GW92Q&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1021]: 3.9 out of 5 stars
+                      - text: "646"
+                    - generic [ref=e1022]:
+                      - generic [ref=e1023]:
+                        - generic [ref=e1024]: ₹326.00
+                        - generic [ref=e1025]:
+                          - text: ₹
+                          - generic [ref=e1026]:
+                            - text: "326"
+                            - generic [ref=e1027]: .
+                          - text: "00"
+                      - generic [ref=e1028]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1029]:
+                          - generic [ref=e1030]: Previous Price ₹499.00
+                          - text: ₹499.00
+                - generic [ref=e1032]:
+                  - status [ref=e1033]
+                  - generic [ref=e1038] [cursor=pointer]:
+                    - button "Add to cart, Portronics Toad 33 Wireless Mouse with 2.4 GHz Wireless Receiver, Adjustable Sensitivity, Ergonomic Design, for Laptops, Desktops PC, Mac (Black)" [ref=e1039]
+                    - generic [ref=e1040]: Add to cart
+            - listitem [ref=e1042]:
+              - generic [ref=e1043]:
+                - generic [ref=e1044]:
+                  - link "Zebronics Zeb-Pluto 2.0 Multimedia Speaker with Aux Connectivity,USB Powered and Volume Control" [ref=e1045] [cursor=pointer]:
+                    - /url: /Zebronics-Zeb-Pluto-Multimedia-Speaker-Connectivity/dp/B07ZZCBQZD/ref=sw_img_d_crh_rh_chashrec_1?_encoding=UTF8&pd_rd_i=B07ZZCBQZD&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Zebronics Zeb-Pluto 2.0 Multimedia Speaker with Aux Connectivity,USB Powered and Volume Control" [ref=e1047]
+                  - generic [ref=e1048]:
+                    - link "Zebronics Zeb-Pluto 2.0 Multimedia Speaker with Aux Connectivity,USB Powered and Volume Control" [ref=e1049] [cursor=pointer]:
+                      - /url: /Zebronics-Zeb-Pluto-Multimedia-Speaker-Connectivity/dp/B07ZZCBQZD/ref=sw_ttl_d_crh_rh_chashrec_1?_encoding=UTF8&pd_rd_i=B07ZZCBQZD&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1051]: Zebronics Zeb-Pluto 2.0 Multimedia Speaker with Aux Connectivity,USB Powered and Volume Control
+                    - link "4.1 out of 5 stars 5,480" [ref=e1053] [cursor=pointer]:
+                      - /url: /product-reviews/B07ZZCBQZD/ref=sw_cr_d_crh_rh_chashrec_1?_encoding=UTF8&pd_rd_i=B07ZZCBQZD&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1055]: 4.1 out of 5 stars
+                      - text: 5,480
+                    - generic [ref=e1056]:
+                      - generic [ref=e1057]:
+                        - generic [ref=e1058]: ₹329.00
+                        - generic [ref=e1059]:
+                          - text: ₹
+                          - generic [ref=e1060]:
+                            - text: "329"
+                            - generic [ref=e1061]: .
+                          - text: "00"
+                      - generic [ref=e1062]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1063]:
+                          - generic [ref=e1064]: Previous Price ₹599.00
+                          - text: ₹599.00
+                - generic [ref=e1066]:
+                  - status [ref=e1067]
+                  - generic [ref=e1072] [cursor=pointer]:
+                    - button "Add to cart, Zebronics Zeb-Pluto 2.0 Multimedia Speaker with Aux Connectivity,USB Powered and Volume Control" [ref=e1073]
+                    - generic [ref=e1074]: Add to cart
+            - listitem [ref=e1076]:
+              - generic [ref=e1077]:
+                - generic [ref=e1078]:
+                  - link "SKYCELL Caddy for SSD & HDD for Optical Bay 2nd Hard Drive Caddy, Caddy 9.5mm for Laptop" [ref=e1079] [cursor=pointer]:
+                    - /url: /SKYCELL-Caddy-Optical-Drive-Laptop/dp/B0C7WN82QH/ref=sw_img_d_crh_rh_chashrec_2?_encoding=UTF8&pd_rd_i=B0C7WN82QH&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "SKYCELL Caddy for SSD & HDD for Optical Bay 2nd Hard Drive Caddy, Caddy 9.5mm for Laptop" [ref=e1081]
+                  - generic [ref=e1082]:
+                    - link "SKYCELL Caddy for SSD & HDD for Optical Bay 2nd Hard Drive Caddy, Caddy 9.5mm for Laptop" [ref=e1083] [cursor=pointer]:
+                      - /url: /SKYCELL-Caddy-Optical-Drive-Laptop/dp/B0C7WN82QH/ref=sw_ttl_d_crh_rh_chashrec_2?_encoding=UTF8&pd_rd_i=B0C7WN82QH&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1085]: SKYCELL Caddy for SSD & HDD for Optical Bay 2nd Hard Drive Caddy, Caddy 9.5mm for Laptop
+                    - link "4.0 out of 5 stars 182" [ref=e1087] [cursor=pointer]:
+                      - /url: /product-reviews/B0C7WN82QH/ref=sw_cr_d_crh_rh_chashrec_2?_encoding=UTF8&pd_rd_i=B0C7WN82QH&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1089]: 4.0 out of 5 stars
+                      - text: "182"
+                    - generic [ref=e1090]:
+                      - generic [ref=e1091]:
+                        - generic [ref=e1092]: ₹209.00
+                        - generic [ref=e1093]:
+                          - text: ₹
+                          - generic [ref=e1094]:
+                            - text: "209"
+                            - generic [ref=e1095]: .
+                          - text: "00"
+                      - generic [ref=e1096]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1097]:
+                          - generic [ref=e1098]: Previous Price ₹599.00
+                          - text: ₹599.00
+                - generic [ref=e1100]:
+                  - status [ref=e1101]
+                  - generic [ref=e1106] [cursor=pointer]:
+                    - button "Add to cart, SKYCELL Caddy for SSD & HDD for Optical Bay 2nd Hard Drive Caddy, Caddy 9.5mm for Laptop" [ref=e1107]
+                    - generic [ref=e1108]: Add to cart
+            - listitem [ref=e1110]:
+              - generic [ref=e1111]:
+                - generic [ref=e1112]:
+                  - link "Portronics Toad 103 Wired Optical Mouse with 2400 DPI, Plug & Play, Ambidextrous, Hi-Optical Tracking, 1.5M Cable Length, 30" [ref=e1113] [cursor=pointer]:
+                    - /url: /Portronics-Ambidextrous-Hi-Optical-Ergonomic-Comfortable/dp/B0F5Q9QTH1/ref=sw_img_d_crh_rh_chashrec_3?_encoding=UTF8&pd_rd_i=B0F5Q9QTH1&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Portronics Toad 103 Wired Optical Mouse with 2400 DPI, Plug & Play, Ambidextrous, Hi-Optical Tracking, 1.5M Cable Length, 30" [ref=e1115]
+                  - generic [ref=e1116]:
+                    - link "Portronics Toad 103 Wired Optical Mouse with 2400 DPI, Plug & Play, Ambidextrous, Hi-Optical Tracking, 1.5M Cable Length, 30 Lakhs Click Life, Ergonomic Mouse for Comfortable All-Day Grip (Black)" [ref=e1117] [cursor=pointer]:
+                      - /url: /Portronics-Ambidextrous-Hi-Optical-Ergonomic-Comfortable/dp/B0F5Q9QTH1/ref=sw_ttl_d_crh_rh_chashrec_3?_encoding=UTF8&pd_rd_i=B0F5Q9QTH1&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1119]: Portronics Toad 103 Wired Optical Mouse with 2400 DPI, Plug & Play, Ambidextrous, Hi-Optical Tracking, 1.5M Cable Length, 30 Lakhs Click Life, Ergonomic Mouse for Comfortable All-Day Grip (Black)
+                    - link "4.2 out of 5 stars 559" [ref=e1121] [cursor=pointer]:
+                      - /url: /product-reviews/B0F5Q9QTH1/ref=sw_cr_d_crh_rh_chashrec_3?_encoding=UTF8&pd_rd_i=B0F5Q9QTH1&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1123]: 4.2 out of 5 stars
+                      - text: "559"
+                    - generic [ref=e1124]:
+                      - generic [ref=e1125]:
+                        - generic [ref=e1126]: ₹160.00
+                        - generic [ref=e1127]:
+                          - text: ₹
+                          - generic [ref=e1128]:
+                            - text: "160"
+                            - generic [ref=e1129]: .
+                          - text: "00"
+                      - generic [ref=e1130]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1131]:
+                          - generic [ref=e1132]: Previous Price ₹499.00
+                          - text: ₹499.00
+                - generic [ref=e1134]:
+                  - status [ref=e1135]
+                  - generic [ref=e1140] [cursor=pointer]:
+                    - button "Add to cart, Portronics Toad 103 Wired Optical Mouse with 2400 DPI, Plug & Play, Ambidextrous, Hi-Optical Tracking, 1.5M Cable Length, 30 Lakhs Click Life, Ergonomic Mouse for Comfortable All-Day Grip (Black)" [ref=e1141]
+                    - generic [ref=e1142]: Add to cart
+            - listitem [ref=e1144]:
+              - generic [ref=e1145]:
+                - generic [ref=e1146]:
+                  - link "ZEBRONICS Dash Pro 2.4GHz Wireless Mouse, Upto 1600 DPI, 3 Level DPI, High Precision, Power Saving Mode, Comfortable & Lightw" [ref=e1147] [cursor=pointer]:
+                    - /url: /ZEBRONICS-Pro-Precision-Comfortable-Lightweight/dp/B0DDTL9PB6/ref=sw_img_d_crh_rh_chashrec_4?_encoding=UTF8&pd_rd_i=B0DDTL9PB6&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "ZEBRONICS Dash Pro 2.4GHz Wireless Mouse, Upto 1600 DPI, 3 Level DPI, High Precision, Power Saving Mode, Comfortable & Lightw" [ref=e1149]
+                  - generic [ref=e1150]:
+                    - link "ZEBRONICS Dash Pro 2.4GHz Wireless Mouse, Upto 1600 DPI, 3 Level DPI, High Precision, Power Saving Mode, Comfortable & Lightweight, for Mac | Laptop | Computer (Black)" [ref=e1151] [cursor=pointer]:
+                      - /url: /ZEBRONICS-Pro-Precision-Comfortable-Lightweight/dp/B0DDTL9PB6/ref=sw_ttl_d_crh_rh_chashrec_4?_encoding=UTF8&pd_rd_i=B0DDTL9PB6&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1153]: ZEBRONICS Dash Pro 2.4GHz Wireless Mouse, Upto 1600 DPI, 3 Level DPI, High Precision, Power Saving Mode, Comfortable & Lightweight, for Mac | Laptop | Computer (Black)
+                    - link "3.7 out of 5 stars 1,290" [ref=e1155] [cursor=pointer]:
+                      - /url: /product-reviews/B0DDTL9PB6/ref=sw_cr_d_crh_rh_chashrec_4?_encoding=UTF8&pd_rd_i=B0DDTL9PB6&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1157]: 3.7 out of 5 stars
+                      - text: 1,290
+                    - generic [ref=e1159]: 67% off Limited time deal
+                    - generic [ref=e1160]:
+                      - generic [ref=e1161]:
+                        - generic [ref=e1162]: ₹199.00
+                        - generic [ref=e1163]:
+                          - text: ₹
+                          - generic [ref=e1164]:
+                            - text: "199"
+                            - generic [ref=e1165]: .
+                          - text: "00"
+                      - generic [ref=e1166]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1167]:
+                          - generic [ref=e1168]: Previous Price ₹599.00
+                          - text: ₹599.00
+                - generic [ref=e1170]:
+                  - status [ref=e1171]
+                  - generic [ref=e1176] [cursor=pointer]:
+                    - button "Add to cart, ZEBRONICS Dash Pro 2.4GHz Wireless Mouse, Upto 1600 DPI, 3 Level DPI, High Precision, Power Saving Mode, Comfortable & Lightweight, for Mac | Laptop | Computer (Black)" [ref=e1177]
+                    - generic [ref=e1178]: Add to cart
+            - listitem [ref=e1180]:
+              - generic [ref=e1181]:
+                - generic [ref=e1182]:
+                  - link "ZEBRONICS Zeb-Comfort Wired USB Mouse, 3-Button, 1000 DPI Optical Sensor, Plug & Play, for Windows/Mac, Black" [ref=e1183] [cursor=pointer]:
+                    - /url: /ZEBRONICS-Zeb-Comfort-3-Button-Optical-Windows/dp/B079Y6JZC8/ref=sw_img_d_crh_rh_chashrec_5?_encoding=UTF8&pd_rd_i=B079Y6JZC8&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "ZEBRONICS Zeb-Comfort Wired USB Mouse, 3-Button, 1000 DPI Optical Sensor, Plug & Play, for Windows/Mac, Black" [ref=e1185]
+                  - generic [ref=e1186]:
+                    - link "ZEBRONICS Zeb-Comfort Wired USB Mouse, 3-Button, 1000 DPI Optical Sensor, Plug & Play, for Windows/Mac, Black" [ref=e1187] [cursor=pointer]:
+                      - /url: /ZEBRONICS-Zeb-Comfort-3-Button-Optical-Windows/dp/B079Y6JZC8/ref=sw_ttl_d_crh_rh_chashrec_5?_encoding=UTF8&pd_rd_i=B079Y6JZC8&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1189]: ZEBRONICS Zeb-Comfort Wired USB Mouse, 3-Button, 1000 DPI Optical Sensor, Plug & Play, for Windows/Mac, Black
+                    - link "4.0 out of 5 stars 9,990" [ref=e1191] [cursor=pointer]:
+                      - /url: /product-reviews/B079Y6JZC8/ref=sw_cr_d_crh_rh_chashrec_5?_encoding=UTF8&pd_rd_i=B079Y6JZC8&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1193]: 4.0 out of 5 stars
+                      - text: 9,990
+                    - generic [ref=e1195]: 67% off Limited time deal
+                    - generic [ref=e1196]:
+                      - generic [ref=e1197]:
+                        - generic [ref=e1198]: ₹99.00
+                        - generic [ref=e1199]:
+                          - text: ₹
+                          - generic [ref=e1200]:
+                            - text: "99"
+                            - generic [ref=e1201]: .
+                          - text: "00"
+                      - generic [ref=e1202]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1203]:
+                          - generic [ref=e1204]: Previous Price ₹299.00
+                          - text: ₹299.00
+                - generic [ref=e1206]:
+                  - status [ref=e1207]
+                  - generic [ref=e1212] [cursor=pointer]:
+                    - button "Add to cart, ZEBRONICS Zeb-Comfort Wired USB Mouse, 3-Button, 1000 DPI Optical Sensor, Plug & Play, for Windows/Mac, Black" [ref=e1213]
+                    - generic [ref=e1214]: Add to cart
+            - listitem [ref=e1216]:
+              - generic [ref=e1217]:
+                - generic [ref=e1218]:
+                  - link "STRIFF Laptop Tabletop Stand, Adjustable Laptop Computer Stand, Multi-Angle, Portable Foldable Laptop Riser Notebook Holder C" [ref=e1219] [cursor=pointer]:
+                    - /url: /STRIFF-Tabletop-Adjustable-Multi-Angle-Compatible/dp/B08PFSZ7FH/ref=sw_img_d_crh_rh_chashrec_6?_encoding=UTF8&pd_rd_i=B08PFSZ7FH&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "STRIFF Laptop Tabletop Stand, Adjustable Laptop Computer Stand, Multi-Angle, Portable Foldable Laptop Riser Notebook Holder C" [ref=e1221]
+                  - generic [ref=e1222]:
+                    - link "STRIFF Laptop Tabletop Stand, Adjustable Laptop Computer Stand, Multi-Angle, Portable Foldable Laptop Riser Notebook Holder Compatible for 9 to 15.6 Laptops (Black)" [ref=e1223] [cursor=pointer]:
+                      - /url: /STRIFF-Tabletop-Adjustable-Multi-Angle-Compatible/dp/B08PFSZ7FH/ref=sw_ttl_d_crh_rh_chashrec_6?_encoding=UTF8&pd_rd_i=B08PFSZ7FH&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1225]: STRIFF Laptop Tabletop Stand, Adjustable Laptop Computer Stand, Multi-Angle, Portable Foldable Laptop Riser Notebook Holder Compatible for 9 to 15.6 Laptops (Black)
+                    - link "4.2 out of 5 stars 3,329" [ref=e1227] [cursor=pointer]:
+                      - /url: /product-reviews/B08PFSZ7FH/ref=sw_cr_d_crh_rh_chashrec_6?_encoding=UTF8&pd_rd_i=B08PFSZ7FH&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1229]: 4.2 out of 5 stars
+                      - text: 3,329
+                    - generic [ref=e1230]:
+                      - generic [ref=e1231]:
+                        - generic [ref=e1232]: ₹199.00
+                        - generic [ref=e1233]:
+                          - text: ₹
+                          - generic [ref=e1234]:
+                            - text: "199"
+                            - generic [ref=e1235]: .
+                          - text: "00"
+                      - generic [ref=e1236]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1237]:
+                          - generic [ref=e1238]: Previous Price ₹1,499.00
+                          - text: ₹1,499.00
+                - generic [ref=e1240]:
+                  - status [ref=e1241]
+                  - generic [ref=e1246] [cursor=pointer]:
+                    - button "Add to cart, STRIFF Laptop Tabletop Stand, Adjustable Laptop Computer Stand, Multi-Angle, Portable Foldable Laptop Riser Notebook Holder Compatible for 9 to 15.6 Laptops (Black)" [ref=e1247]
+                    - generic [ref=e1248]: Add to cart
+            - listitem [ref=e1250]:
+              - generic [ref=e1251]:
+                - generic [ref=e1252]:
+                  - link "ZEBRONICS 210HB, 4 in 1 USB Hub, USB 3.0, 4 USB Ports, Speeds Upto 5 Gbps, Metal Body, for Mac | Laptops" [ref=e1253] [cursor=pointer]:
+                    - /url: /ZEBRONICS-210HB-Ports-Speeds-Laptops/dp/B0F8J84FGQ/ref=sw_img_d_crh_rh_chashrec_7?_encoding=UTF8&pd_rd_i=B0F8J84FGQ&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "ZEBRONICS 210HB, 4 in 1 USB Hub, USB 3.0, 4 USB Ports, Speeds Upto 5 Gbps, Metal Body, for Mac | Laptops" [ref=e1255]
+                  - generic [ref=e1256]:
+                    - link "ZEBRONICS 210HB, 4 in 1 USB Hub, USB 3.0, 4 USB Ports, Speeds Upto 5 Gbps, Metal Body, for Mac | Laptops" [ref=e1257] [cursor=pointer]:
+                      - /url: /ZEBRONICS-210HB-Ports-Speeds-Laptops/dp/B0F8J84FGQ/ref=sw_ttl_d_crh_rh_chashrec_7?_encoding=UTF8&pd_rd_i=B0F8J84FGQ&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1259]: ZEBRONICS 210HB, 4 in 1 USB Hub, USB 3.0, 4 USB Ports, Speeds Upto 5 Gbps, Metal Body, for Mac | Laptops
+                    - link "4.1 out of 5 stars 508" [ref=e1261] [cursor=pointer]:
+                      - /url: /product-reviews/B0F8J84FGQ/ref=sw_cr_d_crh_rh_chashrec_7?_encoding=UTF8&pd_rd_i=B0F8J84FGQ&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1263]: 4.1 out of 5 stars
+                      - text: "508"
+                    - generic [ref=e1264]:
+                      - generic [ref=e1265]:
+                        - generic [ref=e1266]: ₹179.00
+                        - generic [ref=e1267]:
+                          - text: ₹
+                          - generic [ref=e1268]:
+                            - text: "179"
+                            - generic [ref=e1269]: .
+                          - text: "00"
+                      - generic [ref=e1270]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1271]:
+                          - generic [ref=e1272]: Previous Price ₹899.00
+                          - text: ₹899.00
+                - generic [ref=e1274]:
+                  - status [ref=e1275]
+                  - generic [ref=e1280] [cursor=pointer]:
+                    - button "Add to cart, ZEBRONICS 210HB, 4 in 1 USB Hub, USB 3.0, 4 USB Ports, Speeds Upto 5 Gbps, Metal Body, for Mac | Laptops" [ref=e1281]
+                    - generic [ref=e1282]: Add to cart
+            - listitem [ref=e1284]:
+              - generic [ref=e1285]:
+                - generic [ref=e1286]:
+                  - link "Tizum Mouse Pad Computer Mouse Mat with Anti-Slip Rubber Base & Smooth Mouse Control with Spill-Resistant Surface for Laptop," [ref=e1287] [cursor=pointer]:
+                    - /url: /Tizum-Mouse-Pad-Anti-Slip-Spill-Resistant/dp/B08QJJCY2Q/ref=sw_img_d_crh_rh_chashrec_8?_encoding=UTF8&pd_rd_i=B08QJJCY2Q&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Tizum Mouse Pad Computer Mouse Mat with Anti-Slip Rubber Base & Smooth Mouse Control with Spill-Resistant Surface for Laptop," [ref=e1289]
+                  - generic [ref=e1290]:
+                    - link "Tizum Mouse Pad Computer Mouse Mat with Anti-Slip Rubber Base & Smooth Mouse Control with Spill-Resistant Surface for Laptop, Notebook, MacBook Pro, Gaming Computer (9.4*7.9 Inches), Beta (Multicolor)" [ref=e1291] [cursor=pointer]:
+                      - /url: /Tizum-Mouse-Pad-Anti-Slip-Spill-Resistant/dp/B08QJJCY2Q/ref=sw_ttl_d_crh_rh_chashrec_8?_encoding=UTF8&pd_rd_i=B08QJJCY2Q&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1293]: Tizum Mouse Pad Computer Mouse Mat with Anti-Slip Rubber Base & Smooth Mouse Control with Spill-Resistant Surface for Laptop, Notebook, MacBook Pro, Gaming Computer (9.4*7.9 Inches), Beta (Multicolor)
+                    - link "4.4 out of 5 stars 8,247" [ref=e1295] [cursor=pointer]:
+                      - /url: /product-reviews/B08QJJCY2Q/ref=sw_cr_d_crh_rh_chashrec_8?_encoding=UTF8&pd_rd_i=B08QJJCY2Q&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1297]: 4.4 out of 5 stars
+                      - text: 8,247
+                    - generic [ref=e1298]:
+                      - generic [ref=e1299]:
+                        - generic [ref=e1300]: ₹89.00
+                        - generic [ref=e1301]:
+                          - text: ₹
+                          - generic [ref=e1302]:
+                            - text: "89"
+                            - generic [ref=e1303]: .
+                          - text: "00"
+                      - generic [ref=e1304]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1305]:
+                          - generic [ref=e1306]: Previous Price ₹299.00
+                          - text: ₹299.00
+                - generic [ref=e1308]:
+                  - status [ref=e1309]
+                  - generic [ref=e1314] [cursor=pointer]:
+                    - button "Add to cart, Tizum Mouse Pad Computer Mouse Mat with Anti-Slip Rubber Base & Smooth Mouse Control with Spill-Resistant Surface for Laptop, Notebook, MacBook Pro, Gaming Computer (9.4*7.9 Inches), Beta (Multicolor)" [ref=e1315]
+                    - generic [ref=e1316]: Add to cart
+            - listitem [ref=e1318]:
+              - generic [ref=e1319]:
+                - generic [ref=e1320]:
+                  - link "STRIFF MoRide1 Bike Phone Mount with 360° Rotational, Strong Hold for Bike/Motorcycle Compatible with 4.7 to 6.8 inch Devices" [ref=e1321] [cursor=pointer]:
+                    - /url: /STRIFF-MoRide-nevigation-Locking-Rotation/dp/B0DT4HXKMB/ref=sw_img_d_crh_rh_chashrec_9?_encoding=UTF8&pd_rd_i=B0DT4HXKMB&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "STRIFF MoRide1 Bike Phone Mount with 360° Rotational, Strong Hold for Bike/Motorcycle Compatible with 4.7 to 6.8 inch Devices" [ref=e1323]
+                  - generic [ref=e1324]:
+                    - link "STRIFF MoRide1 Bike Phone Mount with 360° Rotational, Strong Hold for Bike/Motorcycle Compatible with 4.7 to 6.8 inch Devices(Black)" [ref=e1325] [cursor=pointer]:
+                      - /url: /STRIFF-MoRide-nevigation-Locking-Rotation/dp/B0DT4HXKMB/ref=sw_ttl_d_crh_rh_chashrec_9?_encoding=UTF8&pd_rd_i=B0DT4HXKMB&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1327]: STRIFF MoRide1 Bike Phone Mount with 360° Rotational, Strong Hold for Bike/Motorcycle Compatible with 4.7 to 6.8 inch Devices(Black)
+                    - link "4.1 out of 5 stars 1,131" [ref=e1329] [cursor=pointer]:
+                      - /url: /product-reviews/B0DT4HXKMB/ref=sw_cr_d_crh_rh_chashrec_9?_encoding=UTF8&pd_rd_i=B0DT4HXKMB&pd_rd_w=KeFtz&content-id=amzn1.sym.cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_p=cebf3f1d-1019-4a7d-8086-1e21c40e47c6&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1331]: 4.1 out of 5 stars
+                      - text: 1,131
+                    - generic [ref=e1332]:
+                      - generic [ref=e1333]:
+                        - generic [ref=e1334]: ₹199.00
+                        - generic [ref=e1335]:
+                          - text: ₹
+                          - generic [ref=e1336]:
+                            - text: "199"
+                            - generic [ref=e1337]: .
+                          - text: "00"
+                      - generic [ref=e1338]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1339]:
+                          - generic [ref=e1340]: Previous Price ₹999.00
+                          - text: ₹999.00
+                - generic [ref=e1342]:
+                  - status [ref=e1343]
+                  - generic [ref=e1348] [cursor=pointer]:
+                    - button "Add to cart, STRIFF MoRide1 Bike Phone Mount with 360° Rotational, Strong Hold for Bike/Motorcycle Compatible with 4.7 to 6.8 inch Devices(Black)" [ref=e1349]
+                    - generic [ref=e1350]: Add to cart
+      - group [ref=e1356]:
+        - heading "Deals for you" [level=1] [ref=e1359]
+        - group [ref=e1364]:
+          - list [ref=e1365]:
+            - listitem [ref=e1366]:
+              - generic [ref=e1367]:
+                - generic [ref=e1368]:
+                  - link "ZEBRONICS Glassy 10 Wireless Mouse, Dual Mode (2.4GHz + BT), Upto 1600 DPI, Silent Operation, 5 Buttons, Type-C Charging, Com" [ref=e1369] [cursor=pointer]:
+                    - /url: /ZEBRONICS-Wireless-Operation-Comfortable-Ergonomic/dp/B0F88GT83S/ref=sw_img_d_pd_sw_d_sw_dealz_dfy?_encoding=UTF8&pd_rd_i=B0F88GT83S&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "ZEBRONICS Glassy 10 Wireless Mouse, Dual Mode (2.4GHz + BT), Upto 1600 DPI, Silent Operation, 5 Buttons, Type-C Charging, Com" [ref=e1371]
+                  - generic [ref=e1372]:
+                    - link "ZEBRONICS Glassy 10 Wireless Mouse, Dual Mode (2.4GHz + BT), Upto 1600 DPI, Silent Operation, 5 Buttons, Type-C Charging, Comfortable & Ergonomic, for Mac | Laptop | Computer (Black)" [ref=e1373] [cursor=pointer]:
+                      - /url: /ZEBRONICS-Wireless-Operation-Comfortable-Ergonomic/dp/B0F88GT83S/ref=sw_ttl_d_pd_sw_d_sw_dealz_dfy?_encoding=UTF8&pd_rd_i=B0F88GT83S&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1375]: ZEBRONICS Glassy 10 Wireless Mouse, Dual Mode (2.4GHz + BT), Upto 1600 DPI, Silent Operation, 5 Buttons, Type-C Charging, Comfortable & Ergonomic, for Mac | Laptop | Computer (Black)
+                    - link "3.4 out of 5 stars 647" [ref=e1377] [cursor=pointer]:
+                      - /url: /product-reviews/B0F88GT83S/ref=sw_cr_d_pd_sw_d_sw_dealz_dfy?_encoding=UTF8&pd_rd_i=B0F88GT83S&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1379]: 3.4 out of 5 stars
+                      - text: "647"
+                    - generic [ref=e1381]: 60% off Limited time deal
+                    - generic [ref=e1382]:
+                      - generic [ref=e1383]:
+                        - generic [ref=e1384]: ₹399.00
+                        - generic [ref=e1385]:
+                          - text: ₹
+                          - generic [ref=e1386]:
+                            - text: "399"
+                            - generic [ref=e1387]: .
+                          - text: "00"
+                      - generic [ref=e1388]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1389]:
+                          - generic [ref=e1390]: Previous Price ₹999.00
+                          - text: ₹999.00
+                - generic [ref=e1392]:
+                  - status [ref=e1393]
+                  - generic [ref=e1398] [cursor=pointer]:
+                    - button "Add to cart, ZEBRONICS Glassy 10 Wireless Mouse, Dual Mode (2.4GHz + BT), Upto 1600 DPI, Silent Operation, 5 Buttons, Type-C Charging, Comfortable & Ergonomic, for Mac | Laptop | Computer (Black)" [ref=e1399]
+                    - generic [ref=e1400]: Add to cart
+            - listitem [ref=e1402]:
+              - generic [ref=e1403]:
+                - generic [ref=e1404]:
+                  - link "Zebronics Zeb-Power Wired USB Mouse, 3-Button, 1200 DPI Optical Sensor, Plug & Play, for Windows/Mac" [ref=e1405] [cursor=pointer]:
+                    - /url: /Zebronics-Zeb-Power-Wired-Mouse-Black/dp/B07L9FW9GF/ref=sw_img_d_pd_sw_d_sw_dealz_dfy_1?_encoding=UTF8&pd_rd_i=B07L9FW9GF&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Zebronics Zeb-Power Wired USB Mouse, 3-Button, 1200 DPI Optical Sensor, Plug & Play, for Windows/Mac" [ref=e1407]
+                  - generic [ref=e1408]:
+                    - link "Zebronics Zeb-Power Wired USB Mouse, 3-Button, 1200 DPI Optical Sensor, Plug & Play, for Windows/Mac" [ref=e1409] [cursor=pointer]:
+                      - /url: /Zebronics-Zeb-Power-Wired-Mouse-Black/dp/B07L9FW9GF/ref=sw_ttl_d_pd_sw_d_sw_dealz_dfy_1?_encoding=UTF8&pd_rd_i=B07L9FW9GF&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1411]: Zebronics Zeb-Power Wired USB Mouse, 3-Button, 1200 DPI Optical Sensor, Plug & Play, for Windows/Mac
+                    - link "3.9 out of 5 stars 13,951" [ref=e1413] [cursor=pointer]:
+                      - /url: /product-reviews/B07L9FW9GF/ref=sw_cr_d_pd_sw_d_sw_dealz_dfy_1?_encoding=UTF8&pd_rd_i=B07L9FW9GF&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1415]: 3.9 out of 5 stars
+                      - text: 13,951
+                    - generic [ref=e1417]: 48% off Limited time deal
+                    - generic [ref=e1418]:
+                      - generic [ref=e1419]:
+                        - generic [ref=e1420]: ₹129.00
+                        - generic [ref=e1421]:
+                          - text: ₹
+                          - generic [ref=e1422]:
+                            - text: "129"
+                            - generic [ref=e1423]: .
+                          - text: "00"
+                      - generic [ref=e1424]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1425]:
+                          - generic [ref=e1426]: Previous Price ₹249.00
+                          - text: ₹249.00
+                - generic [ref=e1428]:
+                  - status [ref=e1429]
+                  - generic [ref=e1434] [cursor=pointer]:
+                    - button "Add to cart, Zebronics Zeb-Power Wired USB Mouse, 3-Button, 1200 DPI Optical Sensor, Plug & Play, for Windows/Mac" [ref=e1435]
+                    - generic [ref=e1436]: Add to cart
+            - listitem [ref=e1438]:
+              - generic [ref=e1439]:
+                - generic [ref=e1440]:
+                  - link "Amkette Epic S Rechargeable Wireless Mouse/Bluetooth Mouse |2 BT + 2.4GHz | Up to 3200 DPI Instant S201 Sensor | 500mAh Type-" [ref=e1441] [cursor=pointer]:
+                    - /url: /Amkette-Epic-Rechargeable-Wireless-Bluetooth/dp/B0GPCX54B9/ref=sw_img_d_pd_sw_d_sw_dealz_dfy_2?_encoding=UTF8&pd_rd_i=B0GPCX54B9&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Amkette Epic S Rechargeable Wireless Mouse/Bluetooth Mouse |2 BT + 2.4GHz | Up to 3200 DPI Instant S201 Sensor | 500mAh Type-" [ref=e1443]
+                  - generic [ref=e1444]:
+                    - link "Amkette Epic S Rechargeable Wireless Mouse/Bluetooth Mouse |2 BT + 2.4GHz | Up to 3200 DPI Instant S201 Sensor | 500mAh Type-C Charging, 40H Battery | Silent Huano Switches |6 Buttons Compact Mouse" [ref=e1445] [cursor=pointer]:
+                      - /url: /Amkette-Epic-Rechargeable-Wireless-Bluetooth/dp/B0GPCX54B9/ref=sw_ttl_d_pd_sw_d_sw_dealz_dfy_2?_encoding=UTF8&pd_rd_i=B0GPCX54B9&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1447]: Amkette Epic S Rechargeable Wireless Mouse/Bluetooth Mouse |2 BT + 2.4GHz | Up to 3200 DPI Instant S201 Sensor | 500mAh Type-C Charging, 40H Battery | Silent Huano Switches |6 Buttons Compact Mouse
+                    - link "4.0 out of 5 stars 94" [ref=e1449] [cursor=pointer]:
+                      - /url: /product-reviews/B0GPCX54B9/ref=sw_cr_d_pd_sw_d_sw_dealz_dfy_2?_encoding=UTF8&pd_rd_i=B0GPCX54B9&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1451]: 4.0 out of 5 stars
+                      - text: "94"
+                    - generic [ref=e1453]: 50% off Limited time deal
+                    - generic [ref=e1454]:
+                      - generic [ref=e1455]:
+                        - generic [ref=e1456]: ₹499.00
+                        - generic [ref=e1457]:
+                          - text: ₹
+                          - generic [ref=e1458]:
+                            - text: "499"
+                            - generic [ref=e1459]: .
+                          - text: "00"
+                      - generic [ref=e1460]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1461]:
+                          - generic [ref=e1462]: Previous Price ₹999.00
+                          - text: ₹999.00
+                - generic [ref=e1464]:
+                  - status [ref=e1465]
+                  - generic [ref=e1470] [cursor=pointer]:
+                    - button "Add to cart, Amkette Epic S Rechargeable Wireless Mouse/Bluetooth Mouse |2 BT + 2.4GHz | Up to 3200 DPI Instant S201 Sensor | 500mAh Type-C Charging, 40H Battery | Silent Huano Switches |6 Buttons Compact Mouse" [ref=e1471]
+                    - generic [ref=e1472]: Add to cart
+            - listitem [ref=e1474]:
+              - generic [ref=e1475]:
+                - generic [ref=e1476]:
+                  - link "HP M190 Wireless Mouse (AB3C6AA)" [ref=e1477] [cursor=pointer]:
+                    - /url: /HP-M190-Wireless-Mouse-AB3C6AA/dp/B0DXNTYWHV/ref=sw_img_d_pd_sw_d_sw_dealz_dfy_3?_encoding=UTF8&pd_rd_i=B0DXNTYWHV&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "HP M190 Wireless Mouse (AB3C6AA)" [ref=e1479]
+                  - generic [ref=e1480]:
+                    - link "HP M190 Wireless Mouse (AB3C6AA)" [ref=e1481] [cursor=pointer]:
+                      - /url: /HP-M190-Wireless-Mouse-AB3C6AA/dp/B0DXNTYWHV/ref=sw_ttl_d_pd_sw_d_sw_dealz_dfy_3?_encoding=UTF8&pd_rd_i=B0DXNTYWHV&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1483]: HP M190 Wireless Mouse (AB3C6AA)
+                    - link "3.9 out of 5 stars 574" [ref=e1485] [cursor=pointer]:
+                      - /url: /product-reviews/B0DXNTYWHV/ref=sw_cr_d_pd_sw_d_sw_dealz_dfy_3?_encoding=UTF8&pd_rd_i=B0DXNTYWHV&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1487]: 3.9 out of 5 stars
+                      - text: "574"
+                    - generic [ref=e1489]: 50% off Limited time deal
+                    - generic [ref=e1490]:
+                      - generic [ref=e1491]:
+                        - generic [ref=e1492]: ₹499.00
+                        - generic [ref=e1493]:
+                          - text: ₹
+                          - generic [ref=e1494]:
+                            - text: "499"
+                            - generic [ref=e1495]: .
+                          - text: "00"
+                      - generic [ref=e1496]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1497]:
+                          - generic [ref=e1498]: Previous Price ₹999.00
+                          - text: ₹999.00
+                - generic [ref=e1500]:
+                  - status [ref=e1501]
+                  - generic [ref=e1506] [cursor=pointer]:
+                    - button "Add to cart, HP M190 Wireless Mouse (AB3C6AA)" [ref=e1507]
+                    - generic [ref=e1508]: Add to cart
+            - listitem [ref=e1510]:
+              - generic [ref=e1511]:
+                - generic [ref=e1512]:
+                  - link "Sounce Astralis Dual Mode Wireless Mouse – Bluetooth & 2.4GHz, 800/1200/1600 DPI, Silent Click, 500mAh Rechargeable Battery," [ref=e1513] [cursor=pointer]:
+                    - /url: /Sounce-Astralis-Dual-Wireless-Mouse/dp/B0FSDS6R82/ref=sw_img_d_pd_sw_d_sw_dealz_dfy_4?_encoding=UTF8&pd_rd_i=B0FSDS6R82&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Sounce Astralis Dual Mode Wireless Mouse – Bluetooth & 2.4GHz, 800/1200/1600 DPI, Silent Click, 500mAh Rechargeable Battery," [ref=e1515]
+                  - generic [ref=e1516]:
+                    - text: Only 1 left in stock.
+                    - link "Sounce Astralis Dual Mode Wireless Mouse – Bluetooth & 2.4GHz, 800/1200/1600 DPI, Silent Click, 500mAh Rechargeable Battery, Ergonomic Design with Metal Scroll Wheel for Laptop & PC (Black)" [ref=e1517] [cursor=pointer]:
+                      - /url: /Sounce-Astralis-Dual-Wireless-Mouse/dp/B0FSDS6R82/ref=sw_ttl_d_pd_sw_d_sw_dealz_dfy_4?_encoding=UTF8&pd_rd_i=B0FSDS6R82&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1519]: Sounce Astralis Dual Mode Wireless Mouse – Bluetooth & 2.4GHz, 800/1200/1600 DPI, Silent Click, 500mAh Rechargeable Battery, Ergonomic Design with Metal Scroll Wheel for Laptop & PC (Black)
+                    - link "3.8 out of 5 stars 220" [ref=e1521] [cursor=pointer]:
+                      - /url: /product-reviews/B0FSDS6R82/ref=sw_cr_d_pd_sw_d_sw_dealz_dfy_4?_encoding=UTF8&pd_rd_i=B0FSDS6R82&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1523]: 3.8 out of 5 stars
+                      - text: "220"
+                    - generic [ref=e1525]: 70% off Limited time deal
+                    - generic [ref=e1526]:
+                      - generic [ref=e1527]:
+                        - generic [ref=e1528]: ₹299.00
+                        - generic [ref=e1529]:
+                          - text: ₹
+                          - generic [ref=e1530]:
+                            - text: "299"
+                            - generic [ref=e1531]: .
+                          - text: "00"
+                      - generic [ref=e1532]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1533]:
+                          - generic [ref=e1534]: Previous Price ₹999.00
+                          - text: ₹999.00
+                - generic [ref=e1536]:
+                  - status [ref=e1537]
+                  - generic [ref=e1542] [cursor=pointer]:
+                    - button "Add to cart, Sounce Astralis Dual Mode Wireless Mouse – Bluetooth & 2.4GHz, 800/1200/1600 DPI, Silent Click, 500mAh Rechargeable Battery, Ergonomic Design with Metal Scroll Wheel for Laptop & PC (Black)" [ref=e1543]
+                    - generic [ref=e1544]: Add to cart
+            - listitem [ref=e1546]:
+              - generic [ref=e1547]:
+                - generic [ref=e1548]:
+                  - link "Ant Esports GM1103 Wired Gaming Mouse, 800-3600 DPI Adjustable Optical Sensor, RGB Multicolor Backlight, 4 Buttons, Ergonomic" [ref=e1549] [cursor=pointer]:
+                    - /url: /Ant-Esports-GM1103-Adjustable-Lightweight/dp/B0FJ8H52SL/ref=sw_img_d_pd_sw_d_sw_dealz_dfy_5?_encoding=UTF8&pd_rd_i=B0FJ8H52SL&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Ant Esports GM1103 Wired Gaming Mouse, 800-3600 DPI Adjustable Optical Sensor, RGB Multicolor Backlight, 4 Buttons, Ergonomic" [ref=e1551]
+                  - generic [ref=e1552]:
+                    - link "Ant Esports GM1103 Wired Gaming Mouse, 800-3600 DPI Adjustable Optical Sensor, RGB Multicolor Backlight, 4 Buttons, Ergonomic,1.5m Cable, 3300 FPS, Lightweight USB Mouse for PC, Laptop, Mac & Windows" [ref=e1553] [cursor=pointer]:
+                      - /url: /Ant-Esports-GM1103-Adjustable-Lightweight/dp/B0FJ8H52SL/ref=sw_ttl_d_pd_sw_d_sw_dealz_dfy_5?_encoding=UTF8&pd_rd_i=B0FJ8H52SL&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1555]: Ant Esports GM1103 Wired Gaming Mouse, 800-3600 DPI Adjustable Optical Sensor, RGB Multicolor Backlight, 4 Buttons, Ergonomic,1.5m Cable, 3300 FPS, Lightweight USB Mouse for PC, Laptop, Mac & Windows
+                    - link "3.6 out of 5 stars 80" [ref=e1557] [cursor=pointer]:
+                      - /url: /product-reviews/B0FJ8H52SL/ref=sw_cr_d_pd_sw_d_sw_dealz_dfy_5?_encoding=UTF8&pd_rd_i=B0FJ8H52SL&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1559]: 3.6 out of 5 stars
+                      - text: "80"
+                    - generic [ref=e1561]: 76% off Limited time deal
+                    - generic [ref=e1562]:
+                      - generic [ref=e1563]:
+                        - generic [ref=e1564]: ₹189.00
+                        - generic [ref=e1565]:
+                          - text: ₹
+                          - generic [ref=e1566]:
+                            - text: "189"
+                            - generic [ref=e1567]: .
+                          - text: "00"
+                      - generic [ref=e1568]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1569]:
+                          - generic [ref=e1570]: Previous Price ₹799.00
+                          - text: ₹799.00
+                - generic [ref=e1572]:
+                  - status [ref=e1573]
+                  - generic [ref=e1578] [cursor=pointer]:
+                    - button "Add to cart, Ant Esports GM1103 Wired Gaming Mouse, 800-3600 DPI Adjustable Optical Sensor, RGB Multicolor Backlight, 4 Buttons, Ergonomic,1.5m Cable, 3300 FPS, Lightweight USB Mouse for PC, Laptop, Mac & Windows" [ref=e1579]
+                    - generic [ref=e1580]: Add to cart
+            - listitem [ref=e1582]:
+              - generic [ref=e1583]:
+                - generic [ref=e1584]:
+                  - link "Lenovo 210 Wireless USB A Compact Mouse,1600 DPI Optical Sensor, 2.4GHz Wireless Nano USB, 10m Range, 3Yr Warranty, 3-Button(" [ref=e1585] [cursor=pointer]:
+                    - /url: /Lenovo-Wireless-Warranty-3-Button-GY51U02463/dp/B0G7Z7YGRG/ref=sw_img_d_pd_sw_d_sw_dealz_dfy_6?_encoding=UTF8&pd_rd_i=B0G7Z7YGRG&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Lenovo 210 Wireless USB A Compact Mouse,1600 DPI Optical Sensor, 2.4GHz Wireless Nano USB, 10m Range, 3Yr Warranty, 3-Button(" [ref=e1587]
+                  - generic [ref=e1588]:
+                    - link "Lenovo 210 Wireless USB A Compact Mouse,1600 DPI Optical Sensor, 2.4GHz Wireless Nano USB, 10m Range, 3Yr Warranty, 3-Button(Left,Right,Scroll) Upto 3M Left/Right clicks, 1Yr Battery, GY51U02463" [ref=e1589] [cursor=pointer]:
+                      - /url: /Lenovo-Wireless-Warranty-3-Button-GY51U02463/dp/B0G7Z7YGRG/ref=sw_ttl_d_pd_sw_d_sw_dealz_dfy_6?_encoding=UTF8&pd_rd_i=B0G7Z7YGRG&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1591]: Lenovo 210 Wireless USB A Compact Mouse,1600 DPI Optical Sensor, 2.4GHz Wireless Nano USB, 10m Range, 3Yr Warranty, 3-Button(Left,Right,Scroll) Upto 3M Left/Right clicks, 1Yr Battery, GY51U02463
+                    - link "4.1 out of 5 stars 119" [ref=e1593] [cursor=pointer]:
+                      - /url: /product-reviews/B0G7Z7YGRG/ref=sw_cr_d_pd_sw_d_sw_dealz_dfy_6?_encoding=UTF8&pd_rd_i=B0G7Z7YGRG&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1595]: 4.1 out of 5 stars
+                      - text: "119"
+                    - generic [ref=e1597]: 50% off Limited time deal
+                    - generic [ref=e1598]:
+                      - generic [ref=e1599]:
+                        - generic [ref=e1600]: ₹499.00
+                        - generic [ref=e1601]:
+                          - text: ₹
+                          - generic [ref=e1602]:
+                            - text: "499"
+                            - generic [ref=e1603]: .
+                          - text: "00"
+                      - generic [ref=e1604]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1605]:
+                          - generic [ref=e1606]: Previous Price ₹990.00
+                          - text: ₹990.00
+                - generic [ref=e1608]:
+                  - status [ref=e1609]
+                  - generic [ref=e1614] [cursor=pointer]:
+                    - button "Add to cart, Lenovo 210 Wireless USB A Compact Mouse,1600 DPI Optical Sensor, 2.4GHz Wireless Nano USB, 10m Range, 3Yr Warranty, 3-Button(Left,Right,Scroll) Upto 3M Left/Right clicks, 1Yr Battery, GY51U02463" [ref=e1615]
+                    - generic [ref=e1616]: Add to cart
+            - listitem [ref=e1618]:
+              - generic [ref=e1619]:
+                - generic [ref=e1620]:
+                  - link "Zebronics Rechargeable Wireless Mouse, Dual Mode 2.4GHz + BT, Upto 2400 DPI, 6 Buttons, USB Nano Receiver, Type-C, Silent Ope" [ref=e1621] [cursor=pointer]:
+                    - /url: /Zebronics-Rechargeable-Wireless-Operation-Ergonomic/dp/B0GN34LC1H/ref=sw_img_d_pd_sw_d_sw_dealz_dfy_7?_encoding=UTF8&pd_rd_i=B0GN34LC1H&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                    - img "Zebronics Rechargeable Wireless Mouse, Dual Mode 2.4GHz + BT, Upto 2400 DPI, 6 Buttons, USB Nano Receiver, Type-C, Silent Ope" [ref=e1623]
+                  - generic [ref=e1624]:
+                    - link "Zebronics Rechargeable Wireless Mouse, Dual Mode 2.4GHz + BT, Upto 2400 DPI, 6 Buttons, USB Nano Receiver, Type-C, Silent Operation, Ergonomic Design (Blanc 100, Black)" [ref=e1625] [cursor=pointer]:
+                      - /url: /Zebronics-Rechargeable-Wireless-Operation-Ergonomic/dp/B0GN34LC1H/ref=sw_ttl_d_pd_sw_d_sw_dealz_dfy_7?_encoding=UTF8&pd_rd_i=B0GN34LC1H&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1627]: Zebronics Rechargeable Wireless Mouse, Dual Mode 2.4GHz + BT, Upto 2400 DPI, 6 Buttons, USB Nano Receiver, Type-C, Silent Operation, Ergonomic Design (Blanc 100, Black)
+                    - link "4.0 out of 5 stars 39" [ref=e1629] [cursor=pointer]:
+                      - /url: /product-reviews/B0GN34LC1H/ref=sw_cr_d_pd_sw_d_sw_dealz_dfy_7?_encoding=UTF8&pd_rd_i=B0GN34LC1H&pd_rd_w=jjZPk&content-id=amzn1.sym.9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_p=9a052c8b-1a4a-4026-aa8f-aa8915b15f97&pf_rd_r=HHXCKTXFVEBCF4G5KFPE&pd_rd_wg=aISWR&pd_rd_r=9501410c-97ec-43b9-9df4-daeb1d4fa2f5
+                      - generic [ref=e1631]: 4.0 out of 5 stars
+                      - text: "39"
+                    - generic [ref=e1633]: 55% off Limited time deal
+                    - generic [ref=e1634]:
+                      - generic [ref=e1635]:
+                        - generic [ref=e1636]: ₹499.00
+                        - generic [ref=e1637]:
+                          - text: ₹
+                          - generic [ref=e1638]:
+                            - text: "499"
+                            - generic [ref=e1639]: .
+                          - text: "00"
+                      - generic [ref=e1640]:
+                        - text: "M.R.P.:"
+                        - generic [ref=e1641]:
+                          - generic [ref=e1642]: Previous Price ₹1,099.00
+                          - text: ₹1,099.00
+                - generic [ref=e1644]:
+                  - status [ref=e1645]
+                  - generic [ref=e1650] [cursor=pointer]:
+                    - button "Add to cart, Zebronics Rechargeable Wireless Mouse, Dual Mode 2.4GHz + BT, Upto 2400 DPI, 6 Buttons, USB Nano Receiver, Type-C, Silent Operation, Ergonomic Design (Blanc 100, Black)" [ref=e1651]
+                    - generic [ref=e1652]: Add to cart
+  - complementary "Your recently viewed items and featured recommendations"
+  - generic [ref=e1654]:
+    - button "Back to top" [ref=e1655] [cursor=pointer]:
+      - generic [ref=e1656]: Back to top
+    - generic [ref=e1657]:
+      - generic [ref=e1658]:
+        - heading "Get to Know Us" [level=6] [ref=e1659]
+        - list [ref=e1660]:
+          - listitem [ref=e1661]:
+            - link "About Amazon" [ref=e1662] [cursor=pointer]:
+              - /url: https://www.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e1663]:
+            - link "Careers" [ref=e1664] [cursor=pointer]:
+              - /url: https://amazon.jobs
+          - listitem [ref=e1665]:
+            - link "Press Releases" [ref=e1666] [cursor=pointer]:
+              - /url: https://press.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e1667]:
+            - link "Amazon Science" [ref=e1668] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=e1670]:
+        - heading "Connect with Us" [level=6] [ref=e1671]
+        - list [ref=e1672]:
+          - listitem [ref=e1673]:
+            - link "Facebook" [ref=e1674] [cursor=pointer]:
+              - /url: https://www.facebook.com/AmazonIN
+          - listitem [ref=e1675]:
+            - link "Twitter" [ref=e1676] [cursor=pointer]:
+              - /url: https://x.com/AmazonIN
+          - listitem [ref=e1677]:
+            - link "Instagram" [ref=e1678] [cursor=pointer]:
+              - /url: https://www.instagram.com/amazondotin
+      - generic [ref=e1680]:
+        - heading "Make Money with Us" [level=6] [ref=e1681]
+        - list [ref=e1682]:
+          - listitem [ref=e1683]:
+            - link "Sell on Amazon" [ref=e1684] [cursor=pointer]:
+              - /url: /b/?node=2838698031&ld=AZINSOANavDesktopFooter_C&ref_=nav_footer_sell_C
+          - listitem [ref=e1685]:
+            - link "Sell under Amazon Accelerator" [ref=e1686] [cursor=pointer]:
+              - /url: https://accelerator.amazon.in/?ref_=map_1_b2b_GW_FT
+          - listitem [ref=e1687]:
+            - link "Protect and Build Your Brand" [ref=e1688] [cursor=pointer]:
+              - /url: https://brandservices.amazon.in/?ref=AOINABRLGNRFOOT&ld=AOINABRLGNRFOOT
+          - listitem [ref=e1689]:
+            - link "Amazon Global Selling" [ref=e1690] [cursor=pointer]:
+              - /url: https://sell.amazon.in/grow-your-business/amazon-global-selling.html?ld=AZIN_Footer_V1&ref=AZIN_Footer_V1
+          - listitem [ref=e1691]:
+            - link "Supply to Amazon" [ref=e1692] [cursor=pointer]:
+              - /url: https://supply.amazon.com/?ref_=footer_sta&lang=en-IN
+          - listitem [ref=e1693]:
+            - link "Become an Affiliate" [ref=e1694] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.in/?utm_campaign=assocshowcase&utm_medium=footer&utm_source=GW&ref_=footer_assoc
+          - listitem [ref=e1695]:
+            - link "Fulfilment by Amazon" [ref=e1696] [cursor=pointer]:
+              - /url: https://services.amazon.in/services/fulfilment-by-amazon/benefits.html/ref=az_footer_fba?ld=AWRGINFBAfooter
+          - listitem [ref=e1697]:
+            - link "Advertise Your Products" [ref=e1698] [cursor=pointer]:
+              - /url: https://advertising.amazon.in/?ref=Amz.in
+          - listitem [ref=e1699]:
+            - link "Amazon Pay on Merchants" [ref=e1700] [cursor=pointer]:
+              - /url: https://www.amazonpay.in/merchant
+      - generic [ref=e1702]:
+        - heading "Let Us Help You" [level=6] [ref=e1703]
+        - list [ref=e1704]:
+          - listitem [ref=e1705]:
+            - link "Your Account" [ref=e1706] [cursor=pointer]:
+              - /url: /gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=e1707]:
+            - link "Returns Centre" [ref=e1708] [cursor=pointer]:
+              - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e1709]:
+            - link "Recalls and Product Safety Alerts" [ref=e1710] [cursor=pointer]:
+              - /url: https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa
+          - listitem [ref=e1711]:
+            - link "100% Purchase Protection" [ref=e1712] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=201083470&ref_=footer_swc
+          - listitem [ref=e1713]:
+            - link "Amazon App Download" [ref=e1714] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6967393031&ref_=footer_mobapp
+          - listitem [ref=e1715]:
+            - link "Help" [ref=e1716] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=footer_gw_m_b_he
+    - generic [ref=e1718]:
+      - link "Amazon India Home" [ref=e1721] [cursor=pointer]:
+        - /url: /ref=footer_logo
+      - generic [ref=e1724]:
+        - generic [ref=e1725]:
+          - link "Choose a language for shopping. Current selection is English." [ref=e1726] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=e1728]: English
+          - button "Expand to Change Language or Country" [ref=e1729] [cursor=pointer]
+        - button "Choose a country/region for shopping. The current selection is India." [ref=e1730] [cursor=pointer]:
+          - generic [ref=e1732]: India
+    - generic "More on Amazon" [ref=e1733]:
+      - generic "More on Amazon" [ref=e1734]:
+        - list [ref=e1735]:
+          - listitem [ref=e1736]:
+            - link "AbeBooks Books, art & collectibles" [ref=e1737] [cursor=pointer]:
+              - /url: https://www.abebooks.com/
+              - heading "AbeBooks" [level=5] [ref=e1738]
+              - generic [ref=e1739]:
+                - text: Books, art
+                - text: "& collectibles"
+          - listitem [ref=e1740]
+          - listitem [ref=e1741]:
+            - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e1742] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=IN_amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=e1743]
+              - generic [ref=e1744]:
+                - text: Scalable Cloud
+                - text: Computing Services
+          - listitem [ref=e1745]
+          - listitem [ref=e1746]:
+            - link "Audible Download Audio Books" [ref=e1747] [cursor=pointer]:
+              - /url: https://www.audible.in/
+              - heading "Audible" [level=5] [ref=e1748]
+              - generic [ref=e1749]:
+                - text: Download
+                - text: Audio Books
+          - listitem [ref=e1750]
+          - listitem [ref=e1751]:
+            - link "IMDb Movies, TV & Celebrities" [ref=e1752] [cursor=pointer]:
+              - /url: https://www.imdb.com/
+              - heading "IMDb" [level=5] [ref=e1753]
+              - generic [ref=e1754]:
+                - text: Movies, TV
+                - text: "& Celebrities"
+        - list [ref=e1755]:
+          - listitem [ref=e1756]:
+            - link "Shopbop Designer Fashion Brands" [ref=e1757] [cursor=pointer]:
+              - /url: https://www.shopbop.com/
+              - heading "Shopbop" [level=5] [ref=e1758]
+              - generic [ref=e1759]:
+                - text: Designer
+                - text: Fashion Brands
+          - listitem [ref=e1760]
+          - listitem [ref=e1761]:
+            - link "Amazon Business Everything For Your Business" [ref=e1762] [cursor=pointer]:
+              - /url: /business?ref=footer_aingw
+              - heading "Amazon Business" [level=5] [ref=e1763]
+              - generic [ref=e1764]:
+                - text: Everything For
+                - text: Your Business
+          - listitem [ref=e1765]
+          - listitem [ref=e1766]:
+            - link "Amazon Music Stream millions of songs" [ref=e1767] [cursor=pointer]:
+              - /url: /music/player?ref=footer_apm
+              - heading "Amazon Music" [level=5] [ref=e1768]
+              - generic [ref=e1769]: Stream millions of songs
+          - listitem [ref=e1770]
+          - listitem [ref=e1771]
+    - generic [ref=e1772]:
+      - list [ref=e1773]:
+        - listitem [ref=e1774]:
+          - link "Conditions of Use & Sale" [ref=e1775] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200545940&ref_=footer_cou
+        - listitem [ref=e1776]:
+          - link "Privacy Notice" [ref=e1777] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200534380&ref_=footer_privacy
+        - listitem [ref=e1778]:
+          - link "Interest-Based Ads" [ref=e1779] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=202075050&ref_=footer_iba
+      - generic [ref=e1780]: © 1996-2026, Amazon.com, Inc. or its affiliates

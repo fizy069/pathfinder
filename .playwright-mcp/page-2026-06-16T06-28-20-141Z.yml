@@ -1,0 +1,968 @@
+- generic [ref=e2]:
+  - navigation "Shortcuts menu" [ref=e3]:
+    - heading "Skip to" [level=2] [ref=e4]
+    - list "Skip to" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "main content" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+      - listitem [ref=e8]:
+        - link "Shopping cart" [ref=e9] [cursor=pointer]:
+          - /url: "#sc-active-cart"
+          - text: Your Amazon Cart
+    - separator [ref=e10]
+    - heading "Keyboard shortcuts" [level=2] [ref=e11]
+    - list "Keyboard shortcuts" [ref=e12]:
+      - listitem [ref=e13]:
+        - link "Search, alt, forward slash" [ref=e14] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e15]:
+            - generic [ref=e16]: Search
+            - generic [ref=e17]:
+              - generic [ref=e18]: alt
+              - generic [ref=e19]: +
+              - generic [ref=e20]: /
+      - listitem [ref=e21]:
+        - link "Cart, shift, alt, c" [ref=e22] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e23]:
+            - generic [ref=e24]: Cart
+            - generic [ref=e25]:
+              - generic [ref=e26]: shift
+              - generic [ref=e27]: +
+              - generic [ref=e28]: alt
+              - generic [ref=e29]: +
+              - generic [ref=e30]: C
+      - listitem [ref=e31]:
+        - link "Home, shift, alt, h" [ref=e32] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e33]:
+            - generic [ref=e34]: Home
+            - generic [ref=e35]:
+              - generic [ref=e36]: shift
+              - generic [ref=e37]: +
+              - generic [ref=e38]: alt
+              - generic [ref=e39]: +
+              - generic [ref=e40]: H
+      - listitem [ref=e41]:
+        - link "Your orders, shift, alt, o" [ref=e42] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e43]:
+            - generic [ref=e44]: Orders
+            - generic [ref=e45]:
+              - generic [ref=e46]: shift
+              - generic [ref=e47]: +
+              - generic [ref=e48]: alt
+              - generic [ref=e49]: +
+              - generic [ref=e50]: O
+      - listitem [ref=e51]:
+        - button "Show/hide shortcuts, shift, alt, z" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]:
+            - generic [ref=e54]: Show/Hide shortcuts
+            - generic [ref=e55]:
+              - generic [ref=e56]: shift
+              - generic [ref=e57]: +
+              - generic [ref=e58]: alt
+              - generic [ref=e59]: +
+              - generic [ref=e60]: Z
+    - generic [ref=e66]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=e67]:
+    - navigation "Primary" [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - link "Amazon.in" [ref=e72] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .in
+          - button "Delivering to Bengaluru 562130 Update location" [ref=e75] [cursor=pointer]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: Delivering to Bengaluru 562130
+              - generic [ref=e79]: Update location
+        - search [ref=e82]:
+          - generic [ref=e85]:
+            - generic [ref=e87]: All
+            - combobox "Select the department you want to search in" [ref=e89] [cursor=pointer]:
+              - option "All Categories" [selected]
+              - option "Alexa Skills"
+              - option "Amazon Devices"
+              - option "Amazon Fashion"
+              - option "Amazon Fresh"
+              - option "Amazon Pharmacy"
+              - option "Appliances"
+              - option "Apps & Games"
+              - option "Audible Audiobooks"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Car & Motorbike"
+              - option "Clothing & Accessories"
+              - option "Collectibles"
+              - option "Computers & Accessories"
+              - option "Deals"
+              - option "Electronics"
+              - option "Furniture"
+              - option "Garden & Outdoors"
+              - option "Gift Cards"
+              - option "Grocery & Gourmet Foods"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Jewellery"
+              - option "Kindle Store"
+              - option "Luggage & Bags"
+              - option "Luxury Beauty"
+              - option "Movies & TV Shows"
+              - option "MP3 Music"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Office Products"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Shoes & Handbags"
+              - option "Software"
+              - option "Sports, Fitness & Outdoors"
+              - option "Subscribe & Save"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Under ₹500"
+              - option "Video Games"
+              - option "Watches"
+          - searchbox "Search Amazon.in" [ref=e92]
+          - generic "Go" [ref=e95] [cursor=pointer]:
+            - button "Go" [ref=e96]
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - link "Choose a language for shopping in Amazon India. The current selection is English (EN)." [ref=e100] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang
+              - generic [ref=e103]:
+                - img "India" [ref=e104]
+                - generic [ref=e105]: EN
+            - button "Expand to Change Language or Country" [ref=e106] [cursor=pointer]
+          - generic [ref=e107]:
+            - link "Hello, sign in Account & Lists" [ref=e108] [cursor=pointer]:
+              - /url: https://www.amazon.in/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fcart%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=e110]: Hello, sign in
+              - generic [ref=e111]: Account & Lists
+            - button "Expand Account and Lists" [ref=e112] [cursor=pointer]
+          - link "Returns & Orders" [ref=e113] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e114]: Returns
+            - generic [ref=e115]: "& Orders"
+          - link "1 item in cart" [ref=e116] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e118]: "1"
+            - generic [ref=e121]: Cart
+      - generic [ref=e122]:
+        - button "Open All Categories Menu" [ref=e124] [cursor=pointer]:
+          - generic [ref=e126]: All
+        - list [ref=e130]:
+          - listitem [ref=e131]:
+            - generic [ref=e132]:
+              - link "Fresh" [ref=e133] [cursor=pointer]:
+                - /url: /fresh?ref_=nav_cs_grocery
+              - button "Fresh Details" [ref=e134] [cursor=pointer]
+          - listitem [ref=e135]:
+            - link "MX Player" [ref=e137] [cursor=pointer]:
+              - /url: /minitv?ref_=nav_avod_desktop_topnav
+          - listitem [ref=e138]:
+            - link "Sell" [ref=e140] [cursor=pointer]:
+              - /url: /b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3
+          - listitem [ref=e141]:
+            - link "Bestsellers" [ref=e143] [cursor=pointer]:
+              - /url: /gp/bestsellers/?ref_=nav_cs_bestsellers
+          - listitem [ref=e144]:
+            - link "Today's Deals" [ref=e146] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_gb
+          - listitem [ref=e147]:
+            - generic [ref=e148]:
+              - link "Prime" [ref=e149] [cursor=pointer]:
+                - /url: /prime?ref_=nav_cs_primelink_nonmember
+              - button "Prime Details" [ref=e150] [cursor=pointer]
+          - listitem [ref=e151]:
+            - link "Mobiles" [ref=e153] [cursor=pointer]:
+              - /url: /mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles
+          - listitem [ref=e154]:
+            - link "New Releases" [ref=e156] [cursor=pointer]:
+              - /url: /gp/new-releases/?ref_=nav_cs_newreleases
+          - listitem [ref=e157]:
+            - link "Customer Service" [ref=e159] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help
+          - listitem [ref=e160]:
+            - link "Amazon Pay" [ref=e162] [cursor=pointer]:
+              - /url: /gp/sva/dashboard?ref_=nav_cs_apay
+          - listitem [ref=e163]:
+            - link "Electronics" [ref=e165] [cursor=pointer]:
+              - /url: /electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics
+          - listitem [ref=e166]:
+            - link "Home & Kitchen" [ref=e168] [cursor=pointer]:
+              - /url: /Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home
+          - listitem [ref=e169]:
+            - link "Fashion" [ref=e171] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6648217031&ref_=nav_cs_fashion
+          - listitem [ref=e172]:
+            - link "Computers" [ref=e174] [cursor=pointer]:
+              - /url: /computers-and-accessories/b/?ie=UTF8&node=976392031&ref_=nav_cs_pc
+          - listitem [ref=e175]:
+            - link "Toys & Games" [ref=e177] [cursor=pointer]:
+              - /url: /Toys-Games/b/?ie=UTF8&node=1350380031&ref_=nav_cs_toys
+          - listitem [ref=e178]:
+            - link "Car & Motorbike" [ref=e180] [cursor=pointer]:
+              - /url: /Car-Motorbike-Store/b/?ie=UTF8&node=4772060031&ref_=nav_cs_automotive
+          - listitem [ref=e181]:
+            - link "Beauty & Personal Care" [ref=e183] [cursor=pointer]:
+              - /url: /beauty/b/?ie=UTF8&node=1355016031&ref_=nav_cs_beauty
+          - listitem [ref=e184]:
+            - link "Gift Cards" [ref=e186] [cursor=pointer]:
+              - /url: /gift-card-store/b/?ie=UTF8&node=3704982031&ref_=nav_cs_gc
+          - listitem [ref=e187]:
+            - link "Home Improvement" [ref=e189] [cursor=pointer]:
+              - /url: /Home-Improvement/b/?ie=UTF8&node=4286640031&ref_=nav_cs_hi
+          - listitem [ref=e190]:
+            - link "Grocery & Gourmet Foods" [ref=e192] [cursor=pointer]:
+              - /url: /Gourmet-Specialty-Foods/b/?ie=UTF8&node=2454178031&ref_=nav_cs_grocery
+          - listitem [ref=e193]:
+            - link "Health, Household & Personal Care" [ref=e195] [cursor=pointer]:
+              - /url: /health-and-personal-care/b/?ie=UTF8&node=1350384031&ref_=nav_cs_hpc
+          - listitem [ref=e196]:
+            - link "Video Games" [ref=e198] [cursor=pointer]:
+              - /url: /video-games/b/?ie=UTF8&node=976460031&ref_=nav_cs_video_games
+          - listitem [ref=e199]:
+            - link "Custom Products" [ref=e201] [cursor=pointer]:
+              - /url: /Amazon-Custom/b/?ie=UTF8&node=32615889031&ref_=nav_cs_custom
+          - listitem [ref=e202]:
+            - link "Sports, Fitness & Outdoors" [ref=e204] [cursor=pointer]:
+              - /url: /Sports/b/?ie=UTF8&node=1984443031&ref_=nav_cs_sports
+          - listitem [ref=e205]:
+            - link "Baby" [ref=e207] [cursor=pointer]:
+              - /url: /Baby/b/?ie=UTF8&node=1571274031&ref_=nav_cs_baby
+          - listitem [ref=e208]:
+            - link "Pet Supplies" [ref=e210] [cursor=pointer]:
+              - /url: /Pet-Supplies/b/?ie=UTF8&node=2454181031&ref_=nav_cs_pets
+          - listitem [ref=e211]:
+            - link "Audible" [ref=e213] [cursor=pointer]:
+              - /url: /Audible-Books-and-Originals/b/?ie=UTF8&node=17941593031&ref_=nav_cs_audible
+          - listitem [ref=e214]:
+            - link "AmazonBasics" [ref=e216] [cursor=pointer]:
+              - /url: /b/?node=6637738031&ref_=nav_cs_amazonbasics
+          - listitem [ref=e217]:
+            - link "Books" [ref=e219] [cursor=pointer]:
+              - /url: /Books/b/?ie=UTF8&node=976389031&ref_=nav_cs_books
+          - listitem [ref=e220]:
+            - link "Subscribe & Save" [ref=e222] [cursor=pointer]:
+              - /url: /auto-deliveries/landing?ref_=nav_cs_sns
+          - listitem [ref=e223]:
+            - link "Kindle eBooks" [ref=e225] [cursor=pointer]:
+              - /url: /Kindle-eBooks/b/?ie=UTF8&node=1634753031&ref_=nav_cs_kindle_books
+          - listitem [ref=e226]:
+            - link "Flights" [ref=e228] [cursor=pointer]:
+              - /url: /flights?ref_=nav_cs_apay_desktop_topnav_flights
+  - main [ref=e233]:
+    - heading "All Carts" [level=1] [ref=e234]
+    - generic [ref=e236]:
+      - generic [ref=e237]:
+        - generic [ref=e242]:
+          - 'heading "Amazon Subtotal (1 item): ₹209.00" [level=3] [ref=e243]':
+            - generic [ref=e244]: Amazon
+            - generic [ref=e245]:
+              - text: "Subtotal (1 item):"
+              - generic [ref=e246]: ₹209.00
+          - generic [ref=e250]:
+            - checkbox "This order contains a gift" [ref=e251]
+            - generic [ref=e253]: This order contains a gift
+          - generic [ref=e257] [cursor=pointer]:
+            - button "Proceed to Buy Buy Amazon items" [ref=e258]: Proceed to checkout
+            - generic [ref=e261]: Proceed to Buy
+        - generic [ref=e270]:
+          - heading "Customers Who Bought Geonix Nimbus 03 Optical Wireless Mouse, Range 10m... Also Bought" [level=3] [ref=e271]
+          - list [ref=e272]:
+            - listitem [ref=e273]:
+              - generic [ref=e278]:
+                - link [ref=e280] [cursor=pointer]:
+                  - /url: /20000mAh-Charging-Capacity-Portable-Warranty/dp/B0FQV66276/ref=pd_cart_crc_cko_mrai_d_sccl_1_1/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQV66276&psc=1
+                  - img [ref=e282]
+                - generic [ref=e283]:
+                  - generic [ref=e285]:
+                    - link "Geonix Helio C200 Power Bank 20000mAh | 22.5W Fast Charging Power Bank |Slim | Dual USB & Type-C Outputs + Extra Type-C Port | High Capacity Portable Charger, 1 Year Warranty, Blue" [ref=e286] [cursor=pointer]:
+                      - /url: /20000mAh-Charging-Capacity-Portable-Warranty/dp/B0FQV66276/ref=pd_cart_crc_cko_mrai_d_sccl_1_1/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQV66276&psc=1
+                      - generic [ref=e288]: Geonix Helio C200 Power Bank 20000mAh | 22.5W Fast Charging Power Bank |Slim | Dual USB & Type-C Outputs + Extra Type-C Port | High Capacity Portable Charger, 1 Year Warranty, Blue
+                    - link "4.1 out of 5 stars, 20 ratings" [ref=e291] [cursor=pointer]:
+                      - /url: /product-reviews/B0FQV66276/ref=pd_cart_crc_cko_mrai_d_sccl_1_1_cr/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQV66276
+                      - generic [ref=e293]: 4.1 out of 5 stars
+                      - text: "20"
+                    - generic [ref=e294]:
+                      - generic [ref=e296]:
+                        - generic [ref=e297]:
+                          - link "-60%" [ref=e298] [cursor=pointer]:
+                            - /url: /20000mAh-Charging-Capacity-Portable-Warranty/dp/B0FQV66276/ref=pd_cart_crc_cko_mrai_d_sccl_1_1/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQV66276&psc=1
+                            - text: "-60%"
+                          - link "₹999.00" [ref=e299] [cursor=pointer]:
+                            - /url: /20000mAh-Charging-Capacity-Portable-Warranty/dp/B0FQV66276/ref=pd_cart_crc_cko_mrai_d_sccl_1_1/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQV66276&psc=1
+                            - generic [ref=e300]:
+                              - generic [ref=e301]: ₹999.00
+                              - generic [ref=e302]:
+                                - text: ₹
+                                - generic [ref=e303]:
+                                  - text: "999"
+                                  - generic [ref=e304]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹2,499.00" [ref=e306] [cursor=pointer]':
+                          - /url: /20000mAh-Charging-Capacity-Portable-Warranty/dp/B0FQV66276/ref=pd_cart_crc_cko_mrai_d_sccl_1_1/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQV66276&psc=1
+                          - generic [ref=e308]: "M.R.P: ₹2,499.00"
+                      - generic [ref=e310]: Get it by Thursday, June 18
+                    - text: FREE Delivery by Amazon
+                  - generic [ref=e318] [cursor=pointer]:
+                    - button "Add to cart, Geonix Helio C200 Power Bank 20000mAh | 22.5W Fast Charging Power Bank |Slim | Dual USB & Type-C Outputs + Extra Type-C Port | High Capacity Portable Charger, 1 Year Warranty, Blue" [ref=e319]
+                    - generic [ref=e320]: Add to cart
+            - listitem [ref=e321]:
+              - generic [ref=e326]:
+                - link [ref=e328] [cursor=pointer]:
+                  - /url: /Geonix-Charger-Charging-Adapter-Android/dp/B0FQ5TCD2S/ref=pd_cart_crc_cko_mrai_d_sccl_1_2/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQ5TCD2S&psc=1
+                  - img [ref=e330]
+                - generic [ref=e331]:
+                  - generic [ref=e333]:
+                    - link "Geonix Atomic G65, Gan Charger, 65W GaN Charger | Dual Port USB & Type-C Fast Charging Adapter for iPhone 16–11 Series, iPad, Android, Laptop, Tablet, Power Bank (White)" [ref=e334] [cursor=pointer]:
+                      - /url: /Geonix-Charger-Charging-Adapter-Android/dp/B0FQ5TCD2S/ref=pd_cart_crc_cko_mrai_d_sccl_1_2/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQ5TCD2S&psc=1
+                      - generic [ref=e336]: Geonix Atomic G65, Gan Charger, 65W GaN Charger | Dual Port USB & Type-C Fast Charging Adapter for iPhone 16–11 Series, iPad, Android, Laptop, Tablet, Power Bank (White)
+                    - link "4.5 out of 5 stars, 3 ratings" [ref=e339] [cursor=pointer]:
+                      - /url: /product-reviews/B0FQ5TCD2S/ref=pd_cart_crc_cko_mrai_d_sccl_1_2_cr/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQ5TCD2S
+                      - generic [ref=e341]: 4.5 out of 5 stars
+                      - text: "3"
+                    - generic [ref=e342]:
+                      - generic [ref=e344]:
+                        - generic [ref=e345]:
+                          - link "-38%" [ref=e346] [cursor=pointer]:
+                            - /url: /Geonix-Charger-Charging-Adapter-Android/dp/B0FQ5TCD2S/ref=pd_cart_crc_cko_mrai_d_sccl_1_2/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQ5TCD2S&psc=1
+                            - text: "-38%"
+                          - link "₹1,849.00" [ref=e347] [cursor=pointer]:
+                            - /url: /Geonix-Charger-Charging-Adapter-Android/dp/B0FQ5TCD2S/ref=pd_cart_crc_cko_mrai_d_sccl_1_2/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQ5TCD2S&psc=1
+                            - generic [ref=e348]:
+                              - generic [ref=e349]: ₹1,849.00
+                              - generic [ref=e350]:
+                                - text: ₹
+                                - generic [ref=e351]:
+                                  - text: 1,849
+                                  - generic [ref=e352]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹2,999.00" [ref=e354] [cursor=pointer]':
+                          - /url: /Geonix-Charger-Charging-Adapter-Android/dp/B0FQ5TCD2S/ref=pd_cart_crc_cko_mrai_d_sccl_1_2/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FQ5TCD2S&psc=1
+                          - generic [ref=e356]: "M.R.P: ₹2,999.00"
+                      - generic [ref=e358]: Get it by Thursday, June 18
+                    - text: FREE Delivery by Amazon
+                  - generic [ref=e366] [cursor=pointer]:
+                    - button "Add to cart, Geonix Atomic G65, Gan Charger, 65W GaN Charger | Dual Port USB & Type-C Fast Charging Adapter for iPhone 16–11 Series, iPad, Android, Laptop, Tablet, Power Bank (White)" [ref=e367]
+                    - generic [ref=e368]: Add to cart
+            - listitem [ref=e369]:
+              - generic [ref=e374]:
+                - link [ref=e376] [cursor=pointer]:
+                  - /url: /Wireless-Precision-Tracking-Rechargeable-Ergonomic/dp/B0G3R92DCS/ref=pd_cart_crc_cko_mrai_d_sccl_1_3/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G3R92DCS&psc=1
+                  - img [ref=e378]
+                - generic [ref=e379]:
+                  - generic [ref=e381]:
+                    - link "Geonix Opal A11 Optical Wireless Mouse | High Precision Tracking, Silent Click, 3 DPI Modes, Type-C Rechargeable, 10 m Range, 4-Button Ergonomic Design" [ref=e382] [cursor=pointer]:
+                      - /url: /Wireless-Precision-Tracking-Rechargeable-Ergonomic/dp/B0G3R92DCS/ref=pd_cart_crc_cko_mrai_d_sccl_1_3/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G3R92DCS&psc=1
+                      - generic [ref=e384]: Geonix Opal A11 Optical Wireless Mouse | High Precision Tracking, Silent Click, 3 DPI Modes, Type-C Rechargeable, 10 m Range, 4-Button Ergonomic Design
+                    - link "4.0 out of 5 stars, 12 ratings" [ref=e387] [cursor=pointer]:
+                      - /url: /product-reviews/B0G3R92DCS/ref=pd_cart_crc_cko_mrai_d_sccl_1_3_cr/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G3R92DCS
+                      - generic [ref=e389]: 4.0 out of 5 stars
+                      - text: "12"
+                    - generic [ref=e390]:
+                      - generic [ref=e392]:
+                        - generic [ref=e393]:
+                          - link "-64%" [ref=e394] [cursor=pointer]:
+                            - /url: /Wireless-Precision-Tracking-Rechargeable-Ergonomic/dp/B0G3R92DCS/ref=pd_cart_crc_cko_mrai_d_sccl_1_3/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G3R92DCS&psc=1
+                            - text: "-64%"
+                          - link "₹309.00" [ref=e395] [cursor=pointer]:
+                            - /url: /Wireless-Precision-Tracking-Rechargeable-Ergonomic/dp/B0G3R92DCS/ref=pd_cart_crc_cko_mrai_d_sccl_1_3/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G3R92DCS&psc=1
+                            - generic [ref=e396]:
+                              - generic [ref=e397]: ₹309.00
+                              - generic [ref=e398]:
+                                - text: ₹
+                                - generic [ref=e399]:
+                                  - text: "309"
+                                  - generic [ref=e400]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹849.00" [ref=e402] [cursor=pointer]':
+                          - /url: /Wireless-Precision-Tracking-Rechargeable-Ergonomic/dp/B0G3R92DCS/ref=pd_cart_crc_cko_mrai_d_sccl_1_3/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G3R92DCS&psc=1
+                          - generic [ref=e404]: "M.R.P: ₹849.00"
+                      - generic [ref=e406]: Get it by Thursday, June 18
+                    - text: FREE Delivery by Amazon
+                  - generic [ref=e414] [cursor=pointer]:
+                    - button "Add to cart, Geonix Opal A11 Optical Wireless Mouse | High Precision Tracking, Silent Click, 3 DPI Modes, Type-C Rechargeable, 10 m Range, 4-Button Ergonomic Design" [ref=e415]
+                    - generic [ref=e416]: Add to cart
+            - listitem [ref=e417]:
+              - generic [ref=e422]:
+                - link [ref=e424] [cursor=pointer]:
+                  - /url: /Foldable-Wireless-Keyboard-Rechargeable-Li-Polymer/dp/B0G4998SR5/ref=pd_cart_crc_cko_mrai_d_sccl_1_4/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G4998SR5&psc=1
+                  - img [ref=e426]
+                - generic [ref=e427]:
+                  - generic [ref=e429]:
+                    - link "Geonix Neo Fold 11, Foldable Wireless Keyboard | BT 5.0 Version | Rechargeable | 1 Year Warranty | 100+ Working Hours, Li-Polymer Battery (Black)" [ref=e430] [cursor=pointer]:
+                      - /url: /Foldable-Wireless-Keyboard-Rechargeable-Li-Polymer/dp/B0G4998SR5/ref=pd_cart_crc_cko_mrai_d_sccl_1_4/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G4998SR5&psc=1
+                      - generic [ref=e432]: Geonix Neo Fold 11, Foldable Wireless Keyboard | BT 5.0 Version | Rechargeable | 1 Year Warranty | 100+ Working Hours, Li-Polymer Battery (Black)
+                    - link "4.4 out of 5 stars, 8 ratings" [ref=e435] [cursor=pointer]:
+                      - /url: /product-reviews/B0G4998SR5/ref=pd_cart_crc_cko_mrai_d_sccl_1_4_cr/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G4998SR5
+                      - generic [ref=e437]: 4.4 out of 5 stars
+                      - text: "8"
+                    - generic [ref=e438]:
+                      - generic [ref=e440]:
+                        - generic [ref=e441]:
+                          - link "-63%" [ref=e442] [cursor=pointer]:
+                            - /url: /Foldable-Wireless-Keyboard-Rechargeable-Li-Polymer/dp/B0G4998SR5/ref=pd_cart_crc_cko_mrai_d_sccl_1_4/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G4998SR5&psc=1
+                            - text: "-63%"
+                          - link "₹898.00" [ref=e443] [cursor=pointer]:
+                            - /url: /Foldable-Wireless-Keyboard-Rechargeable-Li-Polymer/dp/B0G4998SR5/ref=pd_cart_crc_cko_mrai_d_sccl_1_4/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G4998SR5&psc=1
+                            - generic [ref=e444]:
+                              - generic [ref=e445]: ₹898.00
+                              - generic [ref=e446]:
+                                - text: ₹
+                                - generic [ref=e447]:
+                                  - text: "898"
+                                  - generic [ref=e448]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹2,399.00" [ref=e450] [cursor=pointer]':
+                          - /url: /Foldable-Wireless-Keyboard-Rechargeable-Li-Polymer/dp/B0G4998SR5/ref=pd_cart_crc_cko_mrai_d_sccl_1_4/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G4998SR5&psc=1
+                          - generic [ref=e452]: "M.R.P: ₹2,399.00"
+                      - generic [ref=e454]: Get it by Sunday, June 21
+                    - text: FREE Delivery by Amazon
+                  - generic [ref=e462] [cursor=pointer]:
+                    - button "Add to cart, Geonix Neo Fold 11, Foldable Wireless Keyboard | BT 5.0 Version | Rechargeable | 1 Year Warranty | 100+ Working Hours, Li-Polymer Battery (Black)" [ref=e463]
+                    - generic [ref=e464]: Add to cart
+            - listitem [ref=e465]:
+              - generic [ref=e470]:
+                - link [ref=e472] [cursor=pointer]:
+                  - /url: /USEWELL-2U-Metal-Network-Switches/dp/B0G2S9LH4S/ref=pd_cart_crc_cko_mrai_d_sccl_1_5/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G2S9LH4S&psc=1
+                  - img [ref=e474]
+                - generic [ref=e475]:
+                  - generic [ref=e477]:
+                    - link "USEWELL 2U Full Metal Rack for DVR/NVR/Network Switches – Lockable, Glass Front, Ventilated with Top & Side Airflow, 2-Way Cable Management Holes – 350x400x140mm Secure Equipment Cabinet" [ref=e478] [cursor=pointer]:
+                      - /url: /USEWELL-2U-Metal-Network-Switches/dp/B0G2S9LH4S/ref=pd_cart_crc_cko_mrai_d_sccl_1_5/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G2S9LH4S&psc=1
+                      - generic [ref=e480]: USEWELL 2U Full Metal Rack for DVR/NVR/Network Switches – Lockable, Glass Front, Ventilated with Top & Side Airflow, 2-Way Cable Management Holes – 350x400x140mm Secure Equipment Cabinet
+                    - link "3.4 out of 5 stars, 61 ratings" [ref=e483] [cursor=pointer]:
+                      - /url: /product-reviews/B0G2S9LH4S/ref=pd_cart_crc_cko_mrai_d_sccl_1_5_cr/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G2S9LH4S
+                      - generic [ref=e485]: 3.4 out of 5 stars
+                      - text: "61"
+                    - generic [ref=e486]:
+                      - generic [ref=e488]:
+                        - generic [ref=e489]:
+                          - link "-65%" [ref=e490] [cursor=pointer]:
+                            - /url: /USEWELL-2U-Metal-Network-Switches/dp/B0G2S9LH4S/ref=pd_cart_crc_cko_mrai_d_sccl_1_5/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G2S9LH4S&psc=1
+                            - text: "-65%"
+                          - link "₹347.00" [ref=e491] [cursor=pointer]:
+                            - /url: /USEWELL-2U-Metal-Network-Switches/dp/B0G2S9LH4S/ref=pd_cart_crc_cko_mrai_d_sccl_1_5/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G2S9LH4S&psc=1
+                            - generic [ref=e492]:
+                              - generic [ref=e493]: ₹347.00
+                              - generic [ref=e494]:
+                                - text: ₹
+                                - generic [ref=e495]:
+                                  - text: "347"
+                                  - generic [ref=e496]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹999.00" [ref=e498] [cursor=pointer]':
+                          - /url: /USEWELL-2U-Metal-Network-Switches/dp/B0G2S9LH4S/ref=pd_cart_crc_cko_mrai_d_sccl_1_5/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G2S9LH4S&psc=1
+                          - generic [ref=e500]: "M.R.P: ₹999.00"
+                      - generic [ref=e502]: Get it by Thursday, June 18
+                    - text: FREE Delivery by Amazon
+                  - link "See all buying options" [ref=e508] [cursor=pointer]:
+                    - /url: /USEWELL-2U-Metal-Network-Switches/dp/B0G2S9LH4S/ref=pd_cart_crc_cko_mrai_d_sccl_1_5_atc_o/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0G2S9LH4S&psc=1
+            - listitem [ref=e509]:
+              - generic [ref=e514]:
+                - link [ref=e516] [cursor=pointer]:
+                  - /url: /Generation-Threads-Desktop-Processor-Warranty/dp/B0DY7HGCDJ/ref=pd_cart_crc_cko_mrai_d_sccl_1_6/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0DY7HGCDJ&psc=1
+                  - img [ref=e518]
+                - generic [ref=e519]:
+                  - generic [ref=e521]:
+                    - link "Core i3 4130/4150/4160/4170/4330/4340/4350/4360/4370 4th Generation, 2.9 GHz Upto 3.8 GHz, LGA 1150 Socket, 2 Cores, 4 Threads, 3/4 MB Cache, Desktop Processor, 1 Year Warranty (Silver)" [ref=e522] [cursor=pointer]:
+                      - /url: /Generation-Threads-Desktop-Processor-Warranty/dp/B0DY7HGCDJ/ref=pd_cart_crc_cko_mrai_d_sccl_1_6/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0DY7HGCDJ&psc=1
+                      - generic [ref=e524]: Core i3 4130/4150/4160/4170/4330/4340/4350/4360/4370 4th Generation, 2.9 GHz Upto 3.8 GHz, LGA 1150 Socket, 2 Cores, 4 Threads, 3/4 MB Cache, Desktop Processor, 1 Year Warranty (Silver)
+                    - link "4.1 out of 5 stars, 169 ratings" [ref=e527] [cursor=pointer]:
+                      - /url: /product-reviews/B0DY7HGCDJ/ref=pd_cart_crc_cko_mrai_d_sccl_1_6_cr/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0DY7HGCDJ
+                      - generic [ref=e529]: 4.1 out of 5 stars
+                      - text: "169"
+                    - generic [ref=e530]:
+                      - generic [ref=e532]:
+                        - generic [ref=e533]:
+                          - link "-67%" [ref=e534] [cursor=pointer]:
+                            - /url: /Generation-Threads-Desktop-Processor-Warranty/dp/B0DY7HGCDJ/ref=pd_cart_crc_cko_mrai_d_sccl_1_6/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0DY7HGCDJ&psc=1
+                            - text: "-67%"
+                          - link "₹489.00" [ref=e535] [cursor=pointer]:
+                            - /url: /Generation-Threads-Desktop-Processor-Warranty/dp/B0DY7HGCDJ/ref=pd_cart_crc_cko_mrai_d_sccl_1_6/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0DY7HGCDJ&psc=1
+                            - generic [ref=e536]:
+                              - generic [ref=e537]: ₹489.00
+                              - generic [ref=e538]:
+                                - text: ₹
+                                - generic [ref=e539]:
+                                  - text: "489"
+                                  - generic [ref=e540]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹1,499.00" [ref=e542] [cursor=pointer]':
+                          - /url: /Generation-Threads-Desktop-Processor-Warranty/dp/B0DY7HGCDJ/ref=pd_cart_crc_cko_mrai_d_sccl_1_6/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0DY7HGCDJ&psc=1
+                          - generic [ref=e544]: "M.R.P: ₹1,499.00"
+                      - generic [ref=e546]: Get it by Thursday, June 18
+                    - text: FREE Delivery by Amazon
+                  - generic [ref=e554] [cursor=pointer]:
+                    - button "Add to cart, Core i3 4130/4150/4160/4170/4330/4340/4350/4360/4370 4th Generation, 2.9 GHz Upto 3.8 GHz, LGA 1150 Socket, 2 Cores, 4 Threads, 3/4 MB Cache, Desktop Processor, 1 Year Warranty (Silver)" [ref=e555]
+                    - generic [ref=e556]: Add to cart
+            - listitem [ref=e557]:
+              - generic [ref=e562]:
+                - link [ref=e564] [cursor=pointer]:
+                  - /url: /Geonix-Desktop-Standard-Gaming-Warranty/dp/B09PHKMCM6/ref=pd_cart_crc_cko_mrai_d_sccl_1_7/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B09PHKMCM6&psc=1
+                  - img [ref=e566]
+                - generic [ref=e567]:
+                  - generic [ref=e569]:
+                    - link "Geonix Desktop RAM, 4 GB DDR3, Frequency-1333 Mhz, (8x2) IC, 240 Pin, 5 Years Warranty" [ref=e570] [cursor=pointer]:
+                      - /url: /Geonix-Desktop-Standard-Gaming-Warranty/dp/B09PHKMCM6/ref=pd_cart_crc_cko_mrai_d_sccl_1_7/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B09PHKMCM6&psc=1
+                      - generic [ref=e572]: Geonix Desktop RAM, 4 GB DDR3, Frequency-1333 Mhz, (8x2) IC, 240 Pin, 5 Years Warranty
+                    - link "4.0 out of 5 stars, 411 ratings" [ref=e575] [cursor=pointer]:
+                      - /url: /product-reviews/B09PHKMCM6/ref=pd_cart_crc_cko_mrai_d_sccl_1_7_cr/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B09PHKMCM6
+                      - generic [ref=e577]: 4.0 out of 5 stars
+                      - text: "411"
+                    - generic [ref=e578]:
+                      - generic [ref=e580]:
+                        - generic [ref=e581]:
+                          - link "-75%" [ref=e582] [cursor=pointer]:
+                            - /url: /Geonix-Desktop-Standard-Gaming-Warranty/dp/B09PHKMCM6/ref=pd_cart_crc_cko_mrai_d_sccl_1_7/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B09PHKMCM6&psc=1
+                            - text: "-75%"
+                          - link "₹749.00" [ref=e583] [cursor=pointer]:
+                            - /url: /Geonix-Desktop-Standard-Gaming-Warranty/dp/B09PHKMCM6/ref=pd_cart_crc_cko_mrai_d_sccl_1_7/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B09PHKMCM6&psc=1
+                            - generic [ref=e584]:
+                              - generic [ref=e585]: ₹749.00
+                              - generic [ref=e586]:
+                                - text: ₹
+                                - generic [ref=e587]:
+                                  - text: "749"
+                                  - generic [ref=e588]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹2,999.00" [ref=e590] [cursor=pointer]':
+                          - /url: /Geonix-Desktop-Standard-Gaming-Warranty/dp/B09PHKMCM6/ref=pd_cart_crc_cko_mrai_d_sccl_1_7/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B09PHKMCM6&psc=1
+                          - generic [ref=e592]: "M.R.P: ₹2,999.00"
+                      - generic [ref=e594]: Get it by Thursday, June 18
+                    - text: FREE Delivery by Amazon
+                  - generic [ref=e602] [cursor=pointer]:
+                    - button "Add to cart, Geonix Desktop RAM, 4 GB DDR3, Frequency-1333 Mhz, (8x2) IC, 240 Pin, 5 Years Warranty" [ref=e603]
+                    - generic [ref=e604]: Add to cart
+            - listitem [ref=e605]:
+              - generic [ref=e610]:
+                - link [ref=e612] [cursor=pointer]:
+                  - /url: /Consistent-H-81-Motherboard-Graphic-Warranty/dp/B08P8H15RH/ref=pd_cart_crc_cko_mrai_d_sccl_1_8/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B08P8H15RH&psc=1
+                  - img [ref=e614]
+                - generic [ref=e615]:
+                  - generic [ref=e617]:
+                    - link "Consistent H-81 Motherboard 4th Gen i3, i5, i7, DDR3 Slots for RAM, Motherboard with SATA II&III, 3Year Warranty" [ref=e618] [cursor=pointer]:
+                      - /url: /Consistent-H-81-Motherboard-Graphic-Warranty/dp/B08P8H15RH/ref=pd_cart_crc_cko_mrai_d_sccl_1_8/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B08P8H15RH&psc=1
+                      - generic [ref=e620]: Consistent H-81 Motherboard 4th Gen i3, i5, i7, DDR3 Slots for RAM, Motherboard with SATA II&III, 3Year Warranty
+                    - link "3.8 out of 5 stars, 365 ratings" [ref=e623] [cursor=pointer]:
+                      - /url: /product-reviews/B08P8H15RH/ref=pd_cart_crc_cko_mrai_d_sccl_1_8_cr/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B08P8H15RH
+                      - generic [ref=e625]: 3.8 out of 5 stars
+                      - text: "365"
+                    - generic [ref=e626]:
+                      - generic [ref=e628]:
+                        - generic [ref=e629]:
+                          - link "-55%" [ref=e630] [cursor=pointer]:
+                            - /url: /Consistent-H-81-Motherboard-Graphic-Warranty/dp/B08P8H15RH/ref=pd_cart_crc_cko_mrai_d_sccl_1_8/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B08P8H15RH&psc=1
+                            - text: "-55%"
+                          - link "₹1,790.00" [ref=e631] [cursor=pointer]:
+                            - /url: /Consistent-H-81-Motherboard-Graphic-Warranty/dp/B08P8H15RH/ref=pd_cart_crc_cko_mrai_d_sccl_1_8/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B08P8H15RH&psc=1
+                            - generic [ref=e632]:
+                              - generic [ref=e633]: ₹1,790.00
+                              - generic [ref=e634]:
+                                - text: ₹
+                                - generic [ref=e635]:
+                                  - text: 1,790
+                                  - generic [ref=e636]: .
+                                - text: "00"
+                        - 'link "M.R.P: ₹3,999.00" [ref=e638] [cursor=pointer]':
+                          - /url: /Consistent-H-81-Motherboard-Graphic-Warranty/dp/B08P8H15RH/ref=pd_cart_crc_cko_mrai_d_sccl_1_8/525-9642354-0404766?pd_rd_w=Y3Xmg&content-id=amzn1.sym.3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_p=3164beeb-dd38-4d06-983e-392782d53baa&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B08P8H15RH&psc=1
+                          - generic [ref=e640]: "M.R.P: ₹3,999.00"
+                      - generic [ref=e642]: Get it by Thursday, June 18
+                    - text: FREE Delivery by Amazon
+                  - generic [ref=e650] [cursor=pointer]:
+                    - button "Add to cart, Consistent H-81 Motherboard 4th Gen i3, i5, i7, DDR3 Slots for RAM, Motherboard with SATA II&III, 3Year Warranty" [ref=e651]
+                    - generic [ref=e652]: Add to cart
+      - generic [ref=e653]:
+        - generic [ref=e655]:
+          - heading "Shopping Cart" [level=2] [ref=e659]
+          - generic [ref=e662]:
+            - generic [ref=e666]: Price
+            - list "Shopping Cart" [ref=e667]:
+              - listitem [ref=e668]:
+                - generic [ref=e670]:
+                  - link [ref=e672] [cursor=pointer]:
+                    - /url: /gp/product/B0G3RG1XM2/ref=ox_sc_act_image_1?smid=AJ6SIZC8YQDZX&psc=1
+                  - generic [ref=e673]:
+                    - link "Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug & Play" [ref=e675] [cursor=pointer]:
+                      - /url: /gp/product/B0G3RG1XM2/ref=ox_sc_act_title_1?smid=AJ6SIZC8YQDZX&psc=1
+                      - heading "Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug & Play" [level=3] [ref=e677]:
+                        - generic [ref=e678]:
+                          - generic [ref=e679]: Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug & Play
+                          - generic [ref=e680]: Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4…
+                    - generic [ref=e681]:
+                      - generic [ref=e683]:
+                        - generic [ref=e685]: 75% off
+                        - generic [ref=e687]: Limited time deal
+                      - generic [ref=e688]:
+                        - generic [ref=e692]:
+                          - generic [ref=e693]: ₹209.00
+                          - text: ₹209.00
+                        - generic [ref=e694]:
+                          - text: "M.R.P.:"
+                          - generic [ref=e695]:
+                            - generic [ref=e696]: ₹849.00
+                            - text: ₹849.00
+                    - generic [ref=e697]:
+                      - generic [ref=e699]: Only 1 left in stock.
+                      - generic [ref=e702]: FREE delivery on first order
+                      - paragraph [ref=e703]
+                      - generic [ref=e707]:
+                        - checkbox "This will be a gift This is a gift Learn more" [ref=e708]
+                        - generic [ref=e710]:
+                          - text: This will be a gift
+                          - link "This is a gift Learn more" [ref=e712] [cursor=pointer]:
+                            - /url: /gp/help/customer/display.html/ref=ord_cart_shr?pop-up=1&nodeId=200507630
+                            - generic [ref=e713]:
+                              - generic [ref=e714]: This is a gift
+                              - text: Learn more
+                      - generic [ref=e715]: "Style Name: Nimb 03"
+                    - generic [ref=e716]:
+                      - group "Quantity is 1" [ref=e719]:
+                        - generic [ref=e720]: Quantity is 1
+                        - generic [ref=e722]:
+                          - button "Delete Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug &amp; Play" [ref=e723] [cursor=pointer]
+                          - generic [ref=e727]: "1"
+                          - generic [ref=e729]: "1"
+                          - button "Increase quantity by one Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug &amp; Play" [ref=e730] [cursor=pointer]
+                      - button "Delete Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug &amp; Play" [ref=e734] [cursor=pointer]: Delete
+                      - button "Save for later Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug &amp; Play" [ref=e737] [cursor=pointer]: Save for later
+                      - button "See more like this Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug &amp; Play" [ref=e740] [cursor=pointer]: See more like this
+                      - link "Share Geonix Nimbus 03 Optical Wireless Mouse, Range 10m, 4 Buttons; 2.4GHz Nano Receiver, 3 DPI Modes, 2*AA Cell, Optical Orientation, Plug &amp;amp; Play" [ref=e743] [cursor=pointer]:
+                        - /url: "#"
+                        - text: Share
+            - generic [ref=e745]:
+              - text: "Subtotal (1 item):"
+              - generic [ref=e746]: ₹209.00
+        - generic [ref=e750]:
+          - paragraph [ref=e752]: The price and availability of items at Amazon.in are subject to change. The shopping cart is a temporary place to store a list of your items and reflects each item's most recent price.
+          - paragraph [ref=e753]: Do you have a gift card or promotional code? We'll ask you to enter your claim code when it's time to pay.
+  - group [ref=e761]:
+    - generic [ref=e764]:
+      - heading "Customers who bought items in your cart also bought" [level=2] [ref=e766]
+      - generic [ref=e769]: Page 1 of 5
+    - generic [ref=e771]:
+      - button "Previous set of slides" [ref=e773] [cursor=pointer]:
+        - generic [ref=e776]: Previous set of slides
+      - group [ref=e778]:
+        - list [ref=e779]:
+          - listitem [ref=e780]:
+            - generic [ref=e782]:
+              - link [ref=e783] [cursor=pointer]:
+                - /url: /Geonix-DDR3-Desktop-Years-Warranty/dp/B0F1TS4P4C/ref=pd_cart_crc_cko_cart_d_sccl_2_1/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0F1TS4P4C&psc=1
+                - img [ref=e785]
+              - generic [ref=e787]:
+                - link "Geonix 4GB DDR3 Desktop RAM 8IC 1600 Mhz, 5 Years Warranty" [ref=e788] [cursor=pointer]:
+                  - /url: /Geonix-DDR3-Desktop-Years-Warranty/dp/B0F1TS4P4C/ref=pd_cart_crc_cko_cart_d_sccl_2_1/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0F1TS4P4C&psc=1
+                  - generic [ref=e790]: Geonix 4GB DDR3 Desktop RAM 8IC 1600 Mhz, 5 Years Warranty
+                - link "4.0 out of 5 stars, 307 ratings" [ref=e793] [cursor=pointer]:
+                  - /url: /product-reviews/B0F1TS4P4C/ref=pd_cart_crc_cko_cart_d_sccl_2_1_cr/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0F1TS4P4C
+                  - generic [ref=e795]: 4.0 out of 5 stars
+                  - text: "307"
+                - generic [ref=e796]:
+                  - generic [ref=e798]:
+                    - generic [ref=e799]:
+                      - link "-66%" [ref=e800] [cursor=pointer]:
+                        - /url: /Geonix-DDR3-Desktop-Years-Warranty/dp/B0F1TS4P4C/ref=pd_cart_crc_cko_cart_d_sccl_2_1/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0F1TS4P4C&psc=1
+                        - text: "-66%"
+                      - link "₹749.00" [ref=e801] [cursor=pointer]:
+                        - /url: /Geonix-DDR3-Desktop-Years-Warranty/dp/B0F1TS4P4C/ref=pd_cart_crc_cko_cart_d_sccl_2_1/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0F1TS4P4C&psc=1
+                        - generic [ref=e802]:
+                          - generic [ref=e803]: ₹749.00
+                          - generic [ref=e804]:
+                            - text: ₹
+                            - generic [ref=e805]:
+                              - text: "749"
+                              - generic [ref=e806]: .
+                            - text: "00"
+                    - generic [ref=e809]: Limited time deal
+                    - 'link "M.R.P: ₹2,199.00" [ref=e811] [cursor=pointer]':
+                      - /url: /Geonix-DDR3-Desktop-Years-Warranty/dp/B0F1TS4P4C/ref=pd_cart_crc_cko_cart_d_sccl_2_1/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0F1TS4P4C&psc=1
+                      - generic [ref=e813]: "M.R.P: ₹2,199.00"
+                  - generic [ref=e815]: Get it by Saturday, June 20
+                - text: FREE Delivery by Amazon
+              - generic [ref=e823] [cursor=pointer]:
+                - button "Add to cart, Geonix 4GB DDR3 Desktop RAM 8IC 1600 Mhz, 5 Years Warranty" [ref=e824]
+                - generic [ref=e825]: Add to cart
+          - listitem [ref=e826]:
+            - generic [ref=e828]:
+              - link [ref=e829] [cursor=pointer]:
+                - /url: /TechMaven-Aluminium-Lightweight-48cm-134CM-Smartphones/dp/B0FRLYS11N/ref=pd_cart_crc_cko_cart_d_sccl_2_2/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FRLYS11N&psc=1
+                - img [ref=e831]
+              - generic [ref=e833]:
+                - link "TechMaven Aluminium Lightweight Tripod Stand (48-134CM) Tripod with Mobile Holder 360° Rotation 3 Way Tilt |for DSLR, Camera, GoPro, Smartphones with Phone Stand & Carry Bag (Copper Color)" [ref=e834] [cursor=pointer]:
+                  - /url: /TechMaven-Aluminium-Lightweight-48cm-134CM-Smartphones/dp/B0FRLYS11N/ref=pd_cart_crc_cko_cart_d_sccl_2_2/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FRLYS11N&psc=1
+                  - generic [ref=e836]: TechMaven Aluminium Lightweight Tripod Stand (48-134CM) Tripod with Mobile Holder 360° Rotation 3 Way Tilt |for DSLR, Camera, GoPro, Smartphones with Phone Stand & Carry Bag (Copper Color)
+                - link "4.2 out of 5 stars, 10 ratings" [ref=e839] [cursor=pointer]:
+                  - /url: /product-reviews/B0FRLYS11N/ref=pd_cart_crc_cko_cart_d_sccl_2_2_cr/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FRLYS11N
+                  - generic [ref=e841]: 4.2 out of 5 stars
+                  - text: "10"
+                - generic [ref=e842]:
+                  - generic [ref=e844]:
+                    - generic [ref=e845]:
+                      - link "-58%" [ref=e846] [cursor=pointer]:
+                        - /url: /TechMaven-Aluminium-Lightweight-48cm-134CM-Smartphones/dp/B0FRLYS11N/ref=pd_cart_crc_cko_cart_d_sccl_2_2/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FRLYS11N&psc=1
+                        - text: "-58%"
+                      - link "₹759.00" [ref=e847] [cursor=pointer]:
+                        - /url: /TechMaven-Aluminium-Lightweight-48cm-134CM-Smartphones/dp/B0FRLYS11N/ref=pd_cart_crc_cko_cart_d_sccl_2_2/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FRLYS11N&psc=1
+                        - generic [ref=e848]:
+                          - generic [ref=e849]: ₹759.00
+                          - generic [ref=e850]:
+                            - text: ₹
+                            - generic [ref=e851]:
+                              - text: "759"
+                              - generic [ref=e852]: .
+                            - text: "00"
+                    - generic [ref=e855]: Limited time deal
+                    - 'link "M.R.P: ₹1,799.00" [ref=e857] [cursor=pointer]':
+                      - /url: /TechMaven-Aluminium-Lightweight-48cm-134CM-Smartphones/dp/B0FRLYS11N/ref=pd_cart_crc_cko_cart_d_sccl_2_2/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FRLYS11N&psc=1
+                      - generic [ref=e859]: "M.R.P: ₹1,799.00"
+                  - generic [ref=e861]: Get it by Thursday, June 18
+                - text: FREE Delivery by Amazon
+              - generic [ref=e869] [cursor=pointer]:
+                - button "Add to cart, TechMaven Aluminium Lightweight Tripod Stand (48-134CM) Tripod with Mobile Holder 360° Rotation 3 Way Tilt |for DSLR, Camera, GoPro, Smartphones with Phone Stand & Carry Bag (Copper Color)" [ref=e870]
+                - generic [ref=e871]: Add to cart
+          - listitem [ref=e872]:
+            - generic [ref=e874]:
+              - link [ref=e875] [cursor=pointer]:
+                - /url: /CP-PLUS-Outdoor-CP-URC-TC24PL3-Compatible/dp/B0FH5G1Z7P/ref=pd_cart_crc_cko_cart_d_sccl_2_3/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FH5G1Z7P&psc=1
+                - img [ref=e877]
+              - generic [ref=e879]:
+                - link "CP Plus 2.4MP IR Wired Bullet Outdoor Camera CP-URC-TC24PL3 Compatible with DVR only | 3.6mm Lens | 30 Meter Black & White Night Vision | IP67 | Analog HD CCTV Camera, White" [ref=e880] [cursor=pointer]:
+                  - /url: /CP-PLUS-Outdoor-CP-URC-TC24PL3-Compatible/dp/B0FH5G1Z7P/ref=pd_cart_crc_cko_cart_d_sccl_2_3/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FH5G1Z7P&psc=1
+                  - generic [ref=e882]: CP Plus 2.4MP IR Wired Bullet Outdoor Camera CP-URC-TC24PL3 Compatible with DVR only | 3.6mm Lens | 30 Meter Black & White Night Vision | IP67 | Analog HD CCTV Camera, White
+                - link "3.9 out of 5 stars, 291 ratings" [ref=e885] [cursor=pointer]:
+                  - /url: /product-reviews/B0FH5G1Z7P/ref=pd_cart_crc_cko_cart_d_sccl_2_3_cr/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FH5G1Z7P
+                  - generic [ref=e887]: 3.9 out of 5 stars
+                  - text: "291"
+                - generic [ref=e888]:
+                  - generic [ref=e890]:
+                    - generic [ref=e891]:
+                      - link "-72%" [ref=e892] [cursor=pointer]:
+                        - /url: /CP-PLUS-Outdoor-CP-URC-TC24PL3-Compatible/dp/B0FH5G1Z7P/ref=pd_cart_crc_cko_cart_d_sccl_2_3/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FH5G1Z7P&psc=1
+                        - text: "-72%"
+                      - link "₹949.00" [ref=e893] [cursor=pointer]:
+                        - /url: /CP-PLUS-Outdoor-CP-URC-TC24PL3-Compatible/dp/B0FH5G1Z7P/ref=pd_cart_crc_cko_cart_d_sccl_2_3/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FH5G1Z7P&psc=1
+                        - generic [ref=e894]:
+                          - generic [ref=e895]: ₹949.00
+                          - generic [ref=e896]:
+                            - text: ₹
+                            - generic [ref=e897]:
+                              - text: "949"
+                              - generic [ref=e898]: .
+                            - text: "00"
+                    - 'link "M.R.P: ₹3,400.00" [ref=e900] [cursor=pointer]':
+                      - /url: /CP-PLUS-Outdoor-CP-URC-TC24PL3-Compatible/dp/B0FH5G1Z7P/ref=pd_cart_crc_cko_cart_d_sccl_2_3/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B0FH5G1Z7P&psc=1
+                      - generic [ref=e902]: "M.R.P: ₹3,400.00"
+                  - generic [ref=e904]: Get it by Thursday, June 18
+                - text: FREE Delivery by Amazon
+              - generic [ref=e912] [cursor=pointer]:
+                - button "Add to cart, CP Plus 2.4MP IR Wired Bullet Outdoor Camera CP-URC-TC24PL3 Compatible with DVR only | 3.6mm Lens | 30 Meter Black & White Night Vision | IP67 | Analog HD CCTV Camera, White" [ref=e913]
+                - generic [ref=e914]: Add to cart
+          - listitem [ref=e915]:
+            - generic [ref=e917]:
+              - link [ref=e918] [cursor=pointer]:
+                - /url: /Zebronics-Zeb-Pluto-Multimedia-Speaker-Connectivity/dp/B07ZZCBQZD/ref=pd_cart_crc_cko_cart_d_sccl_2_4/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B07ZZCBQZD&psc=1
+                - img [ref=e920]
+              - generic [ref=e922]:
+                - link "Zebronics Zeb-Pluto 2.0 Multimedia Speaker with Aux Connectivity,USB Powered and Volume Control" [ref=e923] [cursor=pointer]:
+                  - /url: /Zebronics-Zeb-Pluto-Multimedia-Speaker-Connectivity/dp/B07ZZCBQZD/ref=pd_cart_crc_cko_cart_d_sccl_2_4/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B07ZZCBQZD&psc=1
+                  - generic [ref=e925]: Zebronics Zeb-Pluto 2.0 Multimedia Speaker with Aux Connectivity,USB Powered and Volume Control
+                - link "4.1 out of 5 stars, 5,480 ratings" [ref=e928] [cursor=pointer]:
+                  - /url: /product-reviews/B07ZZCBQZD/ref=pd_cart_crc_cko_cart_d_sccl_2_4_cr/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B07ZZCBQZD
+                  - generic [ref=e930]: 4.1 out of 5 stars
+                  - text: 5,480
+                - generic [ref=e931]:
+                  - generic [ref=e933]:
+                    - generic [ref=e934]:
+                      - link "-45%" [ref=e935] [cursor=pointer]:
+                        - /url: /Zebronics-Zeb-Pluto-Multimedia-Speaker-Connectivity/dp/B07ZZCBQZD/ref=pd_cart_crc_cko_cart_d_sccl_2_4/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B07ZZCBQZD&psc=1
+                        - text: "-45%"
+                      - link "₹329.00" [ref=e936] [cursor=pointer]:
+                        - /url: /Zebronics-Zeb-Pluto-Multimedia-Speaker-Connectivity/dp/B07ZZCBQZD/ref=pd_cart_crc_cko_cart_d_sccl_2_4/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B07ZZCBQZD&psc=1
+                        - generic [ref=e937]:
+                          - generic [ref=e938]: ₹329.00
+                          - generic [ref=e939]:
+                            - text: ₹
+                            - generic [ref=e940]:
+                              - text: "329"
+                              - generic [ref=e941]: .
+                            - text: "00"
+                    - 'link "M.R.P: ₹599.00" [ref=e943] [cursor=pointer]':
+                      - /url: /Zebronics-Zeb-Pluto-Multimedia-Speaker-Connectivity/dp/B07ZZCBQZD/ref=pd_cart_crc_cko_cart_d_sccl_2_4/525-9642354-0404766?pd_rd_w=8UEVe&content-id=amzn1.sym.2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_p=2c004b73-17f1-4cb5-a285-2ad2d6d4d6ac&pf_rd_r=SRVM29R6NTHHXHKNPAFA&pd_rd_wg=AJdIa&pd_rd_r=5f7afda3-bf78-4cfa-9033-fc88e200dcbf&pd_rd_i=B07ZZCBQZD&psc=1
+                      - generic [ref=e945]: "M.R.P: ₹599.00"
+                  - generic [ref=e947]: Get it by Thursday, June 18
+                - text: FREE Delivery by Amazon
+              - generic [ref=e955] [cursor=pointer]:
+                - button "Add to cart, Zebronics Zeb-Pluto 2.0 Multimedia Speaker with Aux Connectivity,USB Powered and Volume Control" [ref=e956]
+                - generic [ref=e957]: Add to cart
+      - button "Next set of slides" [ref=e959] [cursor=pointer]:
+        - generic [ref=e962]: Next set of slides
+  - complementary "Your recently viewed items and featured recommendations"
+  - generic [ref=e963]:
+    - button "Back to top" [ref=e964] [cursor=pointer]:
+      - generic [ref=e965]: Back to top
+    - generic [ref=e966]:
+      - generic [ref=e967]:
+        - heading "Get to Know Us" [level=6] [ref=e968]
+        - list [ref=e969]:
+          - listitem [ref=e970]:
+            - link "About Amazon" [ref=e971] [cursor=pointer]:
+              - /url: https://www.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e972]:
+            - link "Careers" [ref=e973] [cursor=pointer]:
+              - /url: https://amazon.jobs
+          - listitem [ref=e974]:
+            - link "Press Releases" [ref=e975] [cursor=pointer]:
+              - /url: https://press.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e976]:
+            - link "Amazon Science" [ref=e977] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=e979]:
+        - heading "Connect with Us" [level=6] [ref=e980]
+        - list [ref=e981]:
+          - listitem [ref=e982]:
+            - link "Facebook" [ref=e983] [cursor=pointer]:
+              - /url: https://www.facebook.com/AmazonIN
+          - listitem [ref=e984]:
+            - link "Twitter" [ref=e985] [cursor=pointer]:
+              - /url: https://x.com/AmazonIN
+          - listitem [ref=e986]:
+            - link "Instagram" [ref=e987] [cursor=pointer]:
+              - /url: https://www.instagram.com/amazondotin
+      - generic [ref=e989]:
+        - heading "Make Money with Us" [level=6] [ref=e990]
+        - list [ref=e991]:
+          - listitem [ref=e992]:
+            - link "Sell on Amazon" [ref=e993] [cursor=pointer]:
+              - /url: /b/?node=2838698031&ld=AZINSOANavDesktopFooter_C&ref_=nav_footer_sell_C
+          - listitem [ref=e994]:
+            - link "Sell under Amazon Accelerator" [ref=e995] [cursor=pointer]:
+              - /url: https://accelerator.amazon.in/?ref_=map_1_b2b_GW_FT
+          - listitem [ref=e996]:
+            - link "Protect and Build Your Brand" [ref=e997] [cursor=pointer]:
+              - /url: https://brandservices.amazon.in/?ref=AOINABRLGNRFOOT&ld=AOINABRLGNRFOOT
+          - listitem [ref=e998]:
+            - link "Amazon Global Selling" [ref=e999] [cursor=pointer]:
+              - /url: https://sell.amazon.in/grow-your-business/amazon-global-selling.html?ld=AZIN_Footer_V1&ref=AZIN_Footer_V1
+          - listitem [ref=e1000]:
+            - link "Supply to Amazon" [ref=e1001] [cursor=pointer]:
+              - /url: https://supply.amazon.com/?ref_=footer_sta&lang=en-IN
+          - listitem [ref=e1002]:
+            - link "Become an Affiliate" [ref=e1003] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.in/?utm_campaign=assocshowcase&utm_medium=footer&utm_source=GW&ref_=footer_assoc
+          - listitem [ref=e1004]:
+            - link "Fulfilment by Amazon" [ref=e1005] [cursor=pointer]:
+              - /url: https://services.amazon.in/services/fulfilment-by-amazon/benefits.html/ref=az_footer_fba?ld=AWRGINFBAfooter
+          - listitem [ref=e1006]:
+            - link "Advertise Your Products" [ref=e1007] [cursor=pointer]:
+              - /url: https://advertising.amazon.in/?ref=Amz.in
+          - listitem [ref=e1008]:
+            - link "Amazon Pay on Merchants" [ref=e1009] [cursor=pointer]:
+              - /url: https://www.amazonpay.in/merchant
+      - generic [ref=e1011]:
+        - heading "Let Us Help You" [level=6] [ref=e1012]
+        - list [ref=e1013]:
+          - listitem [ref=e1014]:
+            - link "Your Account" [ref=e1015] [cursor=pointer]:
+              - /url: /gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=e1016]:
+            - link "Returns Centre" [ref=e1017] [cursor=pointer]:
+              - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e1018]:
+            - link "Recalls and Product Safety Alerts" [ref=e1019] [cursor=pointer]:
+              - /url: https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa
+          - listitem [ref=e1020]:
+            - link "100% Purchase Protection" [ref=e1021] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=201083470&ref_=footer_swc
+          - listitem [ref=e1022]:
+            - link "Amazon App Download" [ref=e1023] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6967393031&ref_=footer_mobapp
+          - listitem [ref=e1024]:
+            - link "Help" [ref=e1025] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=footer_gw_m_b_he
+    - generic [ref=e1027]:
+      - link "Amazon India Home" [ref=e1030] [cursor=pointer]:
+        - /url: /ref=footer_logo
+      - generic [ref=e1033]:
+        - generic [ref=e1034]:
+          - link "Choose a language for shopping. Current selection is English." [ref=e1035] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=e1037]: English
+          - button "Expand to Change Language or Country" [ref=e1038] [cursor=pointer]
+        - button "Choose a country/region for shopping. The current selection is India." [ref=e1039] [cursor=pointer]:
+          - generic [ref=e1041]: India
+    - generic "More on Amazon" [ref=e1042]:
+      - generic "More on Amazon" [ref=e1043]:
+        - list [ref=e1044]:
+          - listitem [ref=e1045]:
+            - link "AbeBooks Books, art & collectibles" [ref=e1046] [cursor=pointer]:
+              - /url: https://www.abebooks.com/
+              - heading "AbeBooks" [level=5] [ref=e1047]
+              - generic [ref=e1048]:
+                - text: Books, art
+                - text: "& collectibles"
+          - listitem [ref=e1049]
+          - listitem [ref=e1050]:
+            - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e1051] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=IN_amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=e1052]
+              - generic [ref=e1053]:
+                - text: Scalable Cloud
+                - text: Computing Services
+          - listitem [ref=e1054]
+          - listitem [ref=e1055]:
+            - link "Audible Download Audio Books" [ref=e1056] [cursor=pointer]:
+              - /url: https://www.audible.in/
+              - heading "Audible" [level=5] [ref=e1057]
+              - generic [ref=e1058]:
+                - text: Download
+                - text: Audio Books
+          - listitem [ref=e1059]
+          - listitem [ref=e1060]:
+            - link "IMDb Movies, TV & Celebrities" [ref=e1061] [cursor=pointer]:
+              - /url: https://www.imdb.com/
+              - heading "IMDb" [level=5] [ref=e1062]
+              - generic [ref=e1063]:
+                - text: Movies, TV
+                - text: "& Celebrities"
+        - list [ref=e1064]:
+          - listitem [ref=e1065]:
+            - link "Shopbop Designer Fashion Brands" [ref=e1066] [cursor=pointer]:
+              - /url: https://www.shopbop.com/
+              - heading "Shopbop" [level=5] [ref=e1067]
+              - generic [ref=e1068]:
+                - text: Designer
+                - text: Fashion Brands
+          - listitem [ref=e1069]
+          - listitem [ref=e1070]:
+            - link "Amazon Business Everything For Your Business" [ref=e1071] [cursor=pointer]:
+              - /url: /business?ref=footer_aingw
+              - heading "Amazon Business" [level=5] [ref=e1072]
+              - generic [ref=e1073]:
+                - text: Everything For
+                - text: Your Business
+          - listitem [ref=e1074]
+          - listitem [ref=e1075]:
+            - link "Amazon Music Stream millions of songs" [ref=e1076] [cursor=pointer]:
+              - /url: /music/player?ref=footer_apm
+              - heading "Amazon Music" [level=5] [ref=e1077]
+              - generic [ref=e1078]: Stream millions of songs
+          - listitem [ref=e1079]
+          - listitem [ref=e1080]
+    - generic [ref=e1081]:
+      - list [ref=e1082]:
+        - listitem [ref=e1083]:
+          - link "Conditions of Use & Sale" [ref=e1084] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200545940&ref_=footer_cou
+        - listitem [ref=e1085]:
+          - link "Privacy Notice" [ref=e1086] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200534380&ref_=footer_privacy
+        - listitem [ref=e1087]:
+          - link "Interest-Based Ads" [ref=e1088] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=202075050&ref_=footer_iba
+      - generic [ref=e1089]: © 1996-2026, Amazon.com, Inc. or its affiliates
