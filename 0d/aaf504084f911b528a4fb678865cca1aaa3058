@@ -1,0 +1,14 @@
+.gitignore
+  h_04aea7ec3680dc 1-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.7",
+  "base_commit_sha": "0daaf504084f911b528a4fb678865cca1aaa3058",
+  "prompts": {},
+  "humans": {
+    "h_04aea7ec3680dc": {
+      "author": "Mahir Ghadiali (mghadial) <mghadial@cisco.com>"
+    }
+  }
+}
