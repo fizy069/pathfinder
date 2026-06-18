@@ -1,4 +1,7 @@
 # Generated tutorial output
+# PDFs are regenerated from JSON (or from a --artifact bundle), so don't commit them.
+# Artifact screenshots (tutorials/<slug>/media/*.png) ARE tracked so the
+# portable artifact stays self-contained and replayable without a browser.
 *.pdf
 .playwright-mcp
 # Python

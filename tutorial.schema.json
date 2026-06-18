@@ -2,20 +2,26 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://playwright-tut/tutorial.schema.json",
     "title": "Tutorial config",
-    "description": "Declarative click-path that drives a website with Playwright and renders an annotated PDF tutorial.",
+    "description": "Declarative click-path that drives a website with Playwright and renders an annotated PDF tutorial. A composable 'graph' of nodes (with branches and reusable fragments).",
     "type": "object",
-    "required": ["name", "start_url", "steps"],
+    "required": ["name", "graph"],
     "additionalProperties": false,
     "properties": {
         "name": {
             "type": "string",
             "minLength": 1,
-            "description": "Human-readable title of the tutorial."
+            "description": "Human-readable title of the tutorial or fragment."
+        },
+        "kind": {
+            "type": "string",
+            "enum": ["tutorial", "fragment", "artifact"],
+            "default": "tutorial",
+            "description": "'tutorial' is a runnable flow, 'fragment' is a reusable subgraph included via a fragment node, 'artifact' is a rendered run that carries captured screenshots."
         },
         "start_url": {
             "type": "string",
             "format": "uri",
-            "description": "URL the browser opens before the first step."
+            "description": "URL the browser opens before traversal starts. Optional for fragments that begin with their own 'goto'."
         },
         "output": {
             "type": "string",
@@ -38,19 +44,80 @@
             "default": true,
             "description": "Run the browser without a visible window."
         },
-        "steps": {
-            "type": "array",
-            "minItems": 1,
-            "description": "Ordered list of tutorial steps.",
-            "items": { "$ref": "#/definitions/step" }
-        }
+        "params": {
+            "type": "object",
+            "description": "Typed inputs this tutorial or fragment accepts. Callers bind them via a fragment node's 'with'. Values are referenced in steps as ${param:NAME}.",
+            "additionalProperties": { "$ref": "#/definitions/paramSpec" }
+        },
+        "graph": { "$ref": "#/definitions/graph" }
     },
     "definitions": {
-        "step": {
+        "paramSpec": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "Declaration of a single input parameter.",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": ["string", "number", "boolean"],
+                    "default": "string",
+                    "description": "Expected value type."
+                },
+                "required": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If true, traversal fails when the param is unbound and has no default."
+                },
+                "default": {
+                    "description": "Value used when the caller does not bind this param."
+                },
+                "secret": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If true, the value is sensitive (e.g. a password). It must be supplied at run time via ${env:...} or a secretRef and is never written into committed JSON or logs."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Human-readable explanation of the parameter."
+                }
+            }
+        },
+        "graph": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["start", "nodes"],
+            "description": "A directed graph of steps. Traversal begins at 'start' and follows each node's 'next' edges until a node has no successor.",
+            "properties": {
+                "start": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Id of the entry node."
+                },
+                "nodes": {
+                    "type": "object",
+                    "minProperties": 1,
+                    "description": "Map of node id -> node. Every edge target and the 'start' must exist here.",
+                    "additionalProperties": { "$ref": "#/definitions/node" }
+                }
+            }
+        },
+        "node": {
+            "oneOf": [
+                { "$ref": "#/definitions/stepNode" },
+                { "$ref": "#/definitions/fragmentNode" }
+            ]
+        },
+        "stepNode": {
             "type": "object",
             "additionalProperties": false,
             "required": ["description"],
+            "description": "A graph node that performs one interaction (a step) and then follows 'next'.",
             "properties": {
+                "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Optional explicit id (the map key is authoritative)."
+                },
                 "description": {
                     "type": "string",
                     "minLength": 1,
@@ -64,14 +131,10 @@
                 },
                 "value": {
                     "type": "string",
-                    "description": "Text to fill, key to press, or URL to navigate to (action-dependent)."
+                    "description": "Text to fill, key to press, or URL to navigate to. Supports ${param:NAME} and ${env:NAME} substitution."
                 },
+                "secretRef": { "$ref": "#/definitions/secretRef" },
                 "locator": { "$ref": "#/definitions/locator" },
-                "selector": {
-                    "type": "string",
-                    "minLength": 1,
-                    "description": "Legacy CSS selector. Prefer 'locator'. Treated as { \"css\": <value> }."
-                },
                 "highlight": {
                     "type": "boolean",
                     "default": true,
@@ -82,30 +145,145 @@
                     "enum": ["draft", "verified"],
                     "default": "draft",
                     "description": "Checkpoint state. 'verified' means the locator resolved on the live site."
-                }
+                },
+                "screenshot": {
+                    "type": "string",
+                    "description": "ARTIFACT ONLY: relative path to the captured PNG for this node, written by the renderer. Never authored by hand."
+                },
+                "next": { "$ref": "#/definitions/next" }
             },
             "allOf": [
                 {
-                    "description": "Non-goto steps need a way to find the element.",
+                    "description": "Non-goto steps need a locator to find the element.",
                     "if": {
                         "properties": { "action": { "not": { "const": "goto" } } }
                     },
-                    "then": {
-                        "anyOf": [
-                            { "required": ["locator"] },
-                            { "required": ["selector"] }
-                        ]
-                    }
+                    "then": { "required": ["locator"] }
                 },
                 {
-                    "description": "goto, fill, and select require a value.",
+                    "description": "goto and select require a value.",
                     "if": {
-                        "properties": { "action": { "enum": ["goto", "fill", "select"] } },
+                        "properties": { "action": { "enum": ["goto", "select"] } },
                         "required": ["action"]
                     },
                     "then": { "required": ["value"] }
+                },
+                {
+                    "description": "fill needs either a value or a secretRef.",
+                    "if": {
+                        "properties": { "action": { "const": "fill" } },
+                        "required": ["action"]
+                    },
+                    "then": {
+                        "anyOf": [
+                            { "required": ["value"] },
+                            { "required": ["secretRef"] }
+                        ]
+                    }
                 }
             ]
+        },
+        "fragmentNode": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["use"],
+            "description": "A graph node that inlines another tutorial/fragment file, binding its params via 'with', then follows 'next'.",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Optional explicit id (the map key is authoritative)."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Optional human-readable label for the included fragment."
+                },
+                "use": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Path (relative to this file) of the fragment/tutorial JSON to inline."
+                },
+                "with": {
+                    "type": "object",
+                    "description": "Bindings for the included file's params. Values may be literals or ${param:NAME}/${env:NAME} references; secrets should use a secretRef.",
+                    "additionalProperties": {
+                        "oneOf": [
+                            { "type": ["string", "number", "boolean"] },
+                            { "$ref": "#/definitions/secretRef" }
+                        ]
+                    }
+                },
+                "next": { "$ref": "#/definitions/next" }
+            }
+        },
+        "next": {
+            "description": "Successor edge(s). A string is a single successor node id. An array describes conditional branches; the first edge whose 'when' matches is taken, falling back to the single edge that has no 'when'.",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "minLength": 1
+                },
+                {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": { "$ref": "#/definitions/edge" }
+                }
+            ]
+        },
+        "edge": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["to"],
+            "properties": {
+                "to": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Target node id."
+                },
+                "when": { "$ref": "#/definitions/condition" }
+            }
+        },
+        "condition": {
+            "type": "object",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "maxProperties": 2,
+            "description": "Branch predicate evaluated against the live page / variable scope. Provide exactly one of 'visible', 'exists', or 'var' (+ 'equals').",
+            "properties": {
+                "visible": {
+                    "allOf": [{ "$ref": "#/definitions/locator" }],
+                    "description": "True when the located element is present and visible."
+                },
+                "exists": {
+                    "allOf": [{ "$ref": "#/definitions/locator" }],
+                    "description": "True when the located element is attached to the DOM (visible or not)."
+                },
+                "var": {
+                    "type": "string",
+                    "description": "Name of a param/variable in scope to compare with 'equals'."
+                },
+                "equals": {
+                    "description": "Value the 'var' must equal for the condition to be true."
+                }
+            },
+            "dependencies": {
+                "var": ["equals"],
+                "equals": ["var"]
+            }
+        },
+        "secretRef": {
+            "type": "object",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "maxProperties": 1,
+            "description": "Reference to a sensitive value resolved at run time and never committed.",
+            "properties": {
+                "env": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Name of the environment variable holding the secret."
+                }
+            }
         },
         "locator": {
             "type": "object",
