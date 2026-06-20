@@ -1,0 +1,52 @@
+tutorial_generator.ts
+  s_ad871b10e22903::t_8c2e111c5ef9d9 1-915,923-932
+  s_ad871b10e22903::t_900a0cf9387a41 916-922
+package.json
+  s_89cfb6e4320400::t_191db3f514353b 1-4,6,10-15,19-20
+  s_ad871b10e22903::t_81714feb7c2f48 5,7-9
+  s_ad871b10e22903::t_539b522711e538 16-18
+README.md
+  s_4ba394933a00af::t_17fa4dd4fbef06 5-6,10-11,31,34-37,45-46,51-52,62,67,71,73,75,81
+  s_ad871b10e22903::t_d587e8ffc6c080 19-21,23
+  s_4ba394933a00af::t_38c375b0c479ea 30,32-33,44,70
+SKILL.md
+  s_ad871b10e22903::t_beb6af61fdc38d 17,79,88
+  s_4ba394933a00af::t_4887dc81a0f46e 6-11,18-19,21-25,33-72,81,87,90-93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "89e0c0447dfcaa6d0cdd9e3aab52ef230838316f",
+  "prompts": {},
+  "humans": {
+    "h_e661ac2a8ff09e": {
+      "author": "fizy069 <mahirg4@gmai.com>"
+    }
+  },
+  "sessions": {
+    "s_4ba394933a00af": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "f7523fbe-a72e-4218-b8f2-9c9b3376b16a",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    },
+    "s_89cfb6e4320400": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "77dc2190-63ce-4154-b2a4-03db580ed754",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    },
+    "s_ad871b10e22903": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "4d6ec61b-aaf9-4e68-8ada-f7a173690130",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    }
+  }
+}
