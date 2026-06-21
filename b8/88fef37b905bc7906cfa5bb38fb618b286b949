@@ -1,0 +1,29 @@
+package.json
+  s_ad871b10e22903::t_9d4a01ee1f2ff2 9
+  s_ad871b10e22903::t_428a46dd5fa713 18
+tutorial_generator.ts
+  s_ad871b10e22903::t_09a6944b0ab8e6 17
+tsconfig.json
+  s_ad871b10e22903::t_8fba3f68f96d36 1-16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "b888fef37b905bc7906cfa5bb38fb618b286b949",
+  "prompts": {},
+  "humans": {
+    "h_e661ac2a8ff09e": {
+      "author": "fizy069 <mahirg4@gmai.com>"
+    }
+  },
+  "sessions": {
+    "s_ad871b10e22903": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "4d6ec61b-aaf9-4e68-8ada-f7a173690130",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    }
+  }
+}
