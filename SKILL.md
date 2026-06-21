@@ -161,10 +161,19 @@ step-qualified errors without launching a browser.
 ## Updating / drift-checking an existing tutorial
 
 1. Load the existing `tutorials/<slug>.spec.ts`.
-2. Phase 1 subagent re-walks the flow; for each step compare the recorded
-   statement against what now resolves on the live site.
-3. For drifted steps, update the statement, set the step back to `[draft]` until
-   re-verified, save (checkpoint) after each change.
+2. Run the fast drift check to see which steps still resolve on the live site
+   (replays headless, no PDF, exits non-zero if any step is stale):
+
+   ```powershell
+   npx tsx tutorial_generator.ts tutorials/<slug>.spec.ts --verify
+   ```
+
+   It prints a per-step `OK`/`FAIL`/`SKIP` report; a `FAIL` line includes the
+   drift reason, and steps after the first failure are `SKIP` (page state can no
+   longer advance). A `--verify` run is the cheapest way to detect a stale doc.
+3. For drifted steps, a Phase 1 subagent re-walks the flow on the live site to
+   find the new locator; update the statement, set the step back to `[draft]`
+   until re-verified, save (checkpoint) after each change.
 4. Re-render and report what changed.
 
 ## Guardrails

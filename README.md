@@ -76,6 +76,14 @@ Validate a spec without launching a browser:
 npx tsx tutorial_generator.ts tutorials/wikipedia-search.spec.ts --check
 ```
 
+Drift-check a spec against the live site (replays headless, no PDF, exits
+non-zero if any step is stale) — useful for spotting tutorials that have gone
+stale:
+
+```powershell
+npx tsx tutorial_generator.ts tutorials/wikipedia-search.spec.ts --verify
+```
+
 Replay the flow with Playwright Test:
 
 ```powershell

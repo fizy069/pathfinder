@@ -14,6 +14,7 @@
  * Usage:
  *     npx tsx tutorial_generator.ts tutorials/wikipedia-search.spec.ts
  *     npx tsx tutorial_generator.ts tutorials/wikipedia-search.spec.ts --check
+ *     npx tsx tutorial_generator.ts tutorials/wikipedia-search.spec.ts --verify
  *     npx tsx tutorial_generator.ts --migrate tutorials/legacy.json   # one-off
  *
  * Spec format (authored by hand or by the skill):
@@ -830,19 +831,147 @@ async function generate(config: Config): Promise<string> {
   return output;
 }
 
+// --- Drift verification (replay each step, report pass/fail, no PDF) ----------
+
+type StepStatus = 'ok' | 'failed' | 'skipped';
+
+interface StepResult {
+  stepNumber: number;
+  description: string;
+  status: StepStatus;
+  detail: string;
+  error?: string;
+}
+
+/** Short, human-readable description of a step's action + locator. */
+function describeStep(step: Step): string {
+  const action = step.action ?? 'click';
+  if (action === 'goto') {
+    return `goto ${step.value ?? ''}`;
+  }
+  let target: string;
+  try {
+    target = locatorToTs(step);
+  } catch {
+    target = '<unresolved locator>';
+  }
+  const value = step.value !== undefined ? ` ${JSON.stringify(step.value)}` : '';
+  return `${action}${value} -> ${target}`;
+}
+
+/**
+ * Replay the tutorial step by step on the live site and report which steps still
+ * resolve. Does not render a PDF. Returns the per-step results plus whether the
+ * whole tutorial passed. Once a step fails, the page state can no longer advance,
+ * so the remaining steps are reported as 'skipped'.
+ */
+async function verify(
+  config: Config,
+  timeoutMs = 6000,
+): Promise<{ ok: boolean; results: StepResult[] }> {
+  const viewport = config.viewport ?? { width: 1280, height: 800 };
+  const headless = config.headless ?? true;
+  const results: StepResult[] = [];
+
+  let browser: Browser | null = null;
+  try {
+    browser = await chromium.launch({ headless });
+    const context = await browser.newContext({ viewport, deviceScaleFactor: 1 });
+    const page = await context.newPage();
+    // Fail fast on drifted locators instead of waiting the default 30s.
+    page.setDefaultTimeout(timeoutMs);
+
+    await page.goto(config.start_url, { waitUntil: 'domcontentloaded' });
+
+    let broken = false;
+    for (let i = 0; i < config.steps.length; i += 1) {
+      const step = config.steps[i];
+      const base: StepResult = {
+        stepNumber: i + 1,
+        description: step.description ?? step.selector ?? '',
+        status: 'ok',
+        detail: describeStep(step),
+      };
+
+      if (broken) {
+        results.push({ ...base, status: 'skipped' });
+        continue;
+      }
+
+      try {
+        await performAction(page, step);
+        results.push(base);
+      } catch (exc) {
+        broken = true;
+        results.push({
+          ...base,
+          status: 'failed',
+          error: (exc instanceof Error ? exc.message : String(exc))
+            .split('\n')[0]
+            .trim(),
+        });
+      }
+    }
+  } finally {
+    if (browser) {
+      await browser.close();
+    }
+  }
+
+  const ok = results.every((r) => r.status === 'ok');
+  return { ok, results };
+}
+
+/** Print a verify report to the console; return the process exit code. */
+function reportVerify(
+  config: Config,
+  results: StepResult[],
+  ok: boolean,
+): number {
+  const label: Record<StepStatus, string> = {
+    ok: 'OK  ',
+    failed: 'FAIL',
+    skipped: 'SKIP',
+  };
+  console.log(`Verifying: ${config.name}`);
+  console.log(`  start: ${config.start_url}`);
+  for (const r of results) {
+    const line = `  Step ${r.stepNumber}: ${label[r.status]}  ${r.description}`;
+    console.log(line);
+    console.log(`           ${r.detail}`);
+    if (r.status === 'failed' && r.error) {
+      console.log(`           drift: ${r.error}`);
+    }
+  }
+  const counts = {
+    ok: results.filter((r) => r.status === 'ok').length,
+    failed: results.filter((r) => r.status === 'failed').length,
+    skipped: results.filter((r) => r.status === 'skipped').length,
+  };
+  console.log(
+    `${counts.ok} ok, ${counts.failed} failed, ${counts.skipped} skipped - ` +
+      (ok ? 'up to date' : 'STALE'),
+  );
+  return ok ? 0 : 1;
+}
+
 interface CliArgs {
   source: string;
   check: boolean;
+  verify: boolean;
   migrate: boolean;
 }
 
 function parseArgs(argv: string[]): CliArgs {
   let source: string | undefined;
   let check = false;
+  let verify = false;
   let migrate = false;
   for (const arg of argv) {
     if (arg === '--check') {
       check = true;
+    } else if (arg === '--verify') {
+      verify = true;
     } else if (arg === '--migrate') {
       migrate = true;
     } else if (arg.startsWith('-')) {
@@ -858,7 +987,7 @@ function parseArgs(argv: string[]): CliArgs {
       "Path to the tutorial '.spec.ts' (source of truth) is required.",
     );
   }
-  return { source, check, migrate };
+  return { source, check, verify, migrate };
 }
 
 async function fileExists(p: string): Promise<boolean> {
@@ -905,6 +1034,10 @@ async function main(argv: string[]): Promise<number> {
       console.log('valid');
       return 0;
     }
+    if (args.verify) {
+      const { ok, results } = await verify(config);
+      return reportVerify(config, results, ok);
+    }
     await generate(config);
   } catch (exc) {
     console.error(exc instanceof Error ? exc.stack ?? exc.message : String(exc));
@@ -929,4 +1062,6 @@ export {
   resolveLocator,
   locatorToTs,
   actionToTs,
+  verify,
+  describeStep,
 };
