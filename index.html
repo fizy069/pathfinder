@@ -481,42 +481,70 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
     <p class="section-sub">It's an <a href="https://agentskills.io" target="_blank" rel="noopener">Agent Skills</a> package — a folder with a <code class="inline">SKILL.md</code> that works in Claude Code, Cursor, and VS Code Copilot.</p>
 
     <div class="tabs" role="tablist">
-      <button class="tab active" data-tab="mac" role="tab">🍎 macOS / Linux</button>
-      <button class="tab" data-tab="win" role="tab">🪟 Windows</button>
+      <button class="tab active" data-tab="claude" role="tab">🤖 Claude Code</button>
+      <button class="tab" data-tab="cursor" role="tab">🖱️ Cursor</button>
     </div>
 
     <div class="install-grid">
       <div class="install-card panel">
         <h3>1 · Copy the skill in</h3>
-        <div class="tab-pane active" data-pane="mac">
-<pre class="code"><span class="c"># into ~/.claude/skills (Claude Code & Cursor)</span>
-./install.sh claude
 
-<span class="c"># also install deps + Playwright MCP</span>
-./install.sh claude <span class="k">--deps</span> <span class="k">--mcp</span></pre>
-        </div>
-        <div class="tab-pane" data-pane="win">
-<pre class="code"><span class="c"># PowerShell</span>
-./install.ps1 claude
+        <!-- Claude Code -->
+        <div class="tab-pane active" data-pane="claude">
+<pre class="code"><span class="c"># macOS / Linux  →  ~/.claude/skills</span>
+./install.sh claude <span class="k">--deps</span> <span class="k">--mcp</span>
 
-<span class="c"># also install deps + Playwright MCP</span>
+<span class="c"># Windows (PowerShell)</span>
 ./install.ps1 claude <span class="k">-Deps</span> <span class="k">-Mcp</span></pre>
-          <div class="hint">⚠️ If scripts are blocked: <code class="inline">powershell -ExecutionPolicy Bypass -File ./install.ps1 claude</code></div>
+          <div class="hint">📁 Installs to <code class="inline">~/.claude/skills/tutorial-generator</code> — this folder is read by <strong>Claude Code and Cursor</strong>.</div>
         </div>
+
+        <!-- Cursor -->
+        <div class="tab-pane" data-pane="cursor">
+<pre class="code"><span class="c"># macOS / Linux  →  ~/.cursor/skills</span>
+./install.sh cursor <span class="k">--deps</span> <span class="k">--mcp</span>
+
+<span class="c"># Windows (PowerShell)</span>
+./install.ps1 cursor <span class="k">-Deps</span> <span class="k">-Mcp</span></pre>
+          <div class="hint">📁 Installs to <code class="inline">~/.cursor/skills/tutorial-generator</code>. You can also import from GitHub via <strong>Settings → Rules → Add Rule → Remote Rule</strong>.</div>
+        </div>
+
+        <div class="hint" style="background:var(--pop-2);">⚠️ Windows blocking scripts? Run <code class="inline">powershell -ExecutionPolicy Bypass -File ./install.ps1 claude -Deps -Mcp</code></div>
       </div>
 
       <div class="install-card panel">
-        <h3>2 · Set up the browser</h3>
-        <p style="margin:0 0 12px; font-size:0.95rem;">Once, inside the skill folder (skipped if you passed <code class="inline">--deps/--mcp</code>):</p>
-<pre class="code"><span class="f">npm</span> install
-<span class="f">npx</span> playwright install chromium</pre>
-        <div class="hint">🤖 You also need a <strong>Playwright MCP server</strong> so the skill can drive a live browser — <code class="inline">--mcp</code> wires it up automatically.</div>
+        <h3>2 · The Playwright MCP server</h3>
+        <p style="margin:0 0 12px; font-size:0.95rem;">The <code class="inline">--mcp</code> / <code class="inline">-Mcp</code> flag wires this up for you. To do it by hand:</p>
+
+        <!-- Claude Code -->
+        <div class="tab-pane active" data-pane="claude">
+<pre class="code"><span class="f">claude</span> mcp add playwright \
+  -- npx @playwright/mcp@latest</pre>
+        </div>
+
+        <!-- Cursor -->
+        <div class="tab-pane" data-pane="cursor">
+<pre class="code"><span class="c"># add to ~/.cursor/mcp.json</span>
+{
+  <span class="s">"mcpServers"</span>: {
+    <span class="s">"playwright"</span>: {
+      <span class="s">"command"</span>: <span class="s">"npx"</span>,
+      <span class="s">"args"</span>: [<span class="s">"@playwright/mcp@latest"</span>]
+    }
+  }
+}</pre>
+        </div>
+
+        <div class="hint">🌐 The skill drives a <strong>real browser</strong> through this server. Without it, it can't explore the live site.</div>
       </div>
     </div>
 
     <div style="margin-top:26px;" class="panel install-card">
-      <h3>3 · Just ask 💬</h3>
-      <p style="margin:0;">Tell your agent: <em>"generate a tutorial for how to search on Wikipedia."</em> It writes <code class="inline">tutorials/&lt;slug&gt;.spec.ts</code> checkpoint-by-checkpoint, then renders the PDF right next to it.</p>
+      <h3>3 · Install the browser, then just ask 💬</h3>
+      <p style="margin:0 0 12px; font-size:0.95rem;">Skipped if you passed <code class="inline">--deps</code>/<code class="inline">-Deps</code> — otherwise, once inside the installed skill folder:</p>
+<pre class="code"><span class="f">npm</span> install
+<span class="f">npx</span> playwright install chromium</pre>
+      <p style="margin:14px 0 0;">Then tell your agent: <em>"generate a tutorial for how to search on Wikipedia."</em> It writes <code class="inline">tutorials/&lt;slug&gt;.spec.ts</code> checkpoint-by-checkpoint, then renders the PDF right next to it.</p>
     </div>
   </div>
 </section>
