@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tutorial Generator — turn any web flow into a circled PDF</title>
+<meta name="description" content="An AI Agent Skill that drives a real browser, discovers a robust click-path, and renders a step-by-step PDF tutorial with the right button circled on every page. Tutorials live as docs." />
+<style>
+  :root {
+    --ink: #1a1430;
+    --paper: #fff7e6;
+    --pop: #ff3b6b;
+    --pop-2: #ffd23f;
+    --blue: #4d6fff;
+    --mint: #34e0c4;
+    --shadow: 6px 6px 0 var(--ink);
+    --shadow-sm: 3px 3px 0 var(--ink);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+    color: var(--ink);
+    background-color: #f3e8cf;
+    background-image:
+      radial-gradient(rgba(26, 20, 48, 0.13) 1.3px, transparent 1.5px);
+    background-size: 26px 26px;
+    background-position: -13px -13px;
+    line-height: 1.55;
+  }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Comic frame helper ---------- */
+  .panel {
+    background: #fff;
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+  }
+
+  /* ---------- Top bar ---------- */
+  header.bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--pop-2);
+    border-bottom: 3px solid var(--ink);
+  }
+  .bar .wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 24px;
+  }
+  .logo {
+    font-weight: 900;
+    font-size: 1.15rem;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .dot {
+    width: 18px; height: 18px;
+    border: 3px solid var(--pop);
+    border-radius: 50%;
+    display: inline-block;
+    transform: rotate(-8deg);
+  }
+  .bar nav { margin-left: auto; display: flex; gap: 18px; align-items: center; }
+  .bar nav a {
+    color: var(--ink);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .bar nav a:hover { text-decoration: underline wavy var(--pop); }
+  .bar nav a.ghbtn {
+    background: var(--ink);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  @media (max-width: 720px) {
+    .bar nav a:not(.ghbtn) { display: none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 64px 0 40px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } }
+
+  .kicker {
+    display: inline-block;
+    background: var(--mint);
+    border: 3px solid var(--ink);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-weight: 800;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-sm);
+    transform: rotate(-2deg);
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 0.98;
+    margin: 0 0 18px;
+    letter-spacing: -1.5px;
+    font-weight: 900;
+  }
+  h1 .circle-word {
+    position: relative;
+    white-space: nowrap;
+  }
+  h1 .circle-word::after {
+    content: "";
+    position: absolute;
+    inset: -8px -10px -10px -10px;
+    border: 4px solid var(--pop);
+    border-radius: 50%;
+    transform: rotate(-3deg);
+    pointer-events: none;
+  }
+  .hero p.lead { font-size: 1.18rem; max-width: 36ch; margin: 0 0 28px; }
+
+  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 12px;
+    border: 3px solid var(--ink);
+    box-shadow: var(--shadow);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+  }
+  .btn:active { transform: translate(4px, 4px); box-shadow: 2px 2px 0 var(--ink); }
+  .btn.primary { background: var(--pop); color: #fff; }
+  .btn.secondary { background: #fff; color: var(--ink); }
+
+  /* hero art: a mock circled screenshot */
+  .shot {
+    position: relative;
+    background: #fff;
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transform: rotate(2deg);
+  }
+  .shot .titlebar {
+    background: var(--ink);
+    display: flex;
+    gap: 7px;
+    padding: 10px 12px;
+  }
+  .shot .titlebar span { width: 12px; height: 12px; border-radius: 50%; background: #fff; opacity: 0.85; }
+  .shot .titlebar span:nth-child(1){ background: var(--pop); }
+  .shot .titlebar span:nth-child(2){ background: var(--pop-2); }
+  .shot .titlebar span:nth-child(3){ background: var(--mint); }
+  .shot .body { padding: 22px; min-height: 220px; }
+  .shot .skeleton { height: 12px; background: #eee; border-radius: 6px; margin-bottom: 12px; }
+  .shot .skeleton.s1 { width: 70%; }
+  .shot .skeleton.s2 { width: 90%; }
+  .shot .skeleton.s3 { width: 45%; }
+  .fake-btn {
+    display: inline-block;
+    margin-top: 14px;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 800;
+    padding: 10px 18px;
+    border-radius: 8px;
+    position: relative;
+  }
+  .lasso {
+    position: absolute;
+    border: 5px solid var(--pop);
+    border-radius: 50% 48% 52% 50%;
+    width: 150px; height: 70px;
+    right: 20px; bottom: 34px;
+    transform: rotate(-6deg);
+    pointer-events: none;
+    animation: wobble 3.5s ease-in-out infinite;
+  }
+  @keyframes wobble {
+    0%,100% { transform: rotate(-6deg) scale(1); }
+    50% { transform: rotate(-3deg) scale(1.04); }
+  }
+  .caption-banner {
+    position: absolute;
+    left: 0; bottom: 0; right: 0;
+    background: var(--pop-2);
+    border-top: 3px solid var(--ink);
+    font-weight: 800;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* ---------- Section scaffolding ---------- */
+  section { padding: 50px 0; }
+  .section-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin: 0 0 8px;
+  }
+  .section-sub { font-size: 1.05rem; margin: 0 0 30px; max-width: 60ch; }
+
+  /* ---------- Docs highlight band ---------- */
+  .docs-band { background: var(--ink); color: var(--paper); border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
+  .docs-band .section-title { color: #fff; }
+  .docs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+  @media (max-width: 860px){ .docs-grid { grid-template-columns: 1fr; } }
+  .docs-band .badge-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+  .pill {
+    background: transparent;
+    border: 2px solid var(--mint);
+    color: var(--mint);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+  pre.code {
+    background: #0e0a1f;
+    color: #e9e4ff;
+    border: 3px solid var(--mint);
+    border-radius: 12px;
+    padding: 18px;
+    overflow-x: auto;
+    font-family: "Cascadia Code", "Consolas", monospace;
+    font-size: 0.86rem;
+    line-height: 1.5;
+    box-shadow: var(--shadow-sm);
+  }
+  .code .c { color: #7c75a8; }
+  .code .k { color: var(--pop-2); }
+  .code .s { color: var(--mint); }
+  .code .f { color: var(--blue); }
+
+  /* ---------- Steps / how it works ---------- */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 860px){ .steps { grid-template-columns: 1fr; } }
+  .step { padding: 24px; position: relative; }
+  .step .num {
+    position: absolute;
+    top: -18px; left: -10px;
+    width: 44px; height: 44px;
+    background: var(--pop);
+    color: #fff;
+    border: 3px solid var(--ink);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow-sm);
+    transform: rotate(-6deg);
+  }
+  .step h3 { margin: 6px 0 8px; font-size: 1.2rem; }
+  .step p { margin: 0; font-size: 0.96rem; }
+
+  /* ---------- Install ---------- */
+  .install-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 860px){ .install-grid { grid-template-columns: 1fr; } }
+  .tabs { display: flex; gap: 8px; margin-bottom: 14px; }
+  .tab {
+    border: 3px solid var(--ink);
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    padding: 8px 16px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+  .tab.active { background: var(--pop-2); }
+  .install-card { padding: 22px; }
+  .install-card h3 { margin: 0 0 6px; }
+  .tab-pane { display: none; }
+  .tab-pane.active { display: block; }
+  .hint {
+    font-size: 0.85rem;
+    background: var(--mint);
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-top: 12px;
+    font-weight: 600;
+  }
+
+  /* ---------- Example PDF ---------- */
+  .example .panel { padding: 26px; display:grid; grid-template-columns: 1fr 1.1fr; gap: 26px; align-items:center; }
+  @media (max-width: 860px){ .example .panel { grid-template-columns: 1fr; } }
+  .pdf-card {
+    background: var(--paper);
+    border: 3px dashed var(--ink);
+    border-radius: 12px;
+    padding: 22px;
+    text-align: center;
+  }
+  .pdf-card .doc {
+    width: 96px; height: 120px;
+    margin: 0 auto 14px;
+    background: #fff;
+    border: 3px solid var(--ink);
+    border-radius: 6px;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    transform: rotate(-3deg);
+  }
+  .pdf-card .doc::before {
+    content: "PDF";
+    position: absolute;
+    bottom: 8px; left: 50%;
+    transform: translateX(-50%);
+    font-weight: 900;
+    font-size: 0.75rem;
+    color: var(--pop);
+  }
+  .pdf-card .doc .line { height: 6px; background: #ddd; border-radius: 4px; margin: 10px 12px; }
+  .pdf-card .doc .line.short { width: 50%; }
+  .pdf-card .doc .circ {
+    position: absolute;
+    width: 30px; height: 18px;
+    border: 3px solid var(--pop);
+    border-radius: 50%;
+    right: 12px; top: 40px;
+    transform: rotate(-8deg);
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 3px solid var(--ink);
+    background: var(--pop-2);
+    padding: 30px 0;
+    margin-top: 20px;
+  }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; font-weight: 700; }
+  footer a { color: var(--ink); }
+
+  code.inline {
+    background: var(--ink);
+    color: var(--pop-2);
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-family: "Cascadia Code","Consolas",monospace;
+    font-size: 0.85em;
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="logo"><span class="dot"></span> Tutorial Generator</div>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#docs">Docs as code</a>
+      <a href="#install">Install</a>
+      <a href="#example">Example PDF</a>
+      <a class="ghbtn" href="https://agentskills.io" target="_blank" rel="noopener">Agent Skill ↗</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">★ An AI Agent Skill ★</span>
+      <h1>Turn any web flow into a <span class="circle-word">circled</span> PDF.</h1>
+      <p class="lead">
+        Describe a task — <em>"how to filter issues on GitHub"</em> — and an AI drives a
+        <strong>real browser</strong>, finds a robust click-path, and renders a step-by-step
+        tutorial with the right button <strong>circled</strong> on every page.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="#install">⚡ Install the skill</a>
+        <a class="btn secondary" href="#example">📄 See an example PDF</a>
+      </div>
+    </div>
+
+    <div class="shot" aria-hidden="true">
+      <div class="titlebar"><span></span><span></span><span></span></div>
+      <div class="body">
+        <div class="skeleton s1"></div>
+        <div class="skeleton s2"></div>
+        <div class="skeleton s3"></div>
+        <span class="fake-btn">Publish</span>
+        <div class="lasso"></div>
+      </div>
+      <div class="caption-banner">Step 3: Click <strong>Publish</strong> to ship your change</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <h2 class="section-title">Three panels, one tutorial 🎬</h2>
+    <p class="section-sub">No hand-written CSS selectors. The skill explores the live site, hardens the locators, and draws the PDF for you.</p>
+    <div class="steps">
+      <div class="step panel">
+        <div class="num">1</div>
+        <h3>🕹️ Explore</h3>
+        <p>A discovery subagent walks your task on the live site via the Playwright MCP server, reading each step from the accessibility tree.</p>
+      </div>
+      <div class="step panel">
+        <div class="num">2</div>
+        <h3>🔒 Harden</h3>
+        <p>Selector-hardening subagents pick the most robust locator per element — <code class="inline">getByRole</code> over fragile CSS — and checkpoint the spec one step at a time.</p>
+      </div>
+      <div class="step panel">
+        <div class="num">3</div>
+        <h3>🖍️ Render</h3>
+        <p>The renderer replays the spec in Chromium, screenshots each step, circles the target in red, adds a caption, and compiles a <strong>PDF</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCS AS CODE -->
+<section id="docs" class="docs-band">
+  <div class="wrap">
+    <div class="docs-grid">
+      <div>
+        <h2 class="section-title">Tutorials live as <span style="color:var(--pop-2)">docs</span>. 📚</h2>
+        <p class="section-sub" style="color:var(--paper)">
+          The real deliverable isn't a throwaway recording — it's a
+          <strong>replayable <code class="inline">.spec.ts</code></strong> file. It's the single source
+          of truth: commit it, diff it in PRs, resume it mid-flight, and re-verify it against the
+          live site whenever the page drifts.
+        </p>
+        <div class="badge-row">
+          <span class="pill">✓ Committable</span>
+          <span class="pill">✓ Resumable checkpoints</span>
+          <span class="pill">✓ Drift-checkable</span>
+          <span class="pill">✓ Plain Playwright</span>
+        </div>
+      </div>
+      <div>
+<pre class="code"><span class="c">// Tutorial: How to search on Wikipedia</span>
+<span class="c">// PDF output: wikipedia-search.pdf</span>
+<span class="k">import</span> { test } <span class="k">from</span> <span class="s">'@playwright/test'</span>;
+
+test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async</span> ({ page }) =&gt; {
+  <span class="k">await</span> page.<span class="f">goto</span>(<span class="s">'https://www.wikipedia.org'</span>);
+
+  <span class="c">// Step 1: Click the search box [verified]</span>
+  <span class="k">await</span> page.<span class="f">getByRole</span>(<span class="s">'searchbox'</span>).<span class="f">click</span>();
+
+  <span class="c">// Step 2: Type your query [no-highlight]</span>
+  <span class="k">await</span> page.<span class="f">getByRole</span>(<span class="s">'searchbox'</span>).<span class="f">fill</span>(<span class="s">'Playwright'</span>);
+});</pre>
+        <p style="font-size:0.85rem; opacity:0.8; margin-top:14px;">
+          Re-run it: <code class="inline">npx playwright test wikipedia-search.spec.ts</code>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALL -->
+<section id="install">
+  <div class="wrap">
+    <h2 class="section-title">Install in one line 🚀</h2>
+    <p class="section-sub">It's an <a href="https://agentskills.io" target="_blank" rel="noopener">Agent Skills</a> package — a folder with a <code class="inline">SKILL.md</code> that works in Claude Code, Cursor, and VS Code Copilot.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="mac" role="tab">🍎 macOS / Linux</button>
+      <button class="tab" data-tab="win" role="tab">🪟 Windows</button>
+    </div>
+
+    <div class="install-grid">
+      <div class="install-card panel">
+        <h3>1 · Copy the skill in</h3>
+        <div class="tab-pane active" data-pane="mac">
+<pre class="code"><span class="c"># into ~/.claude/skills (Claude Code & Cursor)</span>
+./install.sh claude
+
+<span class="c"># also install deps + Playwright MCP</span>
+./install.sh claude <span class="k">--deps</span> <span class="k">--mcp</span></pre>
+        </div>
+        <div class="tab-pane" data-pane="win">
+<pre class="code"><span class="c"># PowerShell</span>
+./install.ps1 claude
+
+<span class="c"># also install deps + Playwright MCP</span>
+./install.ps1 claude <span class="k">-Deps</span> <span class="k">-Mcp</span></pre>
+          <div class="hint">⚠️ If scripts are blocked: <code class="inline">powershell -ExecutionPolicy Bypass -File ./install.ps1 claude</code></div>
+        </div>
+      </div>
+
+      <div class="install-card panel">
+        <h3>2 · Set up the browser</h3>
+        <p style="margin:0 0 12px; font-size:0.95rem;">Once, inside the skill folder (skipped if you passed <code class="inline">--deps/--mcp</code>):</p>
+<pre class="code"><span class="f">npm</span> install
+<span class="f">npx</span> playwright install chromium</pre>
+        <div class="hint">🤖 You also need a <strong>Playwright MCP server</strong> so the skill can drive a live browser — <code class="inline">--mcp</code> wires it up automatically.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:26px;" class="panel install-card">
+      <h3>3 · Just ask 💬</h3>
+      <p style="margin:0;">Tell your agent: <em>"generate a tutorial for how to search on Wikipedia."</em> It writes <code class="inline">tutorials/&lt;slug&gt;.spec.ts</code> checkpoint-by-checkpoint, then renders the PDF right next to it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXAMPLE PDF -->
+<section id="example" class="example">
+  <div class="wrap">
+    <h2 class="section-title">See it on a real flow 📄</h2>
+    <p class="section-sub">Here's a tutorial the skill produced for <strong>filtering issues on GitHub</strong> — every step screenshotted, the target button circled, captioned in plain English.</p>
+    <div class="panel">
+      <div class="pdf-card">
+        <div class="doc">
+          <div class="line"></div>
+          <div class="line short"></div>
+          <div class="line"></div>
+          <div class="circ"></div>
+        </div>
+        <a class="btn primary" href="github-filter-issues.pdf" target="_blank" rel="noopener">Open the example PDF ↗</a>
+      </div>
+      <div>
+        <h3 style="margin-top:0; font-size:1.4rem;">github-filter-issues.pdf</h3>
+        <p>Generated from <code class="inline">tutorials/github-filter-issues.spec.ts</code> — the same spec you can replay with Playwright Test. Want a fresh PDF from any spec?</p>
+<pre class="code"><span class="f">npx</span> tsx scripts/tutorial_generator.ts \
+  examples/wikipedia-search.spec.ts
+
+<span class="c"># validate without a browser</span>
+<span class="f">npx</span> tsx scripts/tutorial_generator.ts spec.ts <span class="k">--check</span>
+
+<span class="c"># drift-check against the live site</span>
+<span class="f">npx</span> tsx scripts/tutorial_generator.ts spec.ts <span class="k">--verify</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>🖍️ Tutorial Generator — drive a browser, ship a circled PDF.</div>
+    <div><a href="README.md">README</a> · <a href="https://agentskills.io" target="_blank" rel="noopener">Agent Skills</a> · <a href="https://playwright.dev" target="_blank" rel="noopener">Playwright</a></div>
+  </div>
+</footer>
+
+<script>
+  // Tiny tab switcher for the install section (macOS vs Windows)
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      tabs.forEach(t => t.classList.toggle('active', t === tab));
+      document.querySelectorAll('.tab-pane').forEach(pane => {
+        pane.classList.toggle('active', pane.dataset.pane === target);
+      });
+    });
+  });
+</script>
+</body>
+</html>
