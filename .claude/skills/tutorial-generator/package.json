@@ -1,0 +1,22 @@
+{
+  "name": "tutorial-generator",
+  "version": "1.0.0",
+  "description": "Self-contained Agent Skill that generates visual, step-by-step PDF tutorials for web apps from a replayable Playwright TypeScript spec.",
+  "main": "scripts/tutorial_generator.ts",
+  "scripts": {
+    "render": "tsx scripts/tutorial_generator.ts",
+    "check": "tsx scripts/tutorial_generator.ts",
+    "verify": "tsx scripts/tutorial_generator.ts",
+    "test": "playwright test"
+  },
+  "keywords": ["playwright", "tutorial", "agent-skill", "documentation", "pdf"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^26.0.0",
+    "pdf-lib": "^1.17.1",
+    "tsx": "^4.22.4"
+  }
+}

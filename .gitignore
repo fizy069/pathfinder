@@ -3,4 +3,7 @@
 .playwright-mcp
 node_modules/
 test-results/
-tutorials/
+
+# User-authored tutorials live here (generated output, not committed).
+# Committed reference specs live in .claude/skills/tutorial-generator/examples/.
+/tutorials/

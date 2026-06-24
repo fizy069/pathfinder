@@ -775,6 +775,12 @@ async function loadConfig(filePath: string): Promise<Config> {
     }
     config.output = base + '.pdf';
   }
+  // Resolve the PDF output next to the spec file so it lands in the user's
+  // project regardless of the current working directory (the skill runs the
+  // generator from the skill folder, but the spec lives in the user's repo).
+  if (!path.isAbsolute(config.output)) {
+    config.output = path.join(path.dirname(path.resolve(filePath)), config.output);
+  }
   return config;
 }
 

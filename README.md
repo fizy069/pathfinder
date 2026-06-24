@@ -20,10 +20,10 @@ Task description ──▶ SKILL.md (subagents + Playwright MCP)
                          │  (checkpoint: committable, resumable, replayable)
                          ├─▶ npx playwright test … (replay the flow)
                          ▼
-              tutorial_generator.ts ──▶ <slug>.pdf (circled, captioned)
+     scripts/tutorial_generator.ts ──▶ <slug>.pdf (circled, captioned)
 ```
 
-1. **[SKILL.md](SKILL.md)** orchestrates the authoring:
+1. **[SKILL.md](.claude/skills/tutorial-generator/SKILL.md)** orchestrates the authoring:
    - A **discovery subagent** walks the task on the live site with Playwright
      MCP and records each step from the accessibility tree.
    - **Selector-hardening subagents** pick the most robust locator per element
@@ -31,7 +31,7 @@ Task description ──▶ SKILL.md (subagents + Playwright MCP)
    - The orchestrator appends steps **one at a time** and **saves after each** —
      so runs are resumable and the spec is committable mid-flight (the
      *checkpoint*).
-2. **[tutorial_generator.ts](tutorial_generator.ts)** parses the spec, drives
+2. **[scripts/tutorial_generator.ts](.claude/skills/tutorial-generator/scripts/tutorial_generator.ts)** parses the spec, drives
    Chromium, screenshots each step, draws a red highlight circle around the
    target, adds a caption banner, and compiles a **PDF**. The same spec runs
    directly under `@playwright/test`.
@@ -40,54 +40,123 @@ Task description ──▶ SKILL.md (subagents + Playwright MCP)
 
 | Path | Purpose |
 | --- | --- |
-| [SKILL.md](SKILL.md) | The agent workflow: subagents + Playwright MCP + checkpoints |
-| [tutorial_generator.ts](tutorial_generator.ts) | Parser + renderer: navigate, screenshot, annotate, build PDF |
-| `tutorials/` | Committed tutorials (one `.spec.ts` per tutorial — the source of truth) |
-| [package.json](package.json) | `@playwright/test`, `pdf-lib`, `tsx` |
+| [.claude/skills/tutorial-generator/](.claude/skills/tutorial-generator/) | The self-contained Agent Skill (the distributable unit) |
+| [SKILL.md](.claude/skills/tutorial-generator/SKILL.md) | The agent workflow: subagents + Playwright MCP + checkpoints |
+| [scripts/tutorial_generator.ts](.claude/skills/tutorial-generator/scripts/tutorial_generator.ts) | Parser + renderer: navigate, screenshot, annotate, build PDF |
+| [examples/](.claude/skills/tutorial-generator/examples/) | Committed reference specs |
+| [package.json](.claude/skills/tutorial-generator/package.json) | `@playwright/test`, `pdf-lib`, `tsx` |
+| `tutorials/` | Where the skill writes *your* tutorials (git-ignored output) |
+| [install.sh](install.sh) / [install.ps1](install.ps1) | Copy the skill into a tool's skills directory |
+| [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) | Claude Code plugin marketplace manifest |
 
-## Setup
+## Install the skill
+
+The skill is an [Agent Skills](https://agentskills.io) package — a folder with a
+`SKILL.md`. The same folder works in **Claude Code**, **Cursor**, and **VS Code
+Copilot**. Pick whichever install path suits you.
+
+### 1. Install script (copy into a skills directory)
+
+```bash
+# macOS / Linux
+./install.sh claude               # -> ~/.claude/skills (read by Claude Code AND Cursor)
+./install.sh cursor               # -> ~/.cursor/skills
+./install.sh project              # -> ./.claude/skills (current project)
+./install.sh claude --deps --mcp  # also install deps + configure Playwright MCP
+```
 
 ```powershell
+# Windows PowerShell
+./install.ps1 claude
+./install.ps1 cursor
+./install.ps1 project
+./install.ps1 claude -Deps -Mcp   # also install deps + configure Playwright MCP
+```
+
+The two prerequisites can be installed automatically:
+
+- `--deps` / `-Deps` runs `npm install` + `npx playwright install chromium` in
+  the installed skill folder.
+- `--mcp` / `-Mcp` configures the **Playwright MCP server** — for `cursor` it
+  writes `~/.cursor/mcp.json`; for `claude` it runs `claude mcp add` (falls back
+  to a printed command if the Claude CLI isn't found); for `project` it writes
+  both `.mcp.json` (Claude Code) and `.cursor/mcp.json` (Cursor). Existing
+  servers in those files are preserved.
+
+> If PowerShell blocks the script (`running scripts is disabled on this system`),
+> run it with a one-time bypass:
+> `powershell -ExecutionPolicy Bypass -File ./install.ps1 claude`. The same
+> applies to `npx` — use `npx.cmd` if `npx` is blocked.
+
+### 2. Copy the folder manually
+
+Copy `.claude/skills/tutorial-generator/` into any skills location your tool
+discovers:
+
+| Tool | Project | Global |
+| --- | --- | --- |
+| Claude Code | `.claude/skills/` | `~/.claude/skills/` |
+| Cursor | `.cursor/skills/`, `.agents/skills/`, or `.claude/skills/` | `~/.cursor/skills/`, `~/.agents/skills/` |
+| VS Code Copilot | opening this repo exposes `.claude/skills/tutorial-generator/` | — |
+
+### 3. Claude Code plugin marketplace
+
+```text
+/plugin marketplace add <this-repo-url>
+/plugin install tutorial-generator@tutorial-generator-marketplace
+```
+
+### 4. Cursor — import from GitHub
+
+In **Cursor Settings → Rules → Add Rule → Remote Rule (GitHub)**, paste this
+repo's URL. Cursor scans it for `SKILL.md` and imports the skill.
+
+After installing, run once inside the skill folder:
+
+```bash
 npm install
 npx playwright install chromium
 ```
 
-To author tutorials with the skill you also need a **Playwright MCP server**
-configured so subagents can drive a live browser.
+You also need a **Playwright MCP server** so the skill can drive a live browser.
+The install script can set this up for you (`--mcp` / `-Mcp`, above); otherwise
+see [SKILL.md](.claude/skills/tutorial-generator/SKILL.md) for per-tool MCP setup.
 
 ## Authoring a tutorial (with the skill)
 
 Ask the agent something like *"generate a tutorial for how to search on
-Wikipedia"*. It follows [SKILL.md](SKILL.md): explores the site, writes
-`tutorials/<slug>.spec.ts` checkpoint-by-checkpoint, then renders the PDF.
+Wikipedia"*. It follows [SKILL.md](.claude/skills/tutorial-generator/SKILL.md):
+explores the site, writes `tutorials/<slug>.spec.ts` in your project
+checkpoint-by-checkpoint, then renders the PDF next to the spec.
 
 ## Rendering a tutorial (manually)
 
-```powershell
-npx tsx tutorial_generator.ts tutorials/wikipedia-search.spec.ts
-```
+Run the generator from the skill folder, passing the path to your spec. The PDF
+is written next to the spec.
 
-This parses the spec and writes the PDF named by the header's `// PDF output:`
-line (defaulting to the spec filename). PDFs are git-ignored.
+```bash
+cd .claude/skills/tutorial-generator
+npx tsx scripts/tutorial_generator.ts examples/wikipedia-search.spec.ts
+```
 
 Validate a spec without launching a browser:
 
-```powershell
-npx tsx tutorial_generator.ts tutorials/wikipedia-search.spec.ts --check
+```bash
+npx tsx scripts/tutorial_generator.ts examples/wikipedia-search.spec.ts --check
 ```
 
 Drift-check a spec against the live site (replays headless, no PDF, exits
 non-zero if any step is stale) — useful for spotting tutorials that have gone
 stale:
 
-```powershell
-npx tsx tutorial_generator.ts tutorials/wikipedia-search.spec.ts --verify
+```bash
+npx tsx scripts/tutorial_generator.ts examples/wikipedia-search.spec.ts --verify
 ```
 
 Replay the flow with Playwright Test:
 
-```powershell
-npx playwright test tutorials/wikipedia-search.spec.ts
+```bash
+npx playwright test examples/wikipedia-search.spec.ts
 ```
 
 ## Spec format

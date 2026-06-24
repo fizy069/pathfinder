@@ -1,0 +1,13 @@
+{
+  "name": "tutorial-generator-marketplace",
+  "owner": {
+    "name": "playwright-tut"
+  },
+  "plugins": [
+    {
+      "name": "tutorial-generator",
+      "source": "./.claude/skills/tutorial-generator",
+      "description": "Generate and maintain visual, step-by-step PDF tutorials for web tasks. Drives a live site via Playwright MCP, builds a checkpointed replayable Playwright spec, and renders an annotated PDF with the relevant button circled on each step."
+    }
+  ]
+}

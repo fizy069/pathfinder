@@ -24,18 +24,31 @@ The `.spec.ts` IS the source of truth and the checkpoint. It is plain
 and the file is saved after each, so a run is **resumable** and the spec can be
 committed mid-flight. The TypeScript renderer parses the spec to draw the PDF.
 
+All generator commands below run **from this skill's folder** (the directory
+containing this `SKILL.md`). The generator is bundled at
+[scripts/tutorial_generator.ts](scripts/tutorial_generator.ts) and is invoked
+with a path to the user's spec; the rendered PDF is written **next to the spec**
+in the user's project, not in this skill folder.
+
 ## Prerequisites (check first, stop if missing)
 
 1. **Playwright MCP server** must be configured and its browser tools available
    to subagents (navigate, click, snapshot/accessibility tree, screenshot). If
    no Playwright MCP browser tools are available, STOP and tell the user to add a
    Playwright MCP server before continuing — do not guess selectors blindly.
-2. **Node deps** installed once: `npm install` then
-   `npx playwright install chromium` (only needed to render, not to explore).
-3. Read [tutorial_generator.ts](tutorial_generator.ts) for the exact spec format
-   the parser accepts, how locators map to Playwright builders
+   Add one per host tool:
+   - **Claude Code**: `claude mcp add playwright npx @playwright/mcp@latest`
+   - **Cursor**: add to `.cursor/mcp.json` →
+     `{ "mcpServers": { "playwright": { "command": "npx", "args": ["@playwright/mcp@latest"] } } }`
+   - **VS Code**: add to `.vscode/mcp.json` →
+     `{ "servers": { "playwright": { "command": "npx", "args": ["@playwright/mcp@latest"] } } }`
+2. **Generator deps installed once** in this skill folder (see Phase 0). Only
+   needed to render/verify, not to explore.
+3. Read [scripts/tutorial_generator.ts](scripts/tutorial_generator.ts) for the
+   exact spec format the parser accepts, how locators map to Playwright builders
    (`getByRole`>`getByLabel`>`getByTestId`>`getByText`>`locator`), and the
-   supported actions (`click`,`fill`,`press`,`hover`,`selectOption`,`goto`).
+   supported actions (`click`,`fill`,`press`,`hover`,`selectOption`,`goto`). See
+   [examples/](examples/) for committed reference specs.
 
 ## Spec format (what you author)
 
@@ -83,10 +96,18 @@ Metadata lives in comments so the file stays valid TypeScript:
 ## Workflow
 
 ### Phase 0 — Setup
-1. Confirm prerequisites above.
-2. Slugify the task into `tutorials/<slug>.spec.ts`. If that file already exists,
-   load it and treat existing `[verified]` steps as a checkpoint to resume from /
-   re-verify rather than redoing them.
+1. Confirm prerequisites above. **On first use**, install the generator's
+   dependencies once, from this skill folder:
+
+   ```
+   npm install
+   npx playwright install chromium
+   ```
+
+   (On Windows PowerShell, if `npx` is blocked by execution policy, use `npx.cmd`.)
+2. Slugify the task into `tutorials/<slug>.spec.ts` **in the user's project**. If
+   that file already exists, load it and treat existing `[verified]` steps as a
+   checkpoint to resume from / re-verify rather than redoing them.
 3. Initialize (or keep) the spec skeleton — header comments, the
    `import { test }` line, `test.use({ viewport })`, the `test(...)` block with
    the initial `await page.goto(start_url)` and no steps yet — and save it
@@ -127,15 +148,17 @@ For each discovered step, in order:
    during discovery; otherwise leave it `[draft]` (the default).
 
 ### Phase 4 — Render
-Run the generator to render the annotated PDF from the spec:
+Run the generator from this skill folder, passing the path to the user's spec
+(absolute, or relative to the user's project). The PDF is written next to the
+spec.
 
-```powershell
-npx tsx tutorial_generator.ts tutorials/<slug>.spec.ts
+```
+npx tsx scripts/tutorial_generator.ts <path-to-user-spec>.spec.ts
 ```
 
 This parses the spec and writes the annotated PDF (per the header's
-`// PDF output:`). The same spec replays directly with
-`npx playwright test tutorials/<slug>.spec.ts`.
+`// PDF output:`, resolved next to the spec). The same spec replays directly
+with `npx playwright test <path-to-user-spec>.spec.ts`.
 
 If a step fails to resolve at render time, the locator drifted — go back to
 Phase 1/2 for that step, fix the statement, re-save (checkpoint), re-render.
@@ -151,8 +174,8 @@ Phase 1/2 for that step, fix the statement, re-save (checkpoint), re-render.
 
 ## Validate (run after every checkpoint)
 
-```powershell
-npx tsx tutorial_generator.ts tutorials/<slug>.spec.ts --check
+```
+npx tsx scripts/tutorial_generator.ts <path-to-user-spec>.spec.ts --check
 ```
 
 This parses the spec and runs structural validation, printing precise,
@@ -164,8 +187,8 @@ step-qualified errors without launching a browser.
 2. Run the fast drift check to see which steps still resolve on the live site
    (replays headless, no PDF, exits non-zero if any step is stale):
 
-   ```powershell
-   npx tsx tutorial_generator.ts tutorials/<slug>.spec.ts --verify
+   ```
+   npx tsx scripts/tutorial_generator.ts <path-to-user-spec>.spec.ts --verify
    ```
 
    It prints a per-step `OK`/`FAIL`/`SKIP` report; a `FAIL` line includes the
