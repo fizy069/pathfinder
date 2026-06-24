@@ -1,0 +1,41 @@
+.claude/skills/tutorial-generator/package.json
+  s_92a3e9ee58da38::t_37d0a3dacdee0c 2-12
+install.sh
+  s_92a3e9ee58da38::t_aefec68fca66e4 15-16,23-42,45,50,76-96
+  s_92a3e9ee58da38::t_26e444836b43f1 67-69
+  s_92a3e9ee58da38::t_b2f021a23acd11 1-14,17-22,43-44,46-49,51-66,70-75,97-98
+.claude/skills/tutorial-generator/.claude-plugin/plugin.json
+  h_e661ac2a8ff09e 1-8
+.claude/skills/tutorial-generator/tsconfig.json
+  s_92a3e9ee58da38::t_5b0dbae49c502b 15
+install.ps1
+  s_92a3e9ee58da38::t_1f29362ab32069 18-57,64,86-87,89-111
+  s_92a3e9ee58da38::t_26e444836b43f1 71-76
+README.md
+  s_92a3e9ee58da38::t_3099ce4f42a740 34,50-66,69-76,79-93,107,116,137,140,144,152,158
+  s_92a3e9ee58da38::t_d4134336880881 23,26,43-44,77-78
+  s_92a3e9ee58da38::t_35550040da52a2 45-49
+.claude/skills/tutorial-generator/SKILL.md
+  s_92a3e9ee58da38::t_94d3fbec272b88 27-32,39-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.11",
+  "base_commit_sha": "3d548dc14924267c0208d1f685442918183b378d",
+  "prompts": {},
+  "humans": {
+    "h_e661ac2a8ff09e": {
+      "author": "fizy069 <mahirg4@gmai.com>"
+    }
+  },
+  "sessions": {
+    "s_92a3e9ee58da38": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "417293b1-18b6-45c8-9764-86b939723eb1",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    }
+  }
+}
