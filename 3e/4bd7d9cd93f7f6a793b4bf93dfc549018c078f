@@ -1,0 +1,25 @@
+index.html
+  h_e661ac2a8ff09e 1-27,29,33-576
+  s_9af631f564c6aa::t_76e95f13b704f3 28,30-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.11",
+  "base_commit_sha": "3e4bd7d9cd93f7f6a793b4bf93dfc549018c078f",
+  "prompts": {},
+  "humans": {
+    "h_e661ac2a8ff09e": {
+      "author": "fizy069 <mahirg4@gmai.com>"
+    }
+  },
+  "sessions": {
+    "s_9af631f564c6aa": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "d174e99f-2ddf-4a3d-8f05-59db58f33f1d",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    }
+  }
+}
