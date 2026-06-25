@@ -12,10 +12,10 @@
  * `npx playwright test tutorials/<slug>.spec.ts` to replay the flow.
  *
  * Usage:
- *     npx tsx tutorial_generator.ts tutorials/wikipedia-search.spec.ts
- *     npx tsx tutorial_generator.ts tutorials/wikipedia-search.spec.ts --check
- *     npx tsx tutorial_generator.ts tutorials/wikipedia-search.spec.ts --verify
- *     npx tsx tutorial_generator.ts --migrate tutorials/legacy.json   # one-off
+ *     npx tsx pathfinder.ts tutorials/wikipedia-search.spec.ts
+ *     npx tsx pathfinder.ts tutorials/wikipedia-search.spec.ts --check
+ *     npx tsx pathfinder.ts tutorials/wikipedia-search.spec.ts --verify
+ *     npx tsx pathfinder.ts --migrate tutorials/legacy.json   # one-off
  *
  * Spec format (authored by hand or by the skill):
  *

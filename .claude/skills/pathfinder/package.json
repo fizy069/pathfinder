@@ -1,12 +1,12 @@
 {
-  "name": "tutorial-generator",
+  "name": "pathfinder",
   "version": "1.0.0",
   "description": "Self-contained Agent Skill that generates visual, step-by-step PDF tutorials for web apps from a replayable Playwright TypeScript spec.",
-  "main": "scripts/tutorial_generator.ts",
+  "main": "scripts/pathfinder.ts",
   "scripts": {
-    "render": "tsx scripts/tutorial_generator.ts",
-    "check": "tsx scripts/tutorial_generator.ts",
-    "verify": "tsx scripts/tutorial_generator.ts",
+    "render": "tsx scripts/pathfinder.ts",
+    "check": "tsx scripts/pathfinder.ts",
+    "verify": "tsx scripts/pathfinder.ts",
     "test": "playwright test"
   },
   "keywords": ["playwright", "tutorial", "agent-skill", "documentation", "pdf"],

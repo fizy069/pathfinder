@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tutorial Generator — turn any web flow into a circled PDF</title>
-<meta name="description" content="An AI Agent Skill that drives a real browser, discovers a robust click-path, and renders a step-by-step PDF tutorial with the right button circled on every page. Tutorials live as docs." />
+<title>Pathfinder — turn any web flow into a circled PDF</title>
+<meta name="description" content="An AI Agent Skill that drives a real browser via Playwright MCP, discovers a robust click-path, and saves it as a checkpointed, replayable Playwright .spec.ts — then renders a step-by-step PDF tutorial with the target button circled on every page." />
 <style>
   :root {
     --ink: #1a1430;
@@ -366,7 +366,7 @@
 
 <header class="bar">
   <div class="wrap">
-    <div class="logo"><span class="dot"></span> Tutorial Generator</div>
+    <div class="logo"><span class="dot"></span> Pathfinder</div>
     <nav>
       <a href="#how">How it works</a>
       <a href="#docs">Docs as code</a>
@@ -385,8 +385,9 @@
       <h1>Turn any web flow into a <span class="circle-word">circled</span> PDF.</h1>
       <p class="lead">
         Describe a task — <em>"how to filter issues on GitHub"</em> — and an AI drives a
-        <strong>real browser</strong>, finds a robust click-path, and renders a step-by-step
-        tutorial with the right button <strong>circled</strong> on every page.
+        <strong>real browser</strong> via Playwright MCP, hardens the locators, and saves a
+        replayable <code class="inline">.spec.ts</code> that renders to a step-by-step PDF with the
+        target button <strong>circled</strong> on every page.
       </p>
       <div class="cta-row">
         <a class="btn primary" href="#install">⚡ Install the skill</a>
@@ -404,6 +405,7 @@
         <div class="lasso"></div>
       </div>
       <div class="caption-banner">Step 3: Click <strong>Publish</strong> to ship your change</div>
+      <!-- caption matches the // Step N: comment in the spec -->
     </div>
   </div>
 </section>
@@ -411,23 +413,23 @@
 <!-- HOW IT WORKS -->
 <section id="how">
   <div class="wrap">
-    <h2 class="section-title">Three panels, one tutorial 🎬</h2>
-    <p class="section-sub">No hand-written CSS selectors. The skill explores the live site, hardens the locators, and draws the PDF for you.</p>
+    <h2 class="section-title">Three phases, one tutorial 🎬</h2>
+    <p class="section-sub">No hand-written CSS selectors. One discovery subagent explores the live site, hardening subagents pick robust locators, then the orchestrator checkpoints the spec step by step and renders the PDF.</p>
     <div class="steps">
       <div class="step panel">
         <div class="num">1</div>
         <h3>🕹️ Explore</h3>
-        <p>A discovery subagent walks your task on the live site via the Playwright MCP server, reading each step from the accessibility tree.</p>
+        <p>A single discovery subagent walks your task on the live site via the Playwright MCP server, recording each step and its candidate identifiers from the accessibility tree — never guessing selectors.</p>
       </div>
       <div class="step panel">
         <div class="num">2</div>
-        <h3>🔒 Harden</h3>
-        <p>Selector-hardening subagents pick the most robust locator per element — <code class="inline">getByRole</code> over fragile CSS — and checkpoint the spec one step at a time.</p>
+        <h3>🔒 Harden &amp; checkpoint</h3>
+        <p>Read-only subagents pick the most robust locator per element — <code class="inline">getByRole</code> &gt; <code class="inline">getByLabel</code> &gt; <code class="inline">getByTestId</code> &gt; <code class="inline">getByText</code> &gt; CSS. The orchestrator appends one step at a time and saves after each.</p>
       </div>
       <div class="step panel">
         <div class="num">3</div>
         <h3>🖍️ Render</h3>
-        <p>The renderer replays the spec in Chromium, screenshots each step, circles the target in red, adds a caption, and compiles a <strong>PDF</strong>.</p>
+        <p>The renderer parses the spec, replays it in Chromium, screenshots each step, draws a red circle around the target, adds a caption banner, and compiles the <strong>PDF</strong> next to the spec.</p>
       </div>
     </div>
   </div>
@@ -441,9 +443,11 @@
         <h2 class="section-title">Tutorials live as <span style="color:var(--pop-2)">docs</span>. 📚</h2>
         <p class="section-sub" style="color:var(--paper)">
           The real deliverable isn't a throwaway recording — it's a
-          <strong>replayable <code class="inline">.spec.ts</code></strong> file. It's the single source
-          of truth: commit it, diff it in PRs, resume it mid-flight, and re-verify it against the
-          live site whenever the page drifts.
+          <strong>replayable <code class="inline">.spec.ts</code></strong>, the single source of truth
+          and the checkpoint. Steps are appended and saved one at a time, each tagged
+          <code class="inline">[draft]</code> until it resolves on the live site, then
+          <code class="inline">[verified]</code>. Commit it, diff it in PRs, resume mid-flight, and
+          re-verify it whenever the page drifts.
         </p>
         <div class="badge-row">
           <span class="pill">✓ Committable</span>
@@ -457,14 +461,17 @@
 <span class="c">// PDF output: wikipedia-search.pdf</span>
 <span class="k">import</span> { test } <span class="k">from</span> <span class="s">'@playwright/test'</span>;
 
+test.<span class="f">use</span>({ viewport: { width: 1280, height: 800 } });
+
 test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async</span> ({ page }) =&gt; {
+  <span class="c">// First goto is the start URL, not a step</span>
   <span class="k">await</span> page.<span class="f">goto</span>(<span class="s">'https://www.wikipedia.org'</span>);
 
   <span class="c">// Step 1: Click the search box [verified]</span>
-  <span class="k">await</span> page.<span class="f">getByRole</span>(<span class="s">'searchbox'</span>).<span class="f">click</span>();
+  <span class="k">await</span> page.<span class="f">getByRole</span>(<span class="s">'searchbox'</span>, { name: <span class="s">'Search Wikipedia'</span> }).<span class="f">first</span>().<span class="f">click</span>();
 
   <span class="c">// Step 2: Type your query [no-highlight]</span>
-  <span class="k">await</span> page.<span class="f">getByRole</span>(<span class="s">'searchbox'</span>).<span class="f">fill</span>(<span class="s">'Playwright'</span>);
+  <span class="k">await</span> page.<span class="f">getByRole</span>(<span class="s">'searchbox'</span>, { name: <span class="s">'Search Wikipedia'</span> }).<span class="f">first</span>().<span class="f">fill</span>(<span class="s">'Playwright'</span>);
 });</pre>
         <p style="font-size:0.85rem; opacity:0.8; margin-top:14px;">
           Re-run it: <code class="inline">npx playwright test wikipedia-search.spec.ts</code>
@@ -496,7 +503,7 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
 
 <span class="c"># Windows (PowerShell)</span>
 ./install.ps1 claude <span class="k">-Deps</span> <span class="k">-Mcp</span></pre>
-          <div class="hint">📁 Installs to <code class="inline">~/.claude/skills/tutorial-generator</code> — this folder is read by <strong>Claude Code and Cursor</strong>.</div>
+          <div class="hint">📁 Installs to <code class="inline">~/.claude/skills/pathfinder</code> — this folder is read by <strong>Claude Code and Cursor</strong>.</div>
         </div>
 
         <!-- Cursor -->
@@ -506,7 +513,7 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
 
 <span class="c"># Windows (PowerShell)</span>
 ./install.ps1 cursor <span class="k">-Deps</span> <span class="k">-Mcp</span></pre>
-          <div class="hint">📁 Installs to <code class="inline">~/.cursor/skills/tutorial-generator</code>. You can also import from GitHub via <strong>Settings → Rules → Add Rule → Remote Rule</strong>.</div>
+          <div class="hint">📁 Installs to <code class="inline">~/.cursor/skills/pathfinder</code>. You can also import from GitHub via <strong>Settings → Rules → Add Rule → Remote Rule</strong>.</div>
         </div>
 
         <div class="hint" style="background:var(--pop-2);">⚠️ Windows blocking scripts? Run <code class="inline">powershell -ExecutionPolicy Bypass -File ./install.ps1 claude -Deps -Mcp</code></div>
@@ -553,7 +560,7 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
 <section id="example" class="example">
   <div class="wrap">
     <h2 class="section-title">See it on a real flow 📄</h2>
-    <p class="section-sub">Here's a tutorial the skill produced for <strong>filtering issues on GitHub</strong> — every step screenshotted, the target button circled, captioned in plain English.</p>
+    <p class="section-sub">Here's a tutorial the skill produced for <strong>filtering issues on GitHub</strong> — every step screenshotted, the target circled in red, captioned in plain English. The repo ships more reference specs: Wikipedia search, YouTube search, Amazon, and Google Flights.</p>
     <div class="panel">
       <div class="pdf-card">
         <div class="doc">
@@ -566,15 +573,15 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
       </div>
       <div>
         <h3 style="margin-top:0; font-size:1.4rem;">github-filter-issues.pdf</h3>
-        <p>Generated from <code class="inline">tutorials/github-filter-issues.spec.ts</code> — the same spec you can replay with Playwright Test. Want a fresh PDF from any spec?</p>
-<pre class="code"><span class="f">npx</span> tsx scripts/tutorial_generator.ts \
-  examples/wikipedia-search.spec.ts
+        <p>Generated from <code class="inline">tutorials/github-filter-issues.spec.ts</code> — the same spec you can replay with <code class="inline">npx playwright test</code>. Supported step actions: <code class="inline">click</code>, <code class="inline">fill</code>, <code class="inline">press</code>, <code class="inline">hover</code>, <code class="inline">selectOption</code>, <code class="inline">goto</code>. Want a fresh PDF from any spec?</p>
+<pre class="code"><span class="f">npx</span> tsx scripts/pathfinder.ts \
+      examples/wikipedia-search.spec.ts
 
 <span class="c"># validate without a browser</span>
-<span class="f">npx</span> tsx scripts/tutorial_generator.ts spec.ts <span class="k">--check</span>
+<span class="f">npx</span> tsx scripts/pathfinder.ts spec.ts <span class="k">--check</span>
 
 <span class="c"># drift-check against the live site</span>
-<span class="f">npx</span> tsx scripts/tutorial_generator.ts spec.ts <span class="k">--verify</span></pre>
+<span class="f">npx</span> tsx scripts/pathfinder.ts spec.ts <span class="k">--verify</span></pre>
       </div>
     </div>
   </div>
@@ -582,7 +589,7 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
 
 <footer>
   <div class="wrap">
-    <div>🖍️ Tutorial Generator — drive a browser, ship a circled PDF.</div>
+    <div>🖍️ Pathfinder — drive a browser, ship a circled PDF.</div>
     <div><a href="README.md">README</a> · <a href="https://agentskills.io" target="_blank" rel="noopener">Agent Skills</a> · <a href="https://playwright.dev" target="_blank" rel="noopener">Playwright</a></div>
   </div>
 </footer>

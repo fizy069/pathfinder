@@ -1,5 +1,5 @@
 {
-  "name": "tutorial-generator",
+  "name": "pathfinder",
   "version": "1.0.0",
   "description": "Generate and maintain visual, step-by-step PDF tutorials for web tasks from a replayable Playwright TypeScript spec.",
   "author": {

@@ -1,4 +1,4 @@
-# Automated Tutorial Generator
+# Pathfinder
 
 Generate **visual, step-by-step PDF tutorials** for web apps — "how to do X on
 this website" as a series of annotated screenshots with the relevant button
@@ -20,10 +20,10 @@ Task description ──▶ SKILL.md (subagents + Playwright MCP)
                          │  (checkpoint: committable, resumable, replayable)
                          ├─▶ npx playwright test … (replay the flow)
                          ▼
-     scripts/tutorial_generator.ts ──▶ <slug>.pdf (circled, captioned)
+     scripts/pathfinder.ts ──▶ <slug>.pdf (circled, captioned)
 ```
 
-1. **[SKILL.md](.claude/skills/tutorial-generator/SKILL.md)** orchestrates the authoring:
+1. **[SKILL.md](.claude/skills/pathfinder/SKILL.md)** orchestrates the authoring:
    - A **discovery subagent** walks the task on the live site with Playwright
      MCP and records each step from the accessibility tree.
    - **Selector-hardening subagents** pick the most robust locator per element
@@ -31,7 +31,7 @@ Task description ──▶ SKILL.md (subagents + Playwright MCP)
    - The orchestrator appends steps **one at a time** and **saves after each** —
      so runs are resumable and the spec is committable mid-flight (the
      *checkpoint*).
-2. **[scripts/tutorial_generator.ts](.claude/skills/tutorial-generator/scripts/tutorial_generator.ts)** parses the spec, drives
+2. **[scripts/pathfinder.ts](.claude/skills/pathfinder/scripts/pathfinder.ts)** parses the spec, drives
    Chromium, screenshots each step, draws a red highlight circle around the
    target, adds a caption banner, and compiles a **PDF**. The same spec runs
    directly under `@playwright/test`.
@@ -40,11 +40,11 @@ Task description ──▶ SKILL.md (subagents + Playwright MCP)
 
 | Path | Purpose |
 | --- | --- |
-| [.claude/skills/tutorial-generator/](.claude/skills/tutorial-generator/) | The self-contained Agent Skill (the distributable unit) |
-| [SKILL.md](.claude/skills/tutorial-generator/SKILL.md) | The agent workflow: subagents + Playwright MCP + checkpoints |
-| [scripts/tutorial_generator.ts](.claude/skills/tutorial-generator/scripts/tutorial_generator.ts) | Parser + renderer: navigate, screenshot, annotate, build PDF |
-| [examples/](.claude/skills/tutorial-generator/examples/) | Committed reference specs |
-| [package.json](.claude/skills/tutorial-generator/package.json) | `@playwright/test`, `pdf-lib`, `tsx` |
+| [.claude/skills/pathfinder/](.claude/skills/pathfinder/) | The self-contained Agent Skill (the distributable unit) |
+| [SKILL.md](.claude/skills/pathfinder/SKILL.md) | The agent workflow: subagents + Playwright MCP + checkpoints |
+| [scripts/pathfinder.ts](.claude/skills/pathfinder/scripts/pathfinder.ts) | Parser + renderer: navigate, screenshot, annotate, build PDF |
+| [examples/](.claude/skills/pathfinder/examples/) | Committed reference specs |
+| [package.json](.claude/skills/pathfinder/package.json) | `@playwright/test`, `pdf-lib`, `tsx` |
 | `tutorials/` | Where the skill writes *your* tutorials (git-ignored output) |
 | [install.sh](install.sh) / [install.ps1](install.ps1) | Copy the skill into a tool's skills directory |
 | [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) | Claude Code plugin marketplace manifest |
@@ -90,20 +90,20 @@ The two prerequisites can be installed automatically:
 
 ### 2. Copy the folder manually
 
-Copy `.claude/skills/tutorial-generator/` into any skills location your tool
+Copy `.claude/skills/pathfinder/` into any skills location your tool
 discovers:
 
 | Tool | Project | Global |
 | --- | --- | --- |
 | Claude Code | `.claude/skills/` | `~/.claude/skills/` |
 | Cursor | `.cursor/skills/`, `.agents/skills/`, or `.claude/skills/` | `~/.cursor/skills/`, `~/.agents/skills/` |
-| VS Code Copilot | opening this repo exposes `.claude/skills/tutorial-generator/` | — |
+| VS Code Copilot | opening this repo exposes `.claude/skills/pathfinder/` | — |
 
 ### 3. Claude Code plugin marketplace
 
 ```text
 /plugin marketplace add <this-repo-url>
-/plugin install tutorial-generator@tutorial-generator-marketplace
+/plugin install pathfinder@pathfinder-marketplace
 ```
 
 ### 4. Cursor — import from GitHub
@@ -120,12 +120,12 @@ npx playwright install chromium
 
 You also need a **Playwright MCP server** so the skill can drive a live browser.
 The install script can set this up for you (`--mcp` / `-Mcp`, above); otherwise
-see [SKILL.md](.claude/skills/tutorial-generator/SKILL.md) for per-tool MCP setup.
+see [SKILL.md](.claude/skills/pathfinder/SKILL.md) for per-tool MCP setup.
 
 ## Authoring a tutorial (with the skill)
 
 Ask the agent something like *"generate a tutorial for how to search on
-Wikipedia"*. It follows [SKILL.md](.claude/skills/tutorial-generator/SKILL.md):
+Wikipedia"*. It follows [SKILL.md](.claude/skills/pathfinder/SKILL.md):
 explores the site, writes `tutorials/<slug>.spec.ts` in your project
 checkpoint-by-checkpoint, then renders the PDF next to the spec.
 
@@ -135,14 +135,14 @@ Run the generator from the skill folder, passing the path to your spec. The PDF
 is written next to the spec.
 
 ```bash
-cd .claude/skills/tutorial-generator
-npx tsx scripts/tutorial_generator.ts examples/wikipedia-search.spec.ts
+cd .claude/skills/pathfinder
+npx tsx scripts/pathfinder.ts examples/wikipedia-search.spec.ts
 ```
 
 Validate a spec without launching a browser:
 
 ```bash
-npx tsx scripts/tutorial_generator.ts examples/wikipedia-search.spec.ts --check
+npx tsx scripts/pathfinder.ts examples/wikipedia-search.spec.ts --check
 ```
 
 Drift-check a spec against the live site (replays headless, no PDF, exits
@@ -150,7 +150,7 @@ non-zero if any step is stale) — useful for spotting tutorials that have gone
 stale:
 
 ```bash
-npx tsx scripts/tutorial_generator.ts examples/wikipedia-search.spec.ts --verify
+npx tsx scripts/pathfinder.ts examples/wikipedia-search.spec.ts --verify
 ```
 
 Replay the flow with Playwright Test:
