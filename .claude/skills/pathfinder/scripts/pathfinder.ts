@@ -67,6 +67,20 @@ const CAPTION_FG = rgb(1, 1, 1); // white caption text
 const CAPTION_HEIGHT = 70; // px
 const CAPTION_FONT_SIZE = 26;
 
+// Framing: the screenshot sits on a padded page with a light background and a
+// thin border, so it reads as a framed card rather than an edge-to-edge image.
+const PAGE_MARGIN = 24; // px of padding around the framed screenshot
+const PAGE_BG = rgb(244 / 255, 244 / 255, 245 / 255); // light gray page backdrop
+const FRAME_BORDER = rgb(212 / 255, 212 / 255, 216 / 255); // subtle screenshot border
+const FRAME_BORDER_WIDTH = 1; // px
+
+// Caption banner: a red step-number badge followed by the caption text.
+const BADGE_COLOR = CIRCLE_COLOR; // reuse the red accent
+const BADGE_FG = rgb(1, 1, 1); // white badge number
+const BADGE_SIZE = 40; // px square badge
+const BADGE_PADDING = 16; // px between badge edge and banner edge / text
+const BADGE_FONT_SIZE = 22;
+
 // Dynamic pages can detach/re-render elements between highlight and action.
 const LOCATOR_RETRY_COUNT = 3;
 const LOCATOR_RETRY_DELAY_MS = 350;
@@ -119,6 +133,7 @@ interface BoundingBox {
 async function addAnnotatedPage(
   pdf: PDFDocument,
   font: PDFFont,
+  boldFont: PDFFont,
   imageBytes: Buffer,
   box: BoundingBox | null,
   caption: string,
@@ -127,31 +142,72 @@ async function addAnnotatedPage(
   const png = await pdf.embedPng(imageBytes);
   const { width, height } = png;
 
-  const page = pdf.addPage([width, height + CAPTION_HEIGHT]);
+  // The screenshot is framed inside a padded page: margins on every side and a
+  // caption banner above it. PDF origin is bottom-left.
+  const pageWidth = width + PAGE_MARGIN * 2;
+  const pageHeight = height + CAPTION_HEIGHT + PAGE_MARGIN * 2;
+  const imageX = PAGE_MARGIN;
+  const imageY = PAGE_MARGIN;
+  const bannerY = imageY + height;
 
-  // Screenshot sits below the caption banner (PDF origin is bottom-left).
-  page.drawImage(png, { x: 0, y: 0, width, height });
+  const page = pdf.addPage([pageWidth, pageHeight]);
 
-  // Caption banner across the top.
+  // Light backdrop behind the framed screenshot.
+  page.drawRectangle({ x: 0, y: 0, width: pageWidth, height: pageHeight, color: PAGE_BG });
+
+  // Screenshot, with a subtle border so it reads as a framed card.
+  page.drawImage(png, { x: imageX, y: imageY, width, height });
   page.drawRectangle({
-    x: 0,
-    y: height,
+    x: imageX,
+    y: imageY,
+    width,
+    height,
+    borderColor: FRAME_BORDER,
+    borderWidth: FRAME_BORDER_WIDTH,
+  });
+
+  // Caption banner above the screenshot, aligned to the framed width.
+  page.drawRectangle({
+    x: imageX,
+    y: bannerY,
     width,
     height: CAPTION_HEIGHT,
     color: CAPTION_BG,
   });
 
-  const text = caption ? `Step ${stepNumber}: ${caption}` : `Step ${stepNumber}`;
+  // Red step-number badge on the left of the banner.
+  const badgeX = imageX + BADGE_PADDING;
+  const badgeY = bannerY + (CAPTION_HEIGHT - BADGE_SIZE) / 2;
+  page.drawRectangle({
+    x: badgeX,
+    y: badgeY,
+    width: BADGE_SIZE,
+    height: BADGE_SIZE,
+    color: BADGE_COLOR,
+  });
+  const badgeText = String(stepNumber);
+  const badgeTextWidth = boldFont.widthOfTextAtSize(badgeText, BADGE_FONT_SIZE);
+  page.drawText(badgeText, {
+    x: badgeX + (BADGE_SIZE - badgeTextWidth) / 2,
+    y: badgeY + (BADGE_SIZE - BADGE_FONT_SIZE) / 2 + BADGE_FONT_SIZE * 0.12,
+    size: BADGE_FONT_SIZE,
+    font: boldFont,
+    color: BADGE_FG,
+  });
+
+  // Caption text to the right of the badge.
+  const text = caption || `Step ${stepNumber}`;
   page.drawText(text, {
-    x: 20,
-    y: height + CAPTION_HEIGHT / 2 - CAPTION_FONT_SIZE * 0.35,
+    x: badgeX + BADGE_SIZE + BADGE_PADDING,
+    y: bannerY + CAPTION_HEIGHT / 2 - CAPTION_FONT_SIZE * 0.35,
     size: CAPTION_FONT_SIZE,
     font,
     color: CAPTION_FG,
   });
 
   // Draw the red highlight ellipse hugging the target element. Screenshot pixel
-  // coordinates (origin top-left) map to PDF coordinates via y -> height - y.
+  // coordinates (origin top-left) map to PDF coordinates via y -> height - y,
+  // then offset by the page margins that inset the screenshot.
   if (box !== null) {
     const left = box.x - CIRCLE_PADDING;
     const top = box.y - CIRCLE_PADDING;
@@ -160,8 +216,8 @@ async function addAnnotatedPage(
     const centerX = (left + right) / 2;
     const centerY = (top + bottom) / 2;
     page.drawEllipse({
-      x: centerX,
-      y: height - centerY,
+      x: imageX + centerX,
+      y: imageY + height - centerY,
       xScale: (right - left) / 2,
       yScale: (bottom - top) / 2,
       borderColor: CIRCLE_COLOR,
@@ -824,8 +880,17 @@ async function generate(config: Config): Promise<string> {
 
   const pdf = await PDFDocument.create();
   const font = await pdf.embedFont(StandardFonts.Helvetica);
+  const boldFont = await pdf.embedFont(StandardFonts.HelveticaBold);
   for (const c of captures) {
-    await addAnnotatedPage(pdf, font, c.imageBytes, c.box, c.caption, c.stepNumber);
+    await addAnnotatedPage(
+      pdf,
+      font,
+      boldFont,
+      c.imageBytes,
+      c.box,
+      c.caption,
+      c.stepNumber,
+    );
   }
 
   await fs.mkdir(path.dirname(path.resolve(output)), { recursive: true });

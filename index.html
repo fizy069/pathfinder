@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pathfinder — turn any web flow into a circled PDF</title>
-<meta name="description" content="An AI Agent Skill that drives a real browser via Playwright MCP, discovers a robust click-path, and saves it as a checkpointed, replayable Playwright .spec.ts — then renders a step-by-step PDF tutorial with the target button circled on every page." />
+<title>Pathfinder - turn any web flow into a annotated PDF tutorial </title>
+<meta name="description" content="An AI Agent Skill that drives a real browser via an MCP server, discovers a robust click-path, and saves it as a checkpointed, replayable .spec.ts — then renders a step-by-step PDF tutorial with the target button circled on every page." />
 <style>
   :root {
     --ink: #1a1430;
@@ -224,8 +224,10 @@
   /* ---------- Docs highlight band ---------- */
   .docs-band { background: var(--ink); color: var(--paper); border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
   .docs-band .section-title { color: #fff; }
-  .docs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
-  @media (max-width: 860px){ .docs-grid { grid-template-columns: 1fr; } }
+  .docs-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: start; }
+  .docs-grid > div { min-width: 0; }
+  @media (max-width: 860px){ .docs-grid { grid-template-columns: 1fr; gap: 28px; } }
+  .docs-band .section-sub { max-width: none; }
   .docs-band .badge-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
   .pill {
     background: transparent;
@@ -371,7 +373,7 @@
       <a href="#how">How it works</a>
       <a href="#docs">Docs as code</a>
       <a href="#install">Install</a>
-      <a href="#example">Example PDF</a>
+      <a href="#example">Example</a>
       <a class="ghbtn" href="https://agentskills.io" target="_blank" rel="noopener">Agent Skill ↗</a>
     </nav>
   </div>
@@ -381,17 +383,17 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="kicker">★ An AI Agent Skill ★</span>
-      <h1>Turn any web flow into a <span class="circle-word">circled</span> PDF.</h1>
+      <!-- <span class="kicker">★ An AI Agent Skill ★</span> -->
+      <h1>Turn any web task into an <span class="circle-word">annotated</span> PDF walkthrough.</h1>
       <p class="lead">
         Describe a task — <em>"how to filter issues on GitHub"</em> — and an AI drives a
-        <strong>real browser</strong> via Playwright MCP, hardens the locators, and saves a
-        replayable <code class="inline">.spec.ts</code> that renders to a step-by-step PDF with the
-        target button <strong>circled</strong> on every page.
+        <strong>real browser</strong> via an MCP server, hardens the locators, and saves a
+        replayable <code class="inline">.spec.ts</code> test file that renders to a step-by-step PDF
+        with the target button <strong>circled</strong> on every page.
       </p>
       <div class="cta-row">
-        <a class="btn primary" href="#install">⚡ Install the skill</a>
-        <a class="btn secondary" href="#example">📄 See an example PDF</a>
+        <a class="btn primary" href="#install">Install the skill</a>
+        <a class="btn secondary" href="#example">See an example PDF</a>
       </div>
     </div>
 
@@ -413,13 +415,13 @@
 <!-- HOW IT WORKS -->
 <section id="how">
   <div class="wrap">
-    <h2 class="section-title">Three phases, one tutorial 🎬</h2>
+    <h2 class="section-title">Three phases, one tutorial</h2>
     <p class="section-sub">No hand-written CSS selectors. One discovery subagent explores the live site, hardening subagents pick robust locators, then the orchestrator checkpoints the spec step by step and renders the PDF.</p>
     <div class="steps">
       <div class="step panel">
         <div class="num">1</div>
         <h3>🕹️ Explore</h3>
-        <p>A single discovery subagent walks your task on the live site via the Playwright MCP server, recording each step and its candidate identifiers from the accessibility tree — never guessing selectors.</p>
+        <p>A single discovery subagent walks your task on the live site via the MCP server, recording each step and its candidate identifiers from the accessibility tree — never guessing selectors.</p>
       </div>
       <div class="step panel">
         <div class="num">2</div>
@@ -440,20 +442,21 @@
   <div class="wrap">
     <div class="docs-grid">
       <div>
-        <h2 class="section-title">Tutorials live as <span style="color:var(--pop-2)">docs</span>. 📚</h2>
+        <h2 class="section-title">Tutorials live as <span style="color:var(--pop-2)">docs</span>.</h2>
         <p class="section-sub" style="color:var(--paper)">
-          The real deliverable isn't a throwaway recording — it's a
-          <strong>replayable <code class="inline">.spec.ts</code></strong>, the single source of truth
-          and the checkpoint. Steps are appended and saved one at a time, each tagged
-          <code class="inline">[draft]</code> until it resolves on the live site, then
-          <code class="inline">[verified]</code>. Commit it, diff it in PRs, resume mid-flight, and
-          re-verify it whenever the page drifts.
+          The deliverable isn't a brittle screen recording — it's a replayable
+          <strong>spec file</strong>. Because it's real code, you can commit it, review it in pull
+          requests, and re-run it whenever the site changes. Each step is saved the moment it's
+          written and marked <code class="inline">[draft]</code> until it resolves on the live site,
+          then <code class="inline">[verified]</code>, so a run can stop and resume without losing
+          progress. And since the spec replays against the live page, a quick
+          <code class="inline">--verify</code> run flags exactly which steps have <strong>drifted</strong>
+          — so you know the moment a tutorial goes stale.
         </p>
         <div class="badge-row">
           <span class="pill">✓ Committable</span>
           <span class="pill">✓ Resumable checkpoints</span>
           <span class="pill">✓ Drift-checkable</span>
-          <span class="pill">✓ Plain Playwright</span>
         </div>
       </div>
       <div>
@@ -484,12 +487,12 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
 <!-- INSTALL -->
 <section id="install">
   <div class="wrap">
-    <h2 class="section-title">Install in one line 🚀</h2>
+    <h2 class="section-title">Install in one line</h2>
     <p class="section-sub">It's an <a href="https://agentskills.io" target="_blank" rel="noopener">Agent Skills</a> package — a folder with a <code class="inline">SKILL.md</code> that works in Claude Code, Cursor, and VS Code Copilot.</p>
 
     <div class="tabs" role="tablist">
-      <button class="tab active" data-tab="claude" role="tab">🤖 Claude Code</button>
-      <button class="tab" data-tab="cursor" role="tab">🖱️ Cursor</button>
+      <button class="tab active" data-tab="claude" role="tab">Claude Code</button>
+      <button class="tab" data-tab="cursor" role="tab">Cursor</button>
     </div>
 
     <div class="install-grid">
@@ -503,7 +506,7 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
 
 <span class="c"># Windows (PowerShell)</span>
 ./install.ps1 claude <span class="k">-Deps</span> <span class="k">-Mcp</span></pre>
-          <div class="hint">📁 Installs to <code class="inline">~/.claude/skills/pathfinder</code> — this folder is read by <strong>Claude Code and Cursor</strong>.</div>
+          <div class="hint">Installs to <code class="inline">~/.claude/skills/pathfinder</code> — this folder is read by <strong>Claude Code and Cursor</strong>.</div>
         </div>
 
         <!-- Cursor -->
@@ -513,14 +516,14 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
 
 <span class="c"># Windows (PowerShell)</span>
 ./install.ps1 cursor <span class="k">-Deps</span> <span class="k">-Mcp</span></pre>
-          <div class="hint">📁 Installs to <code class="inline">~/.cursor/skills/pathfinder</code>. You can also import from GitHub via <strong>Settings → Rules → Add Rule → Remote Rule</strong>.</div>
+          <div class="hint">Installs to <code class="inline">~/.cursor/skills/pathfinder</code>. You can also import from GitHub via <strong>Settings → Rules → Add Rule → Remote Rule</strong>.</div>
         </div>
 
-        <div class="hint" style="background:var(--pop-2);">⚠️ Windows blocking scripts? Run <code class="inline">powershell -ExecutionPolicy Bypass -File ./install.ps1 claude -Deps -Mcp</code></div>
+        <div class="hint" style="background:var(--pop-2);">Windows blocking scripts? Run <code class="inline">powershell -ExecutionPolicy Bypass -File ./install.ps1 claude -Deps -Mcp</code></div>
       </div>
 
       <div class="install-card panel">
-        <h3>2 · The Playwright MCP server</h3>
+        <h3>2 · The browser-automation MCP server</h3>
         <p style="margin:0 0 12px; font-size:0.95rem;">The <code class="inline">--mcp</code> / <code class="inline">-Mcp</code> flag wires this up for you. To do it by hand:</p>
 
         <!-- Claude Code -->
@@ -542,12 +545,12 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
 }</pre>
         </div>
 
-        <div class="hint">🌐 The skill drives a <strong>real browser</strong> through this server. Without it, it can't explore the live site.</div>
+        <div class="hint">The skill drives a <strong>real browser</strong> through this server. Without it, it can't explore the live site.</div>
       </div>
     </div>
 
     <div style="margin-top:26px;" class="panel install-card">
-      <h3>3 · Install the browser, then just ask 💬</h3>
+      <h3>3 · Install the browser, then just ask</h3>
       <p style="margin:0 0 12px; font-size:0.95rem;">Skipped if you passed <code class="inline">--deps</code>/<code class="inline">-Deps</code> — otherwise, once inside the installed skill folder:</p>
 <pre class="code"><span class="f">npm</span> install
 <span class="f">npx</span> playwright install chromium</pre>
@@ -559,8 +562,8 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
 <!-- EXAMPLE PDF -->
 <section id="example" class="example">
   <div class="wrap">
-    <h2 class="section-title">See it on a real flow 📄</h2>
-    <p class="section-sub">Here's a tutorial the skill produced for <strong>filtering issues on GitHub</strong> — every step screenshotted, the target circled in red, captioned in plain English. The repo ships more reference specs: Wikipedia search, YouTube search, Amazon, and Google Flights.</p>
+    <h2 class="section-title">See it on a real flow</h2>
+    <p class="section-sub">Below is an <strong>annotated</strong> tutorial generated for <strong>filtering issues on GitHub</strong> — each step captured as a screenshot, the button you need circled in red, with a plain-English caption. The repo ships more reference specs: Wikipedia search, YouTube search, Amazon, and Google Flights.</p>
     <div class="panel">
       <div class="pdf-card">
         <div class="doc">
@@ -589,8 +592,8 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
 
 <footer>
   <div class="wrap">
-    <div>🖍️ Pathfinder — drive a browser, ship a circled PDF.</div>
-    <div><a href="README.md">README</a> · <a href="https://agentskills.io" target="_blank" rel="noopener">Agent Skills</a> · <a href="https://playwright.dev" target="_blank" rel="noopener">Playwright</a></div>
+    <div>Pathfinder — drive a browser, ship a circled PDF.</div>
+    <div><a href="README.md">README</a> · <a href="https://agentskills.io" target="_blank" rel="noopener">Agent Skills</a></div>
   </div>
 </footer>
 
