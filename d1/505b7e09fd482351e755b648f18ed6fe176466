@@ -1,0 +1,34 @@
+index.html
+  s_60afbb04b2a413::t_d4676e75bd4152 6
+  s_9af631f564c6aa::t_41a5376a60edb9 7
+  s_9af631f564c6aa::t_63fb1dc501f984 227-230,376,386-387,390-392,395-396,418,424,445,447-454,490,494-495,509,519,522,526,548,553,565-566,595-596
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "d1505b7e09fd482351e755b648f18ed6fe176466",
+  "prompts": {},
+  "humans": {
+    "h_e661ac2a8ff09e": {
+      "author": "fizy069 <mahirg4@gmai.com>"
+    }
+  },
+  "sessions": {
+    "s_60afbb04b2a413": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "5e1e544e-fe47-4ec9-a9a3-9e9615e964da",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    },
+    "s_9af631f564c6aa": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "d174e99f-2ddf-4a3d-8f05-59db58f33f1d",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    }
+  }
+}
