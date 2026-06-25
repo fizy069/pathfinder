@@ -1,0 +1,67 @@
+index.html
+  s_49324883da4dbc::t_fe5f4925b0c73c 6-7
+  s_9af631f564c6aa::t_0ff04feb2a9e1f 369,388-390,408,416-417,422,426-427,432,446-450,464-465,467,471,474,506,516,563,576-578,581,584,592
+README.md
+  s_1f7edda221e320::t_9419c5d4c91231 1
+.claude/skills/pathfinder/SKILL.md
+  h_e661ac2a8ff09e 2
+.claude/skills/pathfinder/package.json
+  s_1f7edda221e320::t_a479c2b66a7529 2-9
+.claude/skills/pathfinder/tsconfig.json
+  s_1f7edda221e320::t_25d5913f168da3 15
+.claude/skills/pathfinder/.claude-plugin/plugin.json
+  s_1f7edda221e320::t_a479c2b66a7529 2
+.claude-plugin/marketplace.json
+  s_1f7edda221e320::t_a479c2b66a7529 2
+  s_92a3e9ee58da38::t_b6372f902cfd0f 8-9
+install.ps1
+  s_1f7edda221e320::t_d195e6099fa9d7 3
+  s_92a3e9ee58da38::t_4d0165947dac16 6,34-35
+install.sh
+  s_1f7edda221e320::t_d195e6099fa9d7 2,20-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "b3c409c1195840f918ea67b111b61187231f7f8b",
+  "prompts": {},
+  "humans": {
+    "h_e661ac2a8ff09e": {
+      "author": "fizy069 <mahirg4@gmai.com>"
+    }
+  },
+  "sessions": {
+    "s_1f7edda221e320": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "6f8a6ff2-2a4e-4d50-b977-c52592db798f",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    },
+    "s_49324883da4dbc": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "af66df51-f47d-4fa6-a3bc-248fcd12c3da",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    },
+    "s_92a3e9ee58da38": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "417293b1-18b6-45c8-9764-86b939723eb1",
+        "model": "unknown"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    },
+    "s_9af631f564c6aa": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "d174e99f-2ddf-4a3d-8f05-59db58f33f1d",
+        "model": "unknown"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    }
+  }
+}
