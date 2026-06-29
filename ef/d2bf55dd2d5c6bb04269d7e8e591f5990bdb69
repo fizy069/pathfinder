@@ -1,0 +1,37 @@
+index.html
+  s_9af631f564c6aa::t_63fb1dc501f984 6-7
+  s_9af631f564c6aa::t_b5a47bb72b97b2 227-230,376,386-387,390-392,395-396,418,424,445,447-454,490,494-495,509,519,522,526,548,553,565-566,595-596
+.claude/skills/pathfinder/scripts/pathfinder.ts
+  s_4d8e751a3f0512::t_d492a75ad7e685 70-78
+  s_4d8e751a3f0512::t_71858541c65401 79-81
+  s_4d8e751a3f0512::t_e6b55ca7d00065 82-83,136,145-156,158-167,169,171-172,178-199,201-202,209-210,219-220,883,885-893
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "efd2bf55dd2d5c6bb04269d7e8e591f5990bdb69",
+  "prompts": {},
+  "humans": {
+    "h_e661ac2a8ff09e": {
+      "author": "fizy069 <mahirg4@gmai.com>"
+    }
+  },
+  "sessions": {
+    "s_4d8e751a3f0512": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "be5c5688-2e4d-4c33-b6c3-50cdf3b75d3d",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": null
+    },
+    "s_9af631f564c6aa": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "d174e99f-2ddf-4a3d-8f05-59db58f33f1d",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "fizy069 <mahirg4@gmai.com>"
+    }
+  }
+}
