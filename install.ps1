@@ -1,9 +1,9 @@
 <#
 .SYNOPSIS
-  Install the tutorial-generator Agent Skill into a host tool's skills directory.
+  Install the pathfinder Agent Skill into a host tool's skills directory.
 
 .DESCRIPTION
-  Copies .claude/skills/tutorial-generator into the chosen skills location so
+  Copies .claude/skills/pathfinder into the chosen skills location so
   Claude Code, Cursor, or any Agent Skills-compatible tool can discover it.
 
 .PARAMETER Target
@@ -31,8 +31,8 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $ScriptDir = $PSScriptRoot
-$Src = Join-Path $ScriptDir '.claude/skills/tutorial-generator'
-$SkillName = 'tutorial-generator'
+$Src = Join-Path $ScriptDir '.claude/skills/pathfinder'
+$SkillName = 'pathfinder'
 
 # Merge a `playwright` entry into the `mcpServers` map of a JSON config file,
 # preserving any existing servers. Idempotent.

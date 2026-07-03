@@ -5,5 +5,5 @@ node_modules/
 test-results/
 
 # User-authored tutorials live here (generated output, not committed).
-# Committed reference specs live in .claude/skills/tutorial-generator/examples/.
+# Committed reference specs live in .claude/skills/pathfinder/examples/.
 /tutorials/

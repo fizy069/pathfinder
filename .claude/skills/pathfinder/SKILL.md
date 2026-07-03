@@ -1,5 +1,5 @@
 ---
-name: tutorial-generator
+name: pathfinder
 description: >-
   Generate a step-by-step, screenshot-based PDF tutorial for a web task (e.g.
   "how to add an article to Wikipedia"). Uses subagents to explore a live site
@@ -11,7 +11,7 @@ description: >-
   non-tutorial scraping, or tasks with no Playwright MCP server available.
 ---
 
-# Tutorial Generator Skill
+# Pathfinder Skill
 
 Build and maintain visual, step-by-step web tutorials. The deliverable is a
 **replayable Playwright TypeScript spec** (`tutorials/<slug>.spec.ts`) — the
@@ -26,7 +26,7 @@ committed mid-flight. The TypeScript renderer parses the spec to draw the PDF.
 
 All generator commands below run **from this skill's folder** (the directory
 containing this `SKILL.md`). The generator is bundled at
-[scripts/tutorial_generator.ts](scripts/tutorial_generator.ts) and is invoked
+[scripts/pathfinder.ts](scripts/pathfinder.ts) and is invoked
 with a path to the user's spec; the rendered PDF is written **next to the spec**
 in the user's project, not in this skill folder.
 
@@ -44,7 +44,7 @@ in the user's project, not in this skill folder.
      `{ "servers": { "playwright": { "command": "npx", "args": ["@playwright/mcp@latest"] } } }`
 2. **Generator deps installed once** in this skill folder (see Phase 0). Only
    needed to render/verify, not to explore.
-3. Read [scripts/tutorial_generator.ts](scripts/tutorial_generator.ts) for the
+3. Read [scripts/pathfinder.ts](scripts/pathfinder.ts) for the
    exact spec format the parser accepts, how locators map to Playwright builders
    (`getByRole`>`getByLabel`>`getByTestId`>`getByText`>`locator`), and the
    supported actions (`click`,`fill`,`press`,`hover`,`selectOption`,`goto`). See
@@ -153,7 +153,7 @@ Run the generator from this skill folder, passing the path to the user's spec
 spec.
 
 ```
-npx tsx scripts/tutorial_generator.ts <path-to-user-spec>.spec.ts
+npx tsx scripts/pathfinder.ts <path-to-user-spec>.spec.ts
 ```
 
 This parses the spec and writes the annotated PDF (per the header's
@@ -175,7 +175,7 @@ Phase 1/2 for that step, fix the statement, re-save (checkpoint), re-render.
 ## Validate (run after every checkpoint)
 
 ```
-npx tsx scripts/tutorial_generator.ts <path-to-user-spec>.spec.ts --check
+npx tsx scripts/pathfinder.ts <path-to-user-spec>.spec.ts --check
 ```
 
 This parses the spec and runs structural validation, printing precise,
@@ -188,7 +188,7 @@ step-qualified errors without launching a browser.
    (replays headless, no PDF, exits non-zero if any step is stale):
 
    ```
-   npx tsx scripts/tutorial_generator.ts <path-to-user-spec>.spec.ts --verify
+   npx tsx scripts/pathfinder.ts <path-to-user-spec>.spec.ts --verify
    ```
 
    It prints a per-step `OK`/`FAIL`/`SKIP` report; a `FAIL` line includes the

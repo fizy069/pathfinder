@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install the tutorial-generator Agent Skill into a host tool's skills directory.
+# Install the pathfinder Agent Skill into a host tool's skills directory.
 #
 # Usage:
 #   ./install.sh [target] [--deps]
@@ -17,8 +17,8 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SRC="$SCRIPT_DIR/.claude/skills/tutorial-generator"
-SKILL_NAME="tutorial-generator"
+SRC="$SCRIPT_DIR/.claude/skills/pathfinder"
+SKILL_NAME="pathfinder"
 
 # Merge a `playwright` entry into the `mcpServers` map of a JSON config file,
 # preserving any existing servers. Idempotent. Uses node (already a dependency).

@@ -12,5 +12,5 @@
     "resolveJsonModule": true,
     "noEmit": true
   },
-  "include": ["scripts/tutorial_generator.ts"]
+  "include": ["scripts/pathfinder.ts"]
 }
