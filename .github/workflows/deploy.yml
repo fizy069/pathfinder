@@ -31,6 +31,9 @@ jobs:
         run: |
           mkdir dist
           cp index.html dist/
+          if [ -f github-filter-issues.pdf ]; then
+            cp github-filter-issues.pdf dist/
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
