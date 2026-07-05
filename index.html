@@ -502,24 +502,26 @@ test(<span class="s">'How to search on Wikipedia'</span>, <span class="k">async<
         <!-- Claude Code -->
         <div class="tab-pane active" data-pane="claude">
 <pre class="code"><span class="c"># macOS / Linux  →  ~/.claude/skills</span>
-./install.sh claude <span class="k">--deps</span> <span class="k">--mcp</span>
+curl -fsSL https://raw.githubusercontent.com/fizy069/pathfinder/main/install-remote.sh | bash -s -- claude <span class="k">--deps</span> <span class="k">--mcp</span>
 
 <span class="c"># Windows (PowerShell)</span>
-./install.ps1 claude <span class="k">-Deps</span> <span class="k">-Mcp</span></pre>
+irm https://raw.githubusercontent.com/fizy069/pathfinder/main/install-remote.ps1 -OutFile install.ps1
+.\install.ps1 claude <span class="k">-Deps</span> <span class="k">-Mcp</span>; rm install.ps1</pre>
           <div class="hint">Installs to <code class="inline">~/.claude/skills/pathfinder</code> — this folder is read by <strong>Claude Code and Cursor</strong>.</div>
         </div>
 
         <!-- Cursor -->
         <div class="tab-pane" data-pane="cursor">
 <pre class="code"><span class="c"># macOS / Linux  →  ~/.cursor/skills</span>
-./install.sh cursor <span class="k">--deps</span> <span class="k">--mcp</span>
+curl -fsSL https://raw.githubusercontent.com/fizy069/pathfinder/main/install-remote.sh | bash -s -- cursor <span class="k">--deps</span> <span class="k">--mcp</span>
 
 <span class="c"># Windows (PowerShell)</span>
-./install.ps1 cursor <span class="k">-Deps</span> <span class="k">-Mcp</span></pre>
+irm https://raw.githubusercontent.com/fizy069/pathfinder/main/install-remote.ps1 -OutFile install.ps1
+.\install.ps1 cursor <span class="k">-Deps</span> <span class="k">-Mcp</span>; rm install.ps1</pre>
           <div class="hint">Installs to <code class="inline">~/.cursor/skills/pathfinder</code>. You can also import from GitHub via <strong>Settings → Rules → Add Rule → Remote Rule</strong>.</div>
         </div>
 
-        <div class="hint" style="background:var(--pop-2);">Windows blocking scripts? Run <code class="inline">powershell -ExecutionPolicy Bypass -File ./install.ps1 claude -Deps -Mcp</code></div>
+        <div class="hint" style="background:var(--pop-2);">Windows blocking scripts? Run <code class="inline">powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/fizy069/pathfinder/main/install-remote.ps1 -OutFile install.ps1; .\install.ps1 claude -Deps -Mcp; rm install.ps1"</code></div>
       </div>
 
       <div class="install-card panel">
