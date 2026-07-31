@@ -7,3 +7,6 @@ test-results/
 # User-authored tutorials live here (generated output, not committed).
 # Committed reference specs live in .claude/skills/pathfinder/examples/.
 /tutorials/
+
+# Saved login sessions captured with `--login`. These grant account access.
+.auth/

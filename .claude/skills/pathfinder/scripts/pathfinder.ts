@@ -15,6 +15,7 @@
  *     npx tsx pathfinder.ts tutorials/wikipedia-search.spec.ts
  *     npx tsx pathfinder.ts tutorials/wikipedia-search.spec.ts --check
  *     npx tsx pathfinder.ts tutorials/wikipedia-search.spec.ts --verify
+ *     npx tsx pathfinder.ts tutorials/my-app-flow.spec.ts --login  # auth-gated apps
  *     npx tsx pathfinder.ts --migrate tutorials/legacy.json   # one-off
  *
  * Spec format (authored by hand or by the skill):
@@ -39,7 +40,7 @@
  *     });
  *
  * Metadata is carried in comments: header lines (`// PDF output:`,
- * `// Headless: false`) and per-step tags appended to the `// Step N:` comment
+ * `// Headless: false`, `// Storage state:`) and per-step tags appended to the `// Step N:` comment
  * (`[no-highlight]` to skip the circle, `[verified]`/`[draft]` checkpoint state).
  * Locator strategies map to Playwright builders: `getByRole` (+ name),
  * `getByLabel`, `getByTestId`, `getByText`, `locator` (CSS). Supported actions:
@@ -118,6 +119,13 @@ interface Config {
   headless: boolean;
   steps: Step[];
   output?: string;
+  /**
+   * Path to a Playwright storageState JSON holding a logged-in session, so
+   * tutorials for auth-gated apps render the real workflow instead of the login
+   * page. Captured once by hand with `--login`; never contains credentials the
+   * spec itself has to carry.
+   */
+  storage_state?: string;
 }
 
 interface BoundingBox {
@@ -376,6 +384,9 @@ function toTypescript(config: Config, specFilename?: string): string {
     `// Tutorial: ${name}`,
     `// PDF output: ${output}`,
   ];
+  if (config.storage_state) {
+    header.push(`// Storage state: ${config.storage_state}`);
+  }
   if (!(config.headless ?? true)) {
     header.push('// Headless: false');
   }
@@ -605,6 +616,8 @@ function parseTypescript(text: string): Config {
   const outputMatch = /^\/\/\s*PDF output:\s*(.+)$/m.exec(text);
   const output = outputMatch ? outputMatch[1].trim() : undefined;
   const headless = /^\/\/\s*Headless:\s*false\s*$/m.exec(text) === null;
+  const storageMatch = /^\/\/\s*Storage state:\s*(.+)$/m.exec(text);
+  const storageState = storageMatch ? storageMatch[1].trim() : undefined;
 
   let startUrl: string | null = null;
   const steps: Step[] = [];
@@ -662,6 +675,9 @@ function parseTypescript(text: string): Config {
   };
   if (output) {
     config.output = output;
+  }
+  if (storageState) {
+    config.storage_state = storageState;
   }
   return config;
 }
@@ -837,7 +853,37 @@ async function loadConfig(filePath: string): Promise<Config> {
   if (!path.isAbsolute(config.output)) {
     config.output = path.join(path.dirname(path.resolve(filePath)), config.output);
   }
+  // Same for the saved session: it lives beside the spec in the user's repo.
+  if (config.storage_state && !path.isAbsolute(config.storage_state)) {
+    config.storage_state = path.join(
+      path.dirname(path.resolve(filePath)),
+      config.storage_state,
+    );
+  }
   return config;
+}
+
+/**
+ * Build the browser context options for a run, attaching a saved login session
+ * when the spec declares one. Fails loudly rather than silently rendering a
+ * login page, which is the failure mode this exists to prevent.
+ */
+async function contextOptions(
+  config: Config,
+  viewport: Viewport,
+): Promise<{ viewport: Viewport; deviceScaleFactor: number; storageState?: string }> {
+  const options = { viewport, deviceScaleFactor: 1 };
+  if (!config.storage_state) {
+    return options;
+  }
+  if (!(await fileExists(config.storage_state))) {
+    throw new Error(
+      `Saved session not found: ${config.storage_state}\n` +
+        'Capture it once (a real browser opens; log in by hand, then press Enter):\n' +
+        `  npx tsx scripts/pathfinder.ts <spec> --login`,
+    );
+  }
+  return { ...options, storageState: config.storage_state };
 }
 
 async function generate(config: Config): Promise<string> {
@@ -854,7 +900,7 @@ async function generate(config: Config): Promise<string> {
   let browser: Browser | null = null;
   try {
     browser = await chromium.launch({ headless });
-    const context = await browser.newContext({ viewport, deviceScaleFactor: 1 });
+    const context = await browser.newContext(await contextOptions(config, viewport));
     const page = await context.newPage();
 
     console.log(`Navigating to ${config.start_url}`);
@@ -947,7 +993,7 @@ async function verify(
   let browser: Browser | null = null;
   try {
     browser = await chromium.launch({ headless });
-    const context = await browser.newContext({ viewport, deviceScaleFactor: 1 });
+    const context = await browser.newContext(await contextOptions(config, viewport));
     const page = await context.newPage();
     // Fail fast on drifted locators instead of waiting the default 30s.
     page.setDefaultTimeout(timeoutMs);
@@ -1026,11 +1072,57 @@ function reportVerify(
   return ok ? 0 : 1;
 }
 
+/**
+ * Open a real browser at the tutorial's start URL, let a human log in, then
+ * persist the session to the spec's `// Storage state:` path. Runs headed and
+ * waits on stdin, so it is driven by the user in their own terminal — no
+ * credential ever passes through the spec, the agent, or the PDF.
+ */
+async function login(config: Config): Promise<number> {
+  if (!config.storage_state) {
+    console.error(
+      'This spec has no saved session configured. Add a header line first:\n' +
+        '  // Storage state: .auth/<app>.json',
+    );
+    return 1;
+  }
+  const viewport = config.viewport ?? { width: 1280, height: 800 };
+  let browser: Browser | null = null;
+  try {
+    browser = await chromium.launch({ headless: false });
+    const context = await browser.newContext({ viewport, deviceScaleFactor: 1 });
+    const page = await context.newPage();
+    await page.goto(config.start_url, { waitUntil: 'domcontentloaded' });
+
+    console.log(`A browser window is open at ${config.start_url}`);
+    console.log('Log in there, navigate to where the tutorial should start,');
+    console.log('then come back here and press Enter to save the session.');
+    await new Promise<void>((resolve) => {
+      process.stdin.resume();
+      process.stdin.once('data', () => {
+        process.stdin.pause();
+        resolve();
+      });
+    });
+
+    await fs.mkdir(path.dirname(config.storage_state), { recursive: true });
+    await context.storageState({ path: config.storage_state });
+    console.log(`Saved session to ${config.storage_state}`);
+    console.log('Keep this file out of version control — it grants account access.');
+  } finally {
+    if (browser) {
+      await browser.close();
+    }
+  }
+  return 0;
+}
+
 interface CliArgs {
   source: string;
   check: boolean;
   verify: boolean;
   migrate: boolean;
+  login: boolean;
 }
 
 function parseArgs(argv: string[]): CliArgs {
@@ -1038,6 +1130,7 @@ function parseArgs(argv: string[]): CliArgs {
   let check = false;
   let verify = false;
   let migrate = false;
+  let login = false;
   for (const arg of argv) {
     if (arg === '--check') {
       check = true;
@@ -1045,6 +1138,8 @@ function parseArgs(argv: string[]): CliArgs {
       verify = true;
     } else if (arg === '--migrate') {
       migrate = true;
+    } else if (arg === '--login') {
+      login = true;
     } else if (arg.startsWith('-')) {
       throw new Error(`Unknown option: ${arg}`);
     } else if (source === undefined) {
@@ -1058,7 +1153,7 @@ function parseArgs(argv: string[]): CliArgs {
       "Path to the tutorial '.spec.ts' (source of truth) is required.",
     );
   }
-  return { source, check, verify, migrate };
+  return { source, check, verify, migrate, login };
 }
 
 async function fileExists(p: string): Promise<boolean> {
@@ -1104,6 +1199,9 @@ async function main(argv: string[]): Promise<number> {
     if (args.check) {
       console.log('valid');
       return 0;
+    }
+    if (args.login) {
+      return await login(config);
     }
     if (args.verify) {
       const { ok, results } = await verify(config);
