@@ -7,7 +7,8 @@ description: >-
   TypeScript spec (`<slug>.spec.ts`), then renders an annotated PDF (relevant
   buttons circled) from that spec. USE FOR: authoring a new tutorial, updating an
   existing tutorial's spec when a site changes, re-verifying that a tutorial
-  still resolves on the live site. DO NOT USE FOR: generic browsing questions,
+  still resolves on the live site, including apps behind a login wall via a saved
+  session. DO NOT USE FOR: generic browsing questions,
   non-tutorial scraping, or tasks with no Playwright MCP server available.
 ---
 
@@ -76,6 +77,8 @@ test('How to search on Wikipedia', async ({ page }) => {
 Metadata lives in comments so the file stays valid TypeScript:
 - **Header**: `// PDF output: <path>` sets the rendered PDF name (defaults to the
   spec filename). `// Headless: false` runs the render headed.
+  `// Storage state: <path>` reuses a saved login session (see "Auth-gated
+  apps") — required for any tutorial behind a login wall.
 - **First `await page.goto(...)`** is the tutorial's start URL (not a step).
 - **Per-step `// Step N: <caption>`** comment is the screenshot caption. Append
   tags: `[no-highlight]` to skip the red circle, `[verified]`/`[draft]` for the
@@ -90,8 +93,44 @@ Metadata lives in comments so the file stays valid TypeScript:
   Wikipedia").
 - **Start URL**.
 - **Output path** for the spec, default `tutorials/<slug>.spec.ts`.
-- **Credentials / auth**: if the flow needs login, ask how to authenticate. Never
-  hardcode secrets into the spec; note auth as a manual prerequisite step.
+- **Credentials / auth**: if the flow needs login, use the saved-session flow
+  below. Never hardcode secrets into the spec, and never ask the user to paste a
+  password into the conversation — they type it into the browser themselves.
+
+## Auth-gated apps (saved session)
+
+The renderer launches a clean browser context per run, so a tutorial for a
+logged-in app would otherwise screenshot the login page on every step. For any
+app behind a login wall:
+
+1. Add a `// Storage state: .auth/<app>.json` header to the spec (path resolves
+   relative to the spec, like `// PDF output:`).
+2. Have the **user** capture the session once, in their own terminal — a real
+   browser opens, they log in by hand, then press Enter:
+
+   ```
+   npx tsx scripts/pathfinder.ts <path-to-user-spec>.spec.ts --login
+   ```
+
+   Do not run `--login` yourself in the background — it is interactive and
+   headed by design. (In Claude Code, the user can prefix it with `!` so the
+   output lands in the conversation.)
+3. Every subsequent render and `--verify` reuses that session. If the file is
+   missing, the run fails with an explicit error rather than silently producing
+   a PDF full of login screens.
+4. The saved session grants account access. It must be **gitignored** — add
+   `.auth/` to the project's `.gitignore` before capturing. Sessions expire;
+   when a render suddenly shows the login page, re-run `--login`.
+
+**Discovery** (Phase 1) authenticates separately: the Playwright MCP server
+keeps its own persistent browser profile, so ask the user to log in once in the
+MCP browser window and that session carries across the exploration.
+
+**Recording against production**: discovery and rendering perform real clicks on
+the live site. Before authoring a tutorial for a flow that writes data (creating
+records, submitting forms, sending anything), confirm with the user whether to
+target a local/staging environment or a throwaway test account — do not create
+real records in a production tenant without explicit agreement.
 
 ## Workflow
 
@@ -108,6 +147,8 @@ Metadata lives in comments so the file stays valid TypeScript:
 2. Slugify the task into `tutorials/<slug>.spec.ts` **in the user's project**. If
    that file already exists, load it and treat existing `[verified]` steps as a
    checkpoint to resume from / re-verify rather than redoing them.
+2b. If the target app requires login, add the `// Storage state:` header and
+   walk the user through `--login` (see "Auth-gated apps") before Phase 1.
 3. Initialize (or keep) the spec skeleton — header comments, the
    `import { test }` line, `test.use({ viewport })`, the `test(...)` block with
    the initial `await page.goto(start_url)` and no steps yet — and save it
@@ -203,7 +244,8 @@ step-qualified errors without launching a browser.
 
 - One discovery subagent owns the browser session; hardening subagents are
   read-only and must not navigate destructively.
-- Never commit secrets. Auth is a manual prerequisite, not a step.
+- Never commit secrets. Auth is a saved session captured by the user, never a
+  credential written into the spec or typed into the conversation.
 - Do not fabricate roles/names/selectors — they must come from a real
   accessibility snapshot.
 - Keep each step's caption user-facing and imperative ("Click Publish").

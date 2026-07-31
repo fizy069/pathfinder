@@ -159,6 +159,32 @@ Replay the flow with Playwright Test:
 npx playwright test examples/wikipedia-search.spec.ts
 ```
 
+## Tutorials for logged-in apps
+
+The renderer opens a clean browser context on every run, so without a saved
+session a tutorial for an authenticated app screenshots the login page on every
+step. Point the spec at a saved Playwright `storageState` instead:
+
+```ts
+// Tutorial: How to create an invoice
+// Storage state: .auth/app.json     // resolved next to the spec
+```
+
+Capture that session once — a real browser opens, you log in by hand, then press
+Enter:
+
+```bash
+npx tsx scripts/pathfinder.ts tutorials/create-invoice.spec.ts --login
+```
+
+Renders and `--verify` runs then reuse it. If the file is missing the run fails
+with an explicit error rather than quietly producing a PDF full of login
+screens.
+
+> The saved session grants account access — **gitignore `.auth/`**. Sessions
+> expire; when a render suddenly shows the login page, re-run `--login`. No
+> credential is ever written into the spec.
+
 ## Spec format
 
 The `.spec.ts` is plain `@playwright/test` code; tutorial metadata lives in
@@ -168,6 +194,7 @@ comments so the file stays valid TypeScript:
 // Tutorial: How to search on Wikipedia
 // PDF output: wikipedia-search.pdf       // optional; defaults to the spec name
 // Headless: false                         // optional; render headed
+// Storage state: .auth/app.json           // optional; reuse a saved login
 // Run with: npx playwright test wikipedia-search.spec.ts
 
 import { test } from '@playwright/test';
